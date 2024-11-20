@@ -8,6 +8,6 @@ public class ProductTypeData : SettingDataBase
 {
     public string Name;
     public Sprite Icon;
-
+    public Product Prefab;
     public int CostCoin;
 }
