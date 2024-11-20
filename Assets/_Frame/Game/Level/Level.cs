@@ -21,6 +21,9 @@ public class Level : EntityBase
     [GetComponentInChildren, NonSerialized]
     public DraggableCamTarget DraggableCamTarget;
 
+    [GetComponentInChildren, NonSerialized]
+    public new World World;
+
     public LevelSaveInfo NextInfo => LevelSaveInfo.GetInfo(Index + 1, false);
 
 
@@ -38,6 +41,8 @@ public class Level : EntityBase
         // General
         // InitItem();
         // InitPlayer();
+
+        World.Init();
 
         if (DraggableCamTarget != null) DraggableCamTarget.Init();
         Dispatch(GameEvent.LoadLevel);

@@ -10,7 +10,8 @@ public class LayerManager : EntityBase<LayerManager>
     public LayerMask Road;
     public LayerMask Wall;
 
-    public LayerMask MapBlock;
+    public LayerMask Diggable;
+    public LayerMask DropItem;
 
     [Button(SdfIconType.ArrowRepeat, " Auto Cache")]
     public void AutoCache()

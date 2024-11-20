@@ -23,6 +23,9 @@ public abstract partial class EntityBase
     public Level CurrentLevel => Level.Level;
     public LevelSaveInfo CurrentLevelInfo => CurrentLevel.Info;
 
+    public World World => CurrentLevel.World;
+    public DiggerArea DiggerArea => World.DiggerArea;
+
     public Player Player => App.Player;
     public List<Player> PlayerList => App.PlayerList;
 

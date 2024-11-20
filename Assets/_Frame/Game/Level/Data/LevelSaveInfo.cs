@@ -3,6 +3,8 @@ using System;
 [Serializable]
 public class LevelSaveInfo : SaveInfoList<LevelSaveInfo>
 {
+    public float Power;
+
     public bool IsLock = true;
     public bool IsPass = false;
 
