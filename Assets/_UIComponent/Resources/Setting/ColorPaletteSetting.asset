@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd124bd1932458408838b51a594a54a, type: 3}
+  m_Name: ColorPaletteSetting
+  m_EditorClassIdentifier: 
+  SubSettingList:
+  - {fileID: 463753898341064816}
+  CurrentThemeKey: Orange
+--- !u!114 &463753898341064816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9ac96ec0e2e2a41a9e869378504f58, type: 3}
+  m_Name: Orange
+  m_EditorClassIdentifier: 
+  RootSetting: {fileID: 11400000}
+  Key: Orange
+  StyleList:
+  - Key: BgNormal
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Key: BgSelect
+    Color: {r: 1, g: 0.54934794, b: 0, a: 1}
+  - Key: BgFocus
+    Color: {r: 1, g: 0.92549026, b: 0.83921576, a: 1}
+  - Key: TextNormal
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Key: TextTitle
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Key: TextSubTitle
+    Color: {r: 0.7568628, g: 0.7568628, b: 0.7568628, a: 1}
+  - Key: TextMainTitle
+    Color: {r: 0.19607845, g: 0.19607845, b: 0.19607845, a: 1}
+  - Key: TextSelect
+    Color: {r: 1, g: 0.9960785, b: 0.9921569, a: 1}
+  - Key: TextFocus
+    Color: {r: 0.30997294, g: 0.30997294, b: 0.30997294, a: 1}

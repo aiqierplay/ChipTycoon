@@ -1,0 +1,17 @@
+{
+    "name": "Aya.Plugins",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0f22f37ecb9fa824385a11c83de1c6ef",
+        "GUID:25b56b6e0ca69b640bbae0b1e5eab368"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

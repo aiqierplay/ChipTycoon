@@ -1,0 +1,3 @@
+<linker>
+       <assembly fullname="Aya.Extension" preserve="all"/>
+</linker>
