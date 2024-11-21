@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a539234bf4ddc4c95b69651ee141ab, type: 3}
   m_Name: GeneralSetting
   m_EditorClassIdentifier: 
+  PlayerPrefab: {fileID: 418457759895108346, guid: ae32ddde1854ddd49bca0c1ddef395f0,
+    type: 3}
+  WorkerPrefab: {fileID: 0}
   DefaultCoin: 1000
   DefaultDiamond: 0
   DefaultKey: 0
   LoseWaitDuration: 0
   WinWaitDuration: 0
-  PlayerPrefab: {fileID: 4905476628669490931, guid: 9d875f4ed075dfd40b5d32927e893ceb,
-    type: 3}
-  BusinessBlockPrefabList:
-  - {fileID: 6795490414465812140, guid: bbfc2543a4f1ef649a6b25d89e40de9f, type: 3}
   BuffItemList: []

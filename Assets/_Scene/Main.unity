@@ -274,7 +274,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 11543
+    m_Bits: 93463
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -293,8 +293,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99150907}
-  m_LocalRotation: {x: -0.061658274, y: 0, z: 0, w: 0.9980973}
-  m_LocalPosition: {x: 0, y: 9.78, z: -32.14}
+  m_LocalRotation: {x: 0.39946795, y: 0.002320037, z: -0.0010109482, w: 0.9167437}
+  m_LocalPosition: {x: -0.034460757, y: 7.324241, z: -6.8083997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -508,16 +508,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3260612145861153374, guid: e070ecc726a31ba49beb988f8b2eecc7,
-        type: 3}
-      propertyPath: MapBlock.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4874666060787816208, guid: e070ecc726a31ba49beb988f8b2eecc7,
-        type: 3}
-      propertyPath: LevelAbTest.EnableAbTest
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e070ecc726a31ba49beb988f8b2eecc7, type: 3}
 --- !u!1 &872561584
@@ -686,6 +676,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3446224675845598118, guid: 43ec84091dec5cf458512233b541b0a4,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4064127703775737217, guid: 43ec84091dec5cf458512233b541b0a4,
         type: 3}
       propertyPath: m_Name

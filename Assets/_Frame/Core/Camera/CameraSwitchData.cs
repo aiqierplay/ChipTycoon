@@ -12,7 +12,7 @@ public class CameraSwitchData
 
     internal static AppManager App => AppManager.Ins;
     internal static CameraManager Camera => CameraManager.Ins;
-    internal static Player Player => App.Player;
+    internal static Worker Player => App.World.Character;
     internal static Transform PlayerTarget => Player != null ? Player.RendererTrans : null;
     internal static Transform DraggableCamTarget => App.CurrentLevel.DraggableCamTarget.TargetObject.transform;
 

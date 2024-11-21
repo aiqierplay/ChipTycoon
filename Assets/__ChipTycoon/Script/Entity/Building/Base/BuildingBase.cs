@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class BuildingBase : EntityBase
 {
+    public virtual void Init()
+    {
+
+    }
+
     public virtual void OnEnter(Character character)
     {
         character.OnEnter(this);

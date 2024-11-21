@@ -129,32 +129,6 @@ public class Level : EntityBase
 
     #endregion
 
-    #region Player
-
-    public void InitPlayer()
-    {
-        var playerPrefab = GeneralSetting.Ins.PlayerPrefab;
-        App.PlayerList.Clear();
-        for (var i = 0; i < PlayerCount; i++)
-        {
-            var playerIns = GamePool.Spawn(playerPrefab, GetChildTrans(nameof(Player)));
-            playerIns.State.Index = i;
-            playerIns.State.IsPlayer = false;
-            App.PlayerList.Add(playerIns);
-        }
-
-        var player = App.PlayerList.Random();
-        player.State.IsPlayer = true;
-        App.Player = player;
-
-        foreach (var playerTemp in App.PlayerList)
-        {
-            playerTemp.Init();
-        }
-    } 
-
-    #endregion
-
     #region Runner
 
     [FoldoutGroup("Runner")] public List<LevelBlock> RunnerBlockList;

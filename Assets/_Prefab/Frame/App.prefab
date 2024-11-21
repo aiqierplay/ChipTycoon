@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaunchPhase:
     AssemblyName: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    TypeName: GameReady
+    TypeName: GameStart
   Handler: {fileID: 5126899814501923992}
 --- !u!114 &4874666060787816208
 MonoBehaviour:
@@ -348,7 +348,10 @@ MonoBehaviour:
   Wall:
     serializedVersion: 2
     m_Bits: 16384
-  MapBlock:
+  Diggable:
+    serializedVersion: 2
+    m_Bits: 65536
+  DropItem:
     serializedVersion: 2
     m_Bits: 0
 --- !u!114 &2909746394198266302

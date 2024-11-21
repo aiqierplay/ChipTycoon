@@ -166,15 +166,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863819872551050429}
-  m_LocalRotation: {x: -0.061658274, y: 0, z: 0, w: 0.9980973}
-  m_LocalPosition: {x: 0, y: 9.78, z: -32.14}
+  m_LocalRotation: {x: 0.39946795, y: 0.002320037, z: -0.0010109482, w: 0.9167437}
+  m_LocalPosition: {x: -0.034460757, y: 7.324241, z: -6.8083997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2783344061724723332}
   m_Father: {fileID: 4064127703775737223}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -7.07, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 47.09, y: 0.29, z: 0}
 --- !u!114 &3446224675845598118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2783344061724723332}
   - component: {fileID: 7939332898823184614}
-  - component: {fileID: 845204365}
+  - component: {fileID: 3331562535356108417}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &845204365
+--- !u!114 &3331562535356108417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -327,21 +327,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 7623508043092717112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: 9.38, z: -30.14}
-  VerticalArmLength: 0.4
-  CameraSide: 1
-  CameraDistance: 2
-  CameraCollisionFilter:
-    serializedVersion: 2
-    m_Bits: 0
-  IgnoreTag: 
-  CameraRadius: 0.2
-  DampingIntoCollision: 0
-  DampingFromCollision: 2
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_TargetMovementOnly: 1
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_CameraDistance: 10
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_DeadZoneDepth: 0
+  m_UnlimitedSoftZone: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
+  m_GroupFramingMode: 2
+  m_AdjustmentMode: 0
+  m_GroupFramingSize: 0.8
+  m_MaxDollyIn: 5000
+  m_MaxDollyOut: 5000
+  m_MinimumDistance: 1
+  m_MaximumDistance: 5000
+  m_MinimumFOV: 3
+  m_MaximumFOV: 60
+  m_MinimumOrthoSize: 1
+  m_MaximumOrthoSize: 5000
 --- !u!1 &8180738073394204172
 GameObject:
   m_ObjectHideFlags: 0

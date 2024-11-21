@@ -9,14 +9,14 @@ using UnityEngine;
 public class GeneralSetting : SettingBase<GeneralSetting>
 {
     [Title("Game")]
+    public Worker PlayerPrefab;
+    public Worker WorkerPrefab;
+
     public int DefaultCoin;
     public int DefaultDiamond;
     public int DefaultKey;
     public float LoseWaitDuration;
     public float WinWaitDuration;
-
-    [Title("Prefab")] 
-    public Player PlayerPrefab;
 
     [Title("Item"), TableList] 
     public List<BuffItemData> BuffItemList;
