@@ -23,10 +23,13 @@ public class Worker : EntityBase
 
     public void Init(WorkerType type)
     {
+        EnableMove = true;
         Type = type;
         Play(IdleClip);
     }
 
+    #region Trigger
+    
     public void OnEnter(BuildingBase building)
     {
     }
@@ -36,6 +39,11 @@ public class Worker : EntityBase
 
     }
 
+    #endregion
+
+    #region Move
+  
+    [NonSerialized] public bool EnableMove;
     [NonSerialized] public bool IsMoving;
     [NonSerialized] public Vector3 StartPos;
     [NonSerialized] public Vector3 Direction;
@@ -63,19 +71,9 @@ public class Worker : EntityBase
         Play(IdleClip);
     }
 
-    public void LateUpdate()
-    {
-        if (IsMoving)
-        {
-            if (Direction == Vector3.zero) return;
-            Trans.position += Direction * MoveSpeed * DeltaTime;
-            Trans.forward = Vector3.MoveTowards(Forward, Direction, RotateSpeed * DeltaTime);
-        }
-    }
-
     public void Move(Vector3 direction)
     {
-      
+
     }
 
     public IEnumerator MoveTo(Vector3 position, Action onDone)
@@ -92,5 +90,17 @@ public class Worker : EntityBase
 
         Play(IdleClip);
         yield return null;
+    } 
+
+    #endregion
+
+    public void LateUpdate()
+    {
+        if (IsMoving)
+        {
+            if (Direction == Vector3.zero) return;
+            Trans.position += Direction * MoveSpeed * DeltaTime;
+            Trans.forward = Vector3.MoveTowards(Forward, Direction, RotateSpeed * DeltaTime);
+        }
     }
 }

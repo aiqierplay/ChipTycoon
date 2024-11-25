@@ -28,6 +28,7 @@ public class World : EntityBase
 
     public void Init()
     {
+        Mode = GameMode.Work;
         if (DiggerArea != null) DiggerArea.Init();
         foreach (var building in BuildingList)
         {
@@ -42,6 +43,7 @@ public class World : EntityBase
 
         SpawnPlayer();
         SpawnWorker();
+        SwitchCam(Mode);
     }
 
     public void SpawnPlayer()
@@ -55,5 +57,24 @@ public class World : EntityBase
         WorkerList.Clear();
     }
 
+    public void SwitchCam(GameMode mode)
+    {
+        switch (mode)
+        {
+            case GameMode.Work:
+                Camera.Switch("Game", Character.Trans);
+                break;
+            case GameMode.Digger:
+                Camera.Switch("Digger", DiggerArea.Digger.Trans);
+                break;
+        }
+    }
 
+    public void EnterDigger()
+    {
+        Mode = GameMode.Digger;
+        SwitchCam(GameMode.Digger);
+        DiggerArea.Init();
+        DiggerArea.StartDigger();
+    }
 }

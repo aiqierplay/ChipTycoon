@@ -27,15 +27,21 @@ public abstract class BuildingBase : EntityBase
     public virtual void OnEnter(Worker worker)
     {
         worker.OnEnter(this);
+        OnEnterImpl(worker);
     }
 
     public virtual void OnExit(Worker worker)
     {
         worker.OnExit(this);
+        OnExit(worker);
     }
 
     public virtual void OnWork(Worker worker)
     {
-
+        OnWork(worker);
     }
+
+    public abstract void OnEnterImpl(Worker worker);
+    public abstract void OnExitImpl(Worker worker);
+    public abstract void OnWorkImpl(Worker worker);
 }

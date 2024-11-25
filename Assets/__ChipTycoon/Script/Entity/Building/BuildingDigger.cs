@@ -4,5 +4,19 @@ using UnityEngine;
 
 public class BuildingDigger : BuildingBase
 {
+    public override void OnEnterImpl(Worker worker)
+    {
+        worker.EnableMove = false;
+        World.EnterDigger();
+    }
 
+    public override void OnExitImpl(Worker worker)
+    {
+       
+    }
+
+    public override void OnWorkImpl(Worker worker)
+    {
+       
+    }
 }
