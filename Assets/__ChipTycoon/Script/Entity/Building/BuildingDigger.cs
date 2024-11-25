@@ -6,7 +6,7 @@ public class BuildingDigger : BuildingBase
 {
     public override void OnEnterImpl(Worker worker)
     {
-        worker.EnableMove = false;
+        worker.DisableMove();
         World.EnterDigger();
     }
 

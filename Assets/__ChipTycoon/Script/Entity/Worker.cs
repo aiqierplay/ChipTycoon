@@ -23,7 +23,7 @@ public class Worker : EntityBase
 
     public void Init(WorkerType type)
     {
-        EnableMove = true;
+        EnableMove();
         Type = type;
         Play(IdleClip);
     }
@@ -43,10 +43,21 @@ public class Worker : EntityBase
 
     #region Move
   
-    [NonSerialized] public bool EnableMove;
+    [NonSerialized] public bool ActiveMove;
     [NonSerialized] public bool IsMoving;
     [NonSerialized] public Vector3 StartPos;
     [NonSerialized] public Vector3 Direction;
+
+    public void EnableMove()
+    {
+        ActiveMove = true;
+    }
+
+    public void DisableMove()
+    {
+        ActiveMove = false;
+        IsMoving = false;
+    }
 
     public void OnTouchStart(Vector3 pos)
     {
@@ -96,7 +107,7 @@ public class Worker : EntityBase
 
     public void LateUpdate()
     {
-        if (IsMoving)
+        if (ActiveMove && IsMoving)
         {
             if (Direction == Vector3.zero) return;
             Trans.position += Direction * MoveSpeed * DeltaTime;

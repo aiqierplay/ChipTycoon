@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7839772953844484314}
   - component: {fileID: 418457759895108346}
   - component: {fileID: 1977392817805692070}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,6 +49,7 @@ MonoBehaviour:
   IdleClip: Idle
   WalkClip: Walk
   MoveSpeed: 5
+  RotateSpeed: 50
 --- !u!54 &1977392817805692070
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -77,7 +78,7 @@ GameObject:
   - component: {fileID: 1625615813471676157}
   - component: {fileID: 18833745903127344}
   - component: {fileID: 4790808125722399591}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2081273936041625112}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

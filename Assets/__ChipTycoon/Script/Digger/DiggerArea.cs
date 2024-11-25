@@ -8,7 +8,7 @@ public class DiggerArea : EntityBase
     public UTweenPlayerReference TweenDiggerStart;
     public UTweenPlayerReference TweenDiggerEnd;
 
-    [GetComponentInChildren, NonSerialized] public Digger Digger;
+    [GetComponentInChildren(true), NonSerialized] public Digger Digger;
 
     [GetComponentInChildren(true), NonSerialized]
     public List<DiggableBase> DiggableList;
