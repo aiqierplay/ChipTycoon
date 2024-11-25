@@ -4,12 +4,5 @@ using UnityEngine;
 
 public class Character : EntityBase
 {
-    public void OnEnter(BuildingBase building)
-    {
-    }
 
-    public void OnExit(BuildingBase building)
-    {
-
-    }
 }

@@ -27,6 +27,15 @@ public class Worker : EntityBase
         Play(IdleClip);
     }
 
+    public void OnEnter(BuildingBase building)
+    {
+    }
+
+    public void OnExit(BuildingBase building)
+    {
+
+    }
+
     [NonSerialized] public bool IsMoving;
     [NonSerialized] public Vector3 StartPos;
     [NonSerialized] public Vector3 Direction;
