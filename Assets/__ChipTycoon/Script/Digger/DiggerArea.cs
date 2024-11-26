@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Aya.Extension;
-using Sirenix.Utilities;
+using Dreamteck.Splines.Primitives;
+using UnityEngine;
 
 public class DiggerArea : EntityBase
 {
