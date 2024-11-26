@@ -9,7 +9,7 @@ public class DiggerArea : EntityBase
     public UTweenPlayerReference TweenDiggerStart;
     public UTweenPlayerReference TweenDiggerEnd;
 
-    [GetComponentInChildren(true), NonSerialized] public Digger Digger;
+    [GetComponentInChildren(true), NonSerialized] public DiggerTool DiggerTool;
 
     [GetComponentInChildren(true), NonSerialized]
     public List<DiggableBase> DiggableList;
@@ -43,27 +43,29 @@ public class DiggerArea : EntityBase
             if (diggable is DiggableOre ore) OreList.Add(ore);
         }
 
-        Digger.SetActive(true);
-        Digger.Init();
+        DiggerTool.SetActive(true);
+        DiggerTool.Init();
     }
 
     public void EndDigger()
     {
         // UIGame.Ins.DiggerEnd();
         TweenDiggerEnd.Play();
-        Digger.SetActive(false);
+        DiggerTool.SetActive(false);
         World.Mode = GameMode.Work;
+        World.SwitchCam(World.Mode);
+        UIDigger.Ins.Back();
     }
 
-    public void LateUpdate()
-    {
-        if (World.Mode != GameMode.Digger) return;
-        var check = CheckCanContinue();
-        if (!check)
-        {
-            EndDigger();
-        }
-    }
+    // public void LateUpdate()
+    // {
+    //     if (World.Mode != GameMode.Digger) return;
+    //     var check = CheckCanContinue();
+    //     if (!check)
+    //     {
+    //         EndDigger();
+    //     }
+    // }
 
     public bool CheckCanContinue()
     {

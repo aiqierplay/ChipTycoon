@@ -7,15 +7,15 @@ using UnityEngine;
 
 public class DiggableOre : DiggableBase
 {
-    public int RewardCoin;
+    public DropBase DropPrefab;
+    public int RewardValue;
 
-    public override void OnEnterImpl(Digger digger)
+    public override void OnEnterImpl(DiggerTool digger)
     {
-        if (RewardCoin <= 0) return;
-        var prefab = GeneralSetting.Ins.DropCoinPrefab;
-        var coin = GamePool.Spawn(prefab, CurrentLevel.Trans, Position + RandUtil.RandVector3(-0.05f, 0.05f));
+        if (RewardValue <= 0) return;
+        var coin = GamePool.Spawn(DropPrefab, CurrentLevel.Trans, Position + RandUtil.RandVector3(-0.05f, 0.05f));
         World.DropList.Add(coin);
-        coin.Prefab = prefab;
-        coin.Value = RewardCoin;
+        coin.Prefab = DropPrefab;
+        coin.Value = RewardValue;
     }
 }

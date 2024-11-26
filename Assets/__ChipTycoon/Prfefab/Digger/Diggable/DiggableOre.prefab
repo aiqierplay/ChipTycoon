@@ -219,7 +219,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RequirePower: 0
   FxBreak: {fileID: 0}
-  RewardCoin: 10
+  DropPrefab: {fileID: 137837849488135169, guid: ac91a3f41b7f54a41b69750069c5e088,
+    type: 3}
+  RewardValue: 1
 --- !u!1 &6574264993605081748
 GameObject:
   m_ObjectHideFlags: 0

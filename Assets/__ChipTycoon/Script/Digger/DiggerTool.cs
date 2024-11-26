@@ -1,12 +1,22 @@
 using System;
+using System.Collections.Generic;
 using Aya.Extension;
 using Aya.Maths;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class Digger : EntityBase
+public enum DiggerToolMode
+{
+    Digger = 0,
+    Absorber = 1,
+}
+
+public class DiggerTool : EntityBase
 {
     public Vector3 PosMin;
     public Vector3 PosMax;
+
+    [TableList] public List<DiggerToolData> ToolList;
 
     public Transform RootTrans;
     public Transform MoveTrans;
@@ -15,25 +25,43 @@ public class Digger : EntityBase
 
     public float MoveSpeed;
     public float MaxTouchDis = 10;
-    public UTweenPlayerReference TweenWork;
 
+    [NonSerialized] public DiggerToolMode Mode;
     [NonSerialized] public Vector3 StartPos;
     [NonSerialized] public Vector3 Direction;
-
+    [NonSerialized] public DiggerToolData CurrentTool;
+    
     public void Init()
     {
-        TweenWork.Stop();
         Direction = Vector3.zero;
         Trans.ResetLocal();
         RootTrans.ResetLocal();
         MoveTrans.ResetLocal();
         RefreshLine();
+        SwitchTool(DiggerToolMode.Digger);
+    }
+
+    public void SwitchTool(DiggerToolMode mode)
+    {
+        Mode = mode;
+        foreach (var data in ToolList)
+        {
+            if (data.Mode == mode)
+            {
+                data.Active();
+                CurrentTool = data;
+            }
+            else
+            {
+                data.DeActive();
+            }
+        }
     }
 
     public void OnTouchStart(Vector3 pos)
     {
-        TweenWork.Play();
         StartPos = pos;
+        CurrentTool.Start();
     }
 
     public void OnTouch(Vector3 pos)
@@ -46,8 +74,8 @@ public class Digger : EntityBase
 
     public void OnTouchEnd(Vector3 pos)
     {
-        TweenWork.Stop();
         Direction = Vector3.zero;
+        CurrentTool.Stop();
     }
 
     public void LateUpdate()

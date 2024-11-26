@@ -27,44 +27,17 @@ public class UIGame : UIPage<UIGame>
 
     public void OnTouchStart(Vector3 pos)
     {
-        switch (World.Mode)
-        {
-            case GameMode.Work:
-                World.Character.OnTouchStart(pos);
-                break;
-            case GameMode.Digger:
-                DiggerArea.Digger.OnTouchStart(pos);
-                break;
-        }
-       
+        World.Character.OnTouchStart(pos);
     }
 
     public void OnTouch(Vector3 pos)
     {
-        switch (World.Mode)
-        {
-            case GameMode.Work:
-                World.Character.OnTouch(pos);
-                break;
-            case GameMode.Digger:
-                DiggerArea.Digger.OnTouch(pos);
-                break;
-        }
-      
+        World.Character.OnTouch(pos);
     }
 
     public void OnTouchEnd(Vector3 pos)
     {
-        switch (World.Mode)
-        {
-            case GameMode.Work:
-                World.Character.OnTouchEnd(pos);
-                break;
-            case GameMode.Digger:
-                DiggerArea.Digger.OnTouchEnd(pos);
-                break;
-        }
-    
+        World.Character.OnTouchEnd(pos);
     }
 
     public void Retry()

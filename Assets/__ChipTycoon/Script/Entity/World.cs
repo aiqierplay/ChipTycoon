@@ -67,7 +67,7 @@ public class World : EntityBase
                 Camera.Switch("Game", Character.Trans);
                 break;
             case GameMode.Digger:
-                Camera.Switch("Digger", DiggerArea.Digger.Trans);
+                Camera.Switch("Digger", DiggerArea.DiggerTool.Trans);
                 break;
         }
     }
@@ -78,5 +78,6 @@ public class World : EntityBase
         SwitchCam(GameMode.Digger);
         DiggerArea.Init();
         DiggerArea.StartDigger();
+        UI.Show<UIDigger>();
     }
 }

@@ -17,17 +17,18 @@ public abstract class DiggableBase : EntityBase
         IsBroken = false;
         gameObject.SetActive(true);
         ColliderListenerEnter.Clear();
-        ColliderListenerEnter.onTriggerEnter.Add<Digger>(OnEnter, LayerManager.Ins.Player);
+        ColliderListenerEnter.onTriggerEnter.Add<DiggerTool>(OnEnter, LayerManager.Ins.Player);
     }
 
     public virtual bool CheckCanBreak()
     {
         if (IsBroken) return false;
+        if (World.DiggerArea.DiggerTool.Mode != DiggerToolMode.Digger) return false;
         if (RequirePower <= 0) return true;
         return CurrentLevel.Info.Power >= RequirePower;
     }
 
-    public virtual void OnEnterForce(Digger digger, bool force)
+    public virtual void OnEnterForce(DiggerTool digger, bool force)
     {
         if (!force && !CheckCanBreak()) return;
         if (!force)
@@ -41,10 +42,10 @@ public abstract class DiggableBase : EntityBase
         IsBroken = true;
     }
 
-    public virtual void OnEnter(Digger digger)
+    public virtual void OnEnter(DiggerTool digger)
     {
         OnEnterForce(digger, false);
     }
 
-    public abstract void OnEnterImpl(Digger digger);
+    public abstract void OnEnterImpl(DiggerTool digger);
 }
