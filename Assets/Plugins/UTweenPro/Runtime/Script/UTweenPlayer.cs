@@ -45,6 +45,15 @@ namespace Aya.TweenPro
             Animation.OnDrawGizmos();
         }
 #endif
+
+        #region Animation Preset
+
+        public void ApplyAsset(UTweenAnimationPreset preset)
+        {
+            Animation = UTweenAnimationPreset.ApplyPreset(gameObject, preset);
+        }
+
+        #endregion
     }
 
 #if UNITY_EDITOR

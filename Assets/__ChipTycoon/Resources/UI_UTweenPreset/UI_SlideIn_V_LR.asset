@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50187dc61f4ac9a42b69c48ea10ef862, type: 3}
+  m_Name: UI_SlideIn_V_LR
+  m_EditorClassIdentifier: 
+  Animation:
+    EnableIdentifier: 0
+    Identifier: 
+    Duration: 0.25
+    Delay: 0
+    Backward: 0
+    PlayMode: 0
+    PlayCount: 1
+    AutoPlay: 0
+    UpdateMode: 0
+    Interval: 0
+    Interval2: 0
+    TimeMode: 1
+    SelfScale: 1
+    PrepareSampleMode: 0
+    AutoKill: 0
+    SpeedBased: 0
+    TweenerList:
+    - rid: 1318882388122796035
+    - rid: 1318882388122796036
+    OnStart:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnPlay:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnLoopStart:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnLoopEnd:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnUpdate:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnPause:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnResume:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnStop:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnComplete:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    FoldOut: 1
+    FoldOutCallback: 0
+    CallbackType: 1
+    IsSubAnimation: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 1318882388122796035
+      type: {class: TweenCanvasGroupAlpha, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.25
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 0
+        Ease: 6
+        Strength: 0
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 1495718221168863305, guid: cdf034683a9d87e42912dd013a921e95,
+          type: 3}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: 0
+          RandomFrom: 0
+          RandomTo: 0
+        To:
+          Mode: 0
+          Value: 1
+          RandomFrom: 0
+          RandomTo: 1
+    - rid: 1318882388122796036
+      type: {class: TweenAnchoredPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.25
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 0
+        Ease: 3
+        Strength: 0
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 7143512239961700748, guid: cdf034683a9d87e42912dd013a921e95,
+          type: 3}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: {x: -1080, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 0, y: 0}
+        To:
+          Mode: 0
+          Value: {x: 0, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 1, y: 1}

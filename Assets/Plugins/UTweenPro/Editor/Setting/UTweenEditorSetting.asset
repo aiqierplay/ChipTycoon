@@ -85,3 +85,4 @@ MonoBehaviour:
     Color: {r: 0, g: 0.7686275, b: 1, a: 1}
     IconPath: Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component
       Icon.psd
+  IconPreset: {fileID: 2800000, guid: a07dc2d27d270a742965f0a318fa3759, type: 3}

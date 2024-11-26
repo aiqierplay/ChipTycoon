@@ -308,6 +308,7 @@ namespace Aya.TweenPro
         {
             // Header
             var btnTitle = GUILayout.Button(nameof(Animation), EditorStyles.boldLabel);
+            var headerRect = GUILayoutUtility.GetLastRect();
             var info = "";
             if (!FoldOut)
             {
@@ -348,13 +349,40 @@ namespace Aya.TweenPro
                     IdentifierProperty.stringValue = "";
                 }
 
-                // Context Menu
-                var btnContextMenu = GUIUtil.DrawOptionMenuButton();
-                if (btnContextMenu)
+                // Asset
+                if (Mode == TweenEditorMode.Component)
                 {
-                    var menu = CreateContextMenu();
-                    menu.ShowAsContext();
+                    var btnImportAsset = GUIUtil.DrawImportPresetButton();
+                    if (btnImportAsset)
+                    {
+                        var tweenPlayer = TweenPlayer;
+                        var editor = Editor;
+                        var assetList = Resources.LoadAll<UTweenAnimationPreset>("");
+                        var dropRect = headerRect;
+                        var menu = GUIMenu.CreateSearchableDropdownMenu("Import Preset",
+                            assetList,
+                            asset => asset.name,
+                            asset => EditorIcon.ScriptObject,
+                            asset =>
+                            {
+                                if (asset == null) return;
+                                Undo.RegisterCompleteObjectUndo(tweenPlayer, "Import Preset");
+                                tweenPlayer.ApplyAsset(asset);
+                                tweenPlayer.Animation.TweenPlayer = tweenPlayer;
+                                tweenPlayer.Animation.InitEditor(TweenEditorMode.Component, editor);
+                                editor.serializedObject.ApplyModifiedProperties();
+                            });
+                        menu.Show(dropRect);
+                    }
                 }
+               
+                // Context Menu
+                // var btnContextMenu = GUIUtil.DrawOptionMenuButton();
+                // if (btnContextMenu)
+                // {
+                //     var menu = CreateContextMenu();
+                //     menu.ShowAsContext();
+                // }
             }
         }
 

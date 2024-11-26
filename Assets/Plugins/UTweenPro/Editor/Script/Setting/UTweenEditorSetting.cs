@@ -43,6 +43,9 @@ namespace Aya.TweenPro
 #endif
         public List<TweenGroupEditorData> GroupDataList;
 
+        [Header("Icon")]
+        public Texture2D IconPreset;
+
         public Dictionary<string, TweenGroupEditorData> GroupDataDic { get; set; }
 
         public override void Init()

@@ -1,6 +1,7 @@
 ﻿#if UNITY_EDITOR
 using System;
 using UnityEditor.IMGUI.Controls;
+using UnityEngine;
 
 namespace Aya.TweenPro
 {
@@ -13,6 +14,7 @@ namespace Aya.TweenPro
         {
             Root = root;
             OnSelected = onSelected;
+            minimumSize = new Vector2(300, 200);
         }
 
         protected override AdvancedDropdownItem BuildRoot()

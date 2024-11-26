@@ -26,10 +26,12 @@ public enum UIAnimationTriggerMode
 [RequireComponent(typeof(UTweenPlayer))]
 [HideMonoScript]
 [Serializable]
+[LabelWidth(85)]
 public class UITweenPlayerHandler : EntityBase
 {
     public UTweenPlayer TweenPlayer;
     public GameObject Target;
+
     public UIAnimationControlMode Control;
     public UIAnimationTriggerMode Trigger;
 

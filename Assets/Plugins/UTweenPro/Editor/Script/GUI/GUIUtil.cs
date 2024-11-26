@@ -57,6 +57,12 @@ namespace Aya.TweenPro
             return button;
         }
 
+        public static bool DrawImportPresetButton()
+        {
+            var button = DrawIconButton("Preset.Context", " Import Preset");
+            return button;
+        }
+
         public static bool DrawIconButton(string iconName, string toolTip = "")
         {
             var content = new GUIContent(EditorGUIUtility.IconContent(iconName))

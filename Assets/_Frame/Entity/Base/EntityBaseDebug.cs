@@ -103,18 +103,38 @@ public abstract partial class EntityBase
 
     #region Test
 
-    public void Test(Action action)
+    public float Test(Action action)
     {
-        Test("Test", action);
+        return Test("Test", action);
     }
 
-    public void Test(string key, Action action)
+    public float Test(string key, Action action, bool log = true)
     {
         var timeStart = Time.realtimeSinceStartup;
         action?.Invoke();
         var timeEnd = Time.realtimeSinceStartup;
         var duration = (timeEnd - timeStart) * 1000;
-        Log(key, duration);
+        if (log) Log(key, duration, "ms");
+        return duration;
+    }
+
+    public float TestAverage(Action action, int count = 100)
+    {
+        return TestAverage("Test", action, count);
+    }
+
+    public float TestAverage(string key, Action action, int count = 100)
+    {
+        var durationCount = 0f;
+        for (var i = 0; i < count; i++)
+        {
+            var duration = Test(key, action, false);
+            durationCount += duration;
+        }
+
+        var durationAverage = durationCount / count;
+        Log(key, durationAverage, "ms");
+        return durationAverage;
     }
 
     #endregion

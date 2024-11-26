@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: ProductSetting
   m_EditorClassIdentifier: 
   DataList:
-  - Key: 
+  - Key: Product_01
+    Name: 
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    CostCoin: 0
+  - Key: Product_02
     Name: 
     Icon: {fileID: 0}
     Prefab: {fileID: 0}

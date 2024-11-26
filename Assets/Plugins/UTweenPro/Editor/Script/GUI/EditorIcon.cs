@@ -16,6 +16,7 @@ namespace Aya.TweenPro
         public static Texture2D RectTool => GetIcon("d_RectTool");
         public static Texture2D DotFill => GetIcon("DotFill");
         public static Texture2D Script => GetIcon("cs Script Icon");
+        public static Texture2D ScriptObject => GetIcon("ScriptableObject Icon");
 
         #region Tweener Icon
 
