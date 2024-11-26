@@ -7,6 +7,8 @@ public abstract class DropTriggerBase : EntityBase
     [GetComponentInChildren, NonSerialized] public ColliderListenerEnter ColliderListenerEnter;
     [NonSerialized] public HashSet<DropBase> DropList = new HashSet<DropBase>();
 
+    public UTweenPlayerReference TweenTrigger;
+
     public virtual void Init()
     {
         gameObject.SetActive(true);
@@ -20,6 +22,7 @@ public abstract class DropTriggerBase : EntityBase
         if (DropList.Contains(dropItem)) return;
         DropList.Add(dropItem);
         OnEnterImpl(dropItem);
+        TweenTrigger.Play();
     }
 
     public abstract void OnEnterImpl(DropBase dropItem);

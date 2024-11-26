@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPrefab: {fileID: 418457759895108346, guid: ae32ddde1854ddd49bca0c1ddef395f0,
     type: 3}
-  WorkerPrefab: {fileID: 0}
+  WorkerPrefab: {fileID: 418457759895108346, guid: 893d958434dd2444c88a49c7f0f4700c,
+    type: 3}
+  DropCoinPrefab: {fileID: 5780961386655473006, guid: 23ffe7b0bb4c91c49a81f74b630b766a,
+    type: 3}
   DefaultCoin: 1000
   DefaultDiamond: 0
   DefaultKey: 0

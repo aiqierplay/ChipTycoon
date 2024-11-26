@@ -353,7 +353,7 @@ MonoBehaviour:
     m_Bits: 65536
   DropItem:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 131072
 --- !u!114 &2909746394198266302
 MonoBehaviour:
   m_ObjectHideFlags: 0

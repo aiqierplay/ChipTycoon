@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Aya.Extension;
 using Aya.Maths;
 using UnityEngine;

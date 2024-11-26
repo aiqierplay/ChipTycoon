@@ -23,12 +23,14 @@ public class World : EntityBase
 
     [NonSerialized] public Worker Character;
     [NonSerialized] public List<Worker> WorkerList = new List<Worker>();
+    [NonSerialized] public List<DropBase> DropList = new List<DropBase>();
 
     [NonSerialized] public GameMode Mode;
 
     public void Init()
     {
         Mode = GameMode.Work;
+        DropList.Clear();
         if (DiggerArea != null) DiggerArea.Init();
         foreach (var building in BuildingList)
         {

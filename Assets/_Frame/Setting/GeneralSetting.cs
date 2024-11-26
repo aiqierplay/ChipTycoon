@@ -11,6 +11,7 @@ public class GeneralSetting : SettingBase<GeneralSetting>
     [Title("Game")]
     public Worker PlayerPrefab;
     public Worker WorkerPrefab;
+    public DropCoin DropCoinPrefab;
 
     public int DefaultCoin;
     public int DefaultDiamond;

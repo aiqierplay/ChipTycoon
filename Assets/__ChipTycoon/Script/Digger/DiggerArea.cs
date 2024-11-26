@@ -25,8 +25,6 @@ public class DiggerArea : EntityBase
             diggable.Init();
         }
 
-        Digger.SetActive(false);
-
         foreach (var dropTriggerBase in DropTriggerList)
         {
             dropTriggerBase.Init();
@@ -71,7 +69,8 @@ public class DiggerArea : EntityBase
         if (OreList.Count == 0) return false;
         foreach (var ore in OreList)
         {
-            if (ore.CheckCanBreak()) return true;
+            var check = ore.CheckCanBreak();
+            if (check) return true;
         }
 
         return false;
