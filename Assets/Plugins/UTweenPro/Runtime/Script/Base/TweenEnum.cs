@@ -78,7 +78,7 @@ namespace Aya.TweenPro
     public enum AngleMode
     {
         Clamp360 = 0,
-        Beyond360 = 1,
+        Over360 = 1,
     }
 
     public enum ColorMode

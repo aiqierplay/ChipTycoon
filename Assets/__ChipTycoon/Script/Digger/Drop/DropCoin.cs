@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DropCoin : DropBase
 {
-    public override void Get()
+    public override void GetImpl()
     {
         UIFlyIcon.Ins.Fly(UIFlyIcon.Coin, WorldToUiPosition(), 1, null, () =>
         {

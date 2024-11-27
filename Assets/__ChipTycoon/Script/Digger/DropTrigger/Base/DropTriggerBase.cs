@@ -17,6 +17,19 @@ public abstract class DropTriggerBase : EntityBase
         DropList.Clear();
     }
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        DropList.Clear();
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        DropList.Clear();
+        StopAllCoroutines();
+    }
+
     public virtual void OnEnter(DropBase dropItem)
     {
         if (DropList.Contains(dropItem)) return;

@@ -23,7 +23,8 @@ public class DiggerTool : EntityBase
     public LineRenderer Line;
     public float Length = 3;
 
-    public float MoveSpeed;
+    public float MoveSpeed = 5;
+    public float RotateSpeed = 10;
     public float MaxTouchDis = 10;
 
     [NonSerialized] public DiggerToolMode Mode;
@@ -81,6 +82,7 @@ public class DiggerTool : EntityBase
     public void LateUpdate()
     {
         if (World.Mode != GameMode.Digger) return;
+
         var pos = MoveTrans.position + Direction * MoveSpeed * DeltaTime;
         var length = (pos - Position).magnitude;
         if (length > Length)
@@ -94,6 +96,14 @@ public class DiggerTool : EntityBase
         rootPos.x = 0;
         RootTrans.position = rootPos;
         MoveTrans.position = pos;
+
+        if (Mode == DiggerToolMode.Absorber)
+        {
+            var targetDirection = -Direction;
+            var toolDirection = Vector3.Lerp(CurrentTool.Target.transform.up, targetDirection, RotateSpeed * DeltaTime);
+            CurrentTool.Target.transform.up = toolDirection;
+        }
+
         RefreshLine();
     }
 

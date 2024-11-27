@@ -10,7 +10,7 @@ public class DropProduct : DropBase
 
     public IEnumerable TypeGetter() => ProductSetting.Ins.GetValueDropdownKeyList();
 
-    public override void Get()
+    public override void GetImpl()
     {
         
     }
