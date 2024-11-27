@@ -31,12 +31,6 @@ public class BuildingDigger : BuildingBase
             EnterCo = null;
         }
     }
-
-    public override void OnWorkImpl(Worker worker)
-    {
-      
-    }
-
     public IEnumerator EnterDiggerCo(Worker worker)
     {
         for (var i = 3; i >= 1; i--)

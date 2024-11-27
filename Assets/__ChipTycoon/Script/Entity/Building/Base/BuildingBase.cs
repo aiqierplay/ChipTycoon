@@ -41,12 +41,6 @@ public abstract class BuildingBase : EntityBase
         OnExitImpl(worker);
     }
 
-    public virtual void OnWork(Worker worker)
-    {
-        OnWorkImpl(worker);
-    }
-
     public abstract void OnEnterImpl(Worker worker);
     public abstract void OnExitImpl(Worker worker);
-    public abstract void OnWorkImpl(Worker worker);
 }

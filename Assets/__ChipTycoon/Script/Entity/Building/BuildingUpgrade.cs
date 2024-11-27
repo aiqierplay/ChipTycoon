@@ -14,9 +14,4 @@ public class BuildingUpgrade : BuildingBase
     {
        
     }
-
-    public override void OnWorkImpl(Worker worker)
-    {
-       
-    }
 }

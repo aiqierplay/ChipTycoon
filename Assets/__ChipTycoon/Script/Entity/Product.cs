@@ -9,4 +9,6 @@ public class Product : EntityBase
     public string Type;
 
     public IEnumerable TypeGetter() => ProductSetting.Ins.GetValueDropdownKeyList();
+    
+    public ProductTypeData TypeData => ProductSetting.Ins.DataDic[Type];
 }

@@ -13,9 +13,4 @@ public class BuildingFactory : FactoryBase
     {
        
     }
-
-    public override void OnWorkImpl(Worker worker)
-    {
-       
-    }
 }
