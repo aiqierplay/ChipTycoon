@@ -6,7 +6,8 @@ public class BuildingWorker : BuildingBase
 {
     public override void OnEnterImpl(Worker worker)
     {
-
+        UI.Show<UIWorker>();
+        World.Character.DisableMove();
     }
 
     public override void OnExitImpl(Worker worker)

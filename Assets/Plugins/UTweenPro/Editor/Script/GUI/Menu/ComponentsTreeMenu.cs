@@ -103,7 +103,7 @@ namespace Aya.TweenPro
                     if (root != null)
                     {
                         var btnRect = GUILayoutUtility.GetLastRect();
-                        if (GUIUtil.DrawSearchMenuButton())
+                        if (GUIUtil.DrawSearchMenuButton("Search"))
                         {
                             btnRect.width = EditorGUIUtility.currentViewWidth;
                             var dropdown = new SearchableDropdown(root, onClick);

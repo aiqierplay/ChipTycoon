@@ -33,33 +33,33 @@ namespace Aya.TweenPro
             return foldOut;
         }
 
-        public static bool DrawHeaderDocumentationButton()
+        public static bool DrawHeaderDocumentationButton(string toolTip)
         {
-            var button = DrawIconButton("_Help", "Help");
+            var button = DrawIconButton("_Help", toolTip);
             return button;
         }
 
-        public static bool DrawOptionMenuButton(string toolTip = "")
+        public static bool DrawOptionMenuButton(string toolTip)
         {
             var button = DrawIconButton("pane options", toolTip);
             return button;
         }
 
-        public static bool DrawSearchMenuButton()
+        public static bool DrawSearchMenuButton(string toolTip)
         {
-            var button = DrawIconButton("Search Icon", "Search");
+            var button = DrawIconButton("Search Icon", toolTip);
             return button;
         }
 
-        public static bool DrawDeleteButton()
+        public static bool DrawDeleteButton(string toolTip)
         {
-            var button = DrawIconButton("winbtn_win_close", " Delete");
+            var button = DrawIconButton("winbtn_win_close", toolTip);
             return button;
         }
 
-        public static bool DrawImportPresetButton()
+        public static bool DrawImportPresetButton(string toolTip)
         {
-            var button = DrawIconButton("Preset.Context", " Import Preset");
+            var button = DrawIconButton("Preset.Context", toolTip);
             return button;
         }
 

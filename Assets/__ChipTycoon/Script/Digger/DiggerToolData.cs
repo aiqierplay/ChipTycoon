@@ -1,6 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using Aya.Extension;
 using UnityEngine;
 
 [Serializable]
@@ -13,6 +12,7 @@ public class DiggerToolData
     public void Active()
     {
         Target.SetActive(true);
+        Target.transform.ResetLocal();
     }
 
     public void DeActive()

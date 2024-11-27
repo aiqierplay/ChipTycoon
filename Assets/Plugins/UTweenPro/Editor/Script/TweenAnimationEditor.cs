@@ -352,7 +352,7 @@ namespace Aya.TweenPro
                 // Asset
                 if (Mode == TweenEditorMode.Component)
                 {
-                    var btnImportAsset = GUIUtil.DrawImportPresetButton();
+                    var btnImportAsset = GUIUtil.DrawImportPresetButton("Import Preset");
                     if (btnImportAsset)
                     {
                         var tweenPlayer = TweenPlayer;

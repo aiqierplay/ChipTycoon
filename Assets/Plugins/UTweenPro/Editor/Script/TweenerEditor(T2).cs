@@ -72,7 +72,7 @@ namespace Aya.TweenPro
                 using (GUIHorizontal.Create())
                 {
                     FromValueRef.DrawInspector();
-                    var fromContextMenuBtn = GUIUtil.DrawOptionMenuButton();
+                    var fromContextMenuBtn = GUIUtil.DrawOptionMenuButton("Option");
                     if (fromContextMenuBtn)
                     {
                         var menu = CreateFromToContextMenu(FromValueRef);
@@ -83,7 +83,7 @@ namespace Aya.TweenPro
                 using (GUIHorizontal.Create())
                 {
                     ToValueRef.DrawInspector();
-                    var toContextMenuBtn = GUIUtil.DrawOptionMenuButton();
+                    var toContextMenuBtn = GUIUtil.DrawOptionMenuButton("Option");
                     if (toContextMenuBtn)
                     {
                         var menu = CreateFromToContextMenu(ToValueRef);

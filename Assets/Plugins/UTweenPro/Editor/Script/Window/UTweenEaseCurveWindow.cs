@@ -405,7 +405,7 @@ namespace Aya.TweenPro
                 if (IsCustomCurve)
                 {
                     // Option Menu
-                    if (GUIUtil.DrawOptionMenuButton())
+                    if (GUIUtil.DrawOptionMenuButton("Option"))
                     {
                         var menu = CreateCurveMenu();
                         menu.ShowAsContext();

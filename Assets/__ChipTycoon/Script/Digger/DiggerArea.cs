@@ -30,6 +30,8 @@ public class DiggerArea : EntityBase
         {
             dropTriggerBase.Init();
         }
+
+        DiggerTool.Init();
     }
 
     public void StartDigger()

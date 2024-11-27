@@ -109,6 +109,12 @@ public class DiggerTool : EntityBase
 
     public void RefreshLine()
     {
+        if (World.Mode != GameMode.Digger)
+        {
+            Line.positionCount = 0;
+            return;
+        }
+
         Line.SetPositions(new Vector3[]{Position, MoveTrans.position});
         Line.positionCount = 2;
     }

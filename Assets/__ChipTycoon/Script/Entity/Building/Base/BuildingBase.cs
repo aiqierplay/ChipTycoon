@@ -33,12 +33,12 @@ public abstract class BuildingBase : EntityBase
     public virtual void OnExit(Worker worker)
     {
         worker.OnExit(this);
-        OnExit(worker);
+        OnExitImpl(worker);
     }
 
     public virtual void OnWork(Worker worker)
     {
-        OnWork(worker);
+        OnWorkImpl(worker);
     }
 
     public abstract void OnEnterImpl(Worker worker);

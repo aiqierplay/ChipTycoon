@@ -49,7 +49,7 @@ namespace Aya.TweenPro
 
                         using (GUIHorizontal.Create(GUILayout.Width(EditorStyle.SingleButtonWidth)))
                         {
-                            var btnRemove = GUIUtil.DrawDeleteButton();
+                            var btnRemove = GUIUtil.DrawDeleteButton("Remove");
                             if (btnRemove)
                             {
                                 RemovePoint(index);

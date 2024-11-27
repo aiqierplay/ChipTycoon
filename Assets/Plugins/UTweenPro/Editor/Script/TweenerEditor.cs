@@ -177,7 +177,7 @@ namespace Aya.TweenPro
             // Documentation
             if (EditorData.Documentation != null)
             {
-                var btnDocumentation = GUIUtil.DrawHeaderDocumentationButton();
+                var btnDocumentation = GUIUtil.DrawHeaderDocumentationButton("Help");
                 if (btnDocumentation)
                 {
                     UTweenEditorSetting.Ins.ShowDocumentation = !UTweenEditorSetting.Ins.ShowDocumentation;
@@ -185,7 +185,7 @@ namespace Aya.TweenPro
             }
 
             // Menu Button
-            var btnContextMenu = GUIUtil.DrawOptionMenuButton();
+            var btnContextMenu = GUIUtil.DrawOptionMenuButton("Option");
             if (btnContextMenu)
             {
                 var menu = CreateContextMenu();
