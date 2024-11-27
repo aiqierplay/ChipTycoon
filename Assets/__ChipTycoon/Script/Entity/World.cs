@@ -12,6 +12,7 @@ public enum GameMode
 public class World : EntityBase
 {
     public Transform WorkerTrans;
+    public BuildingFactory Factory01;
 
     [GetComponentInChildren, NonSerialized]
     public new DiggerArea DiggerArea;

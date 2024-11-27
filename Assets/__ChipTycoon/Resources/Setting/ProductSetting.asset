@@ -16,10 +16,12 @@ MonoBehaviour:
   - Key: Product_01
     Name: 
     Icon: {fileID: 0}
-    Prefab: {fileID: 0}
-    CostCoin: 0
+    Prefab: {fileID: 5102741648946911573, guid: 40bb45e084470b9469033bd6cc1a0e28,
+      type: 3}
+    CostCoin: 10
   - Key: Product_02
     Name: 
     Icon: {fileID: 0}
-    Prefab: {fileID: 0}
-    CostCoin: 0
+    Prefab: {fileID: 5102741648946911573, guid: 7aed1ba62cab16e4889db9d3c050cc10,
+      type: 3}
+    CostCoin: 20

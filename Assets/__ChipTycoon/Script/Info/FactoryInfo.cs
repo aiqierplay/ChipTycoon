@@ -4,6 +4,7 @@ using System.Collections.Generic;
 [Serializable]
 public class FactoryInfo : SaveInfoList<FactoryInfo>
 {
+    public bool Unlock = true;
     public int InputCount;
     public int OutputCount;
 

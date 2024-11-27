@@ -12,6 +12,6 @@ public class DropProduct : DropBase
 
     public override void GetImpl()
     {
-        
+        World.Factory01.Output.Add(1);
     }
 }

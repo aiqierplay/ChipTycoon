@@ -31,7 +31,7 @@ public class DiggerArea : EntityBase
             dropTriggerBase.Init();
         }
 
-        DiggerTool.Init();
+        DiggerTool.RefreshLine();
     }
 
     public void StartDigger()
@@ -56,6 +56,7 @@ public class DiggerArea : EntityBase
         DiggerTool.SetActive(false);
         World.Mode = GameMode.Work;
         World.SwitchCam(World.Mode);
+        World.Character.EnableMove();
         UIDigger.Ins.Back();
     }
 

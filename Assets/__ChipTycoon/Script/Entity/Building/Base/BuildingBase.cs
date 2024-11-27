@@ -24,6 +24,11 @@ public abstract class BuildingBase : EntityBase
         WorkerList.Clear();
     }
 
+    public virtual void Refresh()
+    {
+
+    }
+
     public virtual void OnEnter(Worker worker)
     {
         worker.OnEnter(this);

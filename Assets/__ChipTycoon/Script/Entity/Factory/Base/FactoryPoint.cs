@@ -1,11 +1,17 @@
+using Sirenix.OdinInspector;
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 [Serializable]
 public class FactoryPoint
 {
+    [ValueDropdown(nameof(TypeGetter))]
     public string Type;
+
+    public IEnumerable TypeGetter() => ProductSetting.Ins.GetValueDropdownKeyList();
+
     public int Max = -1;
     public Transform Pos;
     public StackList StackList;
@@ -32,11 +38,24 @@ public class FactoryPoint
     public void Init()
     {
         StackList.Init();
+        StackList.Prefab = TypeData.Prefab;
     }
 
     public void Refresh()
     {
         if (TextCount != null) TextCount.text = Count.ToString();
         if (MaxTipObj != null) MaxTipObj.SetActive(!CanAdd);
+    }
+
+    public void Add(int count)
+    {
+        StackList.Add(count, true);
+        Refresh();
+    }
+
+    public void Remove(int count)
+    {
+        StackList.Remove(count);
+        Refresh();
     }
 }

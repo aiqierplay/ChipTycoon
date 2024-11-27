@@ -1,7 +1,5 @@
 using Sirenix.OdinInspector;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -24,5 +22,29 @@ public abstract class FactoryBase : BuildingBase
     {
         Index = index;
         Info = FactoryInfo.GetInfo(index, true);
+        Input.Init();
+        Output.Init();
+        LoadState();
+        Refresh();
+    }
+
+    public void LoadState()
+    {
+        Input.Add(Info.InputCount);
+        Output.Add(Info.OutputCount);
+    }
+
+    public void SaveState()
+    {
+        Info.InputCount = Input.Count;
+        Info.OutputCount = Output.Count;
+        Info.Save();
+    }
+
+    public override void Refresh()
+    {
+        base.Refresh();
+        Input.Refresh();
+        Output.Refresh();
     }
 }
