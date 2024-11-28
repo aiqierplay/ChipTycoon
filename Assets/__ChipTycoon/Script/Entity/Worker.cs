@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Aya.Events;
 using Aya.Extension;
 using Aya.TweenPro;
 using Sirenix.OdinInspector;
@@ -13,14 +14,10 @@ public enum WorkerType
 
 public class Worker : EntityBase
 {
-    [Title("Param")] 
-    public int Capacity = 10;
-
     [Title("Animation")] 
     public string IdleClip;
     public string WalkClip;
 
-    public float MoveSpeed = 5f;
     public float RotateSpeed = 50f;
 
     [GetComponentInChildren, NonSerialized]
@@ -31,12 +28,35 @@ public class Worker : EntityBase
 
     [NonSerialized] public WorkerType Type;
 
+    [NonSerialized] public float MoveSpeed = 10;
+    [NonSerialized] public int Capacity = 10;
+
     public void Init(WorkerType type)
     {
         EnableMove();
         Type = type;
         StackList.Init();
         Play(IdleClip);
+
+        RefreshData();
+        if (Type == WorkerType.Computer)
+        {
+        }
+    }
+
+    [Listen(GameEvent.Upgrade)]
+    public void RefreshData()
+    {
+        if (Type == WorkerType.Computer)
+        {
+            MoveSpeed = Upgrade.GetInfo<WorkerMoveSpeedData>(CurrentLevel.SaveKey).Current.Value;
+            Capacity = Upgrade.GetInfo<WorkerCapacityData>(CurrentLevel.SaveKey).Current.IntValue;
+        }
+        else
+        {
+            MoveSpeed = Upgrade.GetInfo<WorkerMoveSpeedData>(CurrentLevel.SaveKey + "/Player").Current.Value;
+            Capacity = Upgrade.GetInfo<WorkerCapacityData>(CurrentLevel.SaveKey + "/Player").Current.IntValue;
+        }
     }
 
     #region Trigger
