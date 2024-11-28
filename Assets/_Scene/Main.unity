@@ -787,6 +787,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 620021939326385950, guid: df89a96bc3873ac4ca51912432173105,
+        type: 3}
+      propertyPath: UpgradeInfo.Type
+      value: WorkerUnlockData
+      objectReference: {fileID: 0}
     - target: {fileID: 2863483065888243390, guid: df89a96bc3873ac4ca51912432173105,
         type: 3}
       propertyPath: m_Pivot.x

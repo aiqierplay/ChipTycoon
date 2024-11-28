@@ -1,3 +1,4 @@
+using Aya.Events;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -55,9 +56,17 @@ public class World : EntityBase
         Character.Init(WorkerType.Player);
     }
 
+
+    [Listen(GameEvent.Upgrade)]
     public void SpawnWorker()
     {
-        WorkerList.Clear();
+        var workerCount = Upgrade.GetInfo<WorkerUnlockData>(CurrentLevel.SaveKey + "/Worker").Current.IntValue;
+        while (WorkerList.Count < workerCount)
+        {
+            var worker = GamePool.Spawn(GeneralSetting.Ins.WorkerPrefab, WorkerTrans, Vector3.zero);
+            worker.Init(WorkerType.Computer);
+            WorkerList.Add(worker);
+        }
     }
 
     public void SwitchCam(GameMode mode)
