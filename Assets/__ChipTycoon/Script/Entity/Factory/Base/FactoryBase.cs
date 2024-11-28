@@ -2,13 +2,16 @@ using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using Aya.Async;
+using Aya.Events;
 using TMPro;
 using UnityEngine;
 
 public abstract class FactoryBase : BuildingBase
 {
-    [BoxGroup("Input")] public FactoryPoint Input = new FactoryPoint();
+    [GUIColor(0.5f, 1f, 1f)]
+    public string DataKey;
 
+    [BoxGroup("Input")] public FactoryPoint Input = new FactoryPoint();
     [BoxGroup("Output")] public FactoryPoint Output = new FactoryPoint();
 
     [BoxGroup("State")] public GameObject LockObj;
@@ -16,13 +19,12 @@ public abstract class FactoryBase : BuildingBase
     [BoxGroup("State")] public GameObject UnlockObj;
     [BoxGroup("State")] public TMP_Text TextUnlockCost;
 
-    public float WorkDuration = 1f;
-    public float WorkInterval = 0.5f;
-    
     [NonSerialized] public int Index; 
     [NonSerialized] public FactoryInfo Info;
     [NonSerialized] public bool IsWorking = false;
     [NonSerialized] public float WorkProgress;
+    [NonSerialized] public float WorkDuration = 1f;
+    [NonSerialized] public float WorkInterval = 0.5f;
 
     public virtual void Init(int index)
     {
@@ -31,9 +33,16 @@ public abstract class FactoryBase : BuildingBase
         Input.Init();
         Output.Init();
         LoadState();
+        RefreshData();
         Refresh();
 
         StartCoroutine(WorkCo());
+    }
+
+    [Listen(GameEvent.Upgrade)]
+    public void RefreshData()
+    {
+        WorkDuration = Upgrade.GetInfo<FactoryWorkDurationData>(CurrentLevel.SaveKey + "/" + DataKey).Current.Value;
     }
 
     public virtual void LoadState()

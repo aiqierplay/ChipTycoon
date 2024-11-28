@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ea89d383f4eae4ea4ce9ba258bcdcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataKey: Factory_02
   Input:
     Type: Product_01
     Max: -1
