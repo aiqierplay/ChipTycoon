@@ -67,7 +67,8 @@ public abstract class FactoryBase : BuildingBase
 
     public virtual void OnClick()
     {
-
+        UI.Show<UIFactory>(this);
+        World.Character.DisableMove();
     }
 
     public IEnumerator WorkCo()
