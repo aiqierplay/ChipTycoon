@@ -15,7 +15,7 @@ public class FactoryPoint
     public int Max = -1;
     public Transform Pos;
     public StackList StackList;
-    public int Number;
+    public int Number = 1;
     public TMP_Text TextCount;
     public GameObject MaxTipObj;
 
