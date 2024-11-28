@@ -49,8 +49,8 @@ public class Worker : EntityBase
     {
         if (Type == WorkerType.Computer)
         {
-            MoveSpeed = Upgrade.GetInfo<WorkerMoveSpeedData>(CurrentLevel.SaveKey).Current.Value;
-            Capacity = Upgrade.GetInfo<WorkerCapacityData>(CurrentLevel.SaveKey).Current.IntValue;
+            MoveSpeed = Upgrade.GetInfo<WorkerMoveSpeedData>(CurrentLevel.SaveKey + "/Worker").Current.Value;
+            Capacity = Upgrade.GetInfo<WorkerCapacityData>(CurrentLevel.SaveKey + "/Worker").Current.IntValue;
         }
         else
         {

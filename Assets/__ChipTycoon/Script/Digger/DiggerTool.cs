@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using Aya.Events;
 using Aya.Extension;
 using Aya.Maths;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.Port;
 
 public enum DiggerToolMode
 {
@@ -21,7 +23,6 @@ public class DiggerTool : EntityBase
     public Transform RootTrans;
     public Transform MoveTrans;
     public LineRenderer Line;
-    public float Length = 3;
 
     public float MoveSpeed = 5;
     public float RotateSpeed = 10;
@@ -31,15 +32,28 @@ public class DiggerTool : EntityBase
     [NonSerialized] public Vector3 StartPos;
     [NonSerialized] public Vector3 Direction;
     [NonSerialized] public DiggerToolData CurrentTool;
-    
+
+    [NonSerialized] public float Power;
+    [NonSerialized] public float Length;
+    [NonSerialized] public float AbsorberSpeed;
+
     public void Init()
     {
         Direction = Vector3.zero;
         Trans.ResetLocal();
         RootTrans.ResetLocal();
         MoveTrans.ResetLocal();
+        RefreshData();
         RefreshLine();
         SwitchTool(DiggerToolMode.Digger);
+    }
+
+    [Listen(GameEvent.Upgrade)]
+    public void RefreshData()
+    {
+        Power = Upgrade.GetInfo<DiggerPowerData>(CurrentLevel.SaveKey).Current.Value;
+        Length = Upgrade.GetInfo<DiggerLengthData>(CurrentLevel.SaveKey).Current.Value;
+        AbsorberSpeed = Upgrade.GetInfo<AbsorberSpeedData>(CurrentLevel.SaveKey).Current.Value;
     }
 
     public void SwitchTool(DiggerToolMode mode)
@@ -56,6 +70,11 @@ public class DiggerTool : EntityBase
             {
                 data.DeActive();
             }
+        }
+
+        if (CurrentTool.Mode == DiggerToolMode.Absorber)
+        {
+            CurrentTool.Target.transform.SetLocalScale(AbsorberSpeed);
         }
     }
 
