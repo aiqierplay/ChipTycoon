@@ -65,6 +65,11 @@ public abstract class FactoryBase : BuildingBase
         Output.Refresh();
     }
 
+    public virtual void OnClick()
+    {
+
+    }
+
     public IEnumerator WorkCo()
     {
         IsWorking = false;
