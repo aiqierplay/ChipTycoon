@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Aya.Async;
 using Aya.Events;
 using Aya.Extension;
 using Aya.TweenPro;
@@ -27,9 +28,9 @@ public class Worker : EntityBase
     public bool IsEmpty => StackList.IsEmpty;
 
     [NonSerialized] public WorkerType Type;
-
     [NonSerialized] public float MoveSpeed = 10;
     [NonSerialized] public int Capacity = 10;
+    [NonSerialized] public BuildingFactory WorkFactory;
 
     public void Init(WorkerType type)
     {
@@ -41,6 +42,7 @@ public class Worker : EntityBase
         RefreshData();
         if (Type == WorkerType.Computer)
         {
+            StartCoroutine(ComputerWorkCo());
         }
     }
 
@@ -70,7 +72,7 @@ public class Worker : EntityBase
         CurrentBuilding = building;
         if (CurrentBuilding is BuildingFactory factory)
         {
-            WorkCoroutine = StartCoroutine(WorkCo(factory));
+            WorkCoroutine = StartCoroutine(FactoryWorkCo(factory));
         }
     }
 
@@ -133,13 +135,13 @@ public class Worker : EntityBase
 
     }
 
-    public IEnumerator MoveTo(Vector3 position, Action onDone)
+    public IEnumerator MoveTo(Vector3 position)
     {
         Play(WalkClip);
         var tweenMove = UTween.Position(Trans, position, MoveSpeed)
             .SetSpeedBased();
         yield return tweenMove.WaitForComplete();
-        var forward = position - Position;
+        var forward = (position - Position).normalized;
         if (forward != Vector3.zero)
         {
             UTween.Forward(Trans, forward, 0.2f);
@@ -171,8 +173,59 @@ public class Worker : EntityBase
         }
     }
 
+    public FactoryBase FindOutputFactory()
+    {
+       var factoryList = World.FactoryList.FindAll(f => f.Output.Count > 0);
+       if (factoryList.Count == 0) return null;
+       var factory = factoryList.Random();
+       return factory;
+    }
 
-    public IEnumerator WorkCo(BuildingFactory factory)
+    public FactoryBase FindInputFactory()
+    {
+        var factoryList = World.FactoryList.FindAll(f => f.Input.Enable &&
+                                                         f.Input.CanAdd && 
+                                                         f.Input.Type == CurrentProductType.Key);
+        if (factoryList.Count == 0) return null;
+        var factory = factoryList.Random();
+        return factory;
+    }
+
+    public IEnumerator ComputerWorkCo()
+    {
+        while (true)
+        {
+            while (IsEmpty)
+            {
+                var targetFactory = FindOutputFactory();
+                if (targetFactory != null)
+                {
+                    var targetPos = targetFactory.Output.Pos.position;
+                    yield return MoveTo(targetPos);
+                    yield return TransferOutputCo(targetFactory);
+                }
+
+                yield return YieldBuilder.WaitForSeconds(0.5f);
+            }
+
+            while (!IsEmpty)
+            {
+                var targetFactory = FindInputFactory();
+                if (targetFactory != null)
+                {
+                    var targetPos = targetFactory.Input.Pos.position;
+                    yield return MoveTo(targetPos);
+                    yield return TransferInputCo(targetFactory);
+                }
+
+                yield return YieldBuilder.WaitForSeconds(0.5f);
+            }
+
+            yield return YieldBuilder.WaitForSeconds(0.5f);
+        }
+    }
+
+    public IEnumerator FactoryWorkCo(BuildingFactory factory)
     {
         while (IsWorking)
         {
@@ -196,7 +249,7 @@ public class Worker : EntityBase
         IsWorking = false;
     }
 
-    public IEnumerator TransferInputCo(BuildingFactory factory)
+    public IEnumerator TransferInputCo(FactoryBase factory)
     {
         while (!IsEmpty && factory.Input.CanAdd)
         {
@@ -210,7 +263,7 @@ public class Worker : EntityBase
         yield return null;
     }
 
-    public IEnumerator TransferOutputCo(BuildingFactory factory)
+    public IEnumerator TransferOutputCo(FactoryBase factory)
     {
         while (!IsFull && !factory.Output.IsEmpty)
         {

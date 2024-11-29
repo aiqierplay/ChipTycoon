@@ -31,12 +31,14 @@ public abstract class BuildingBase : EntityBase
 
     public virtual void OnEnter(Worker worker)
     {
+        if (worker.Type != WorkerType.Player) return;
         worker.OnEnter(this);
         OnEnterImpl(worker);
     }
 
     public virtual void OnExit(Worker worker)
     {
+        if (worker.Type != WorkerType.Player) return;
         worker.OnExit(this);
         OnExitImpl(worker);
     }

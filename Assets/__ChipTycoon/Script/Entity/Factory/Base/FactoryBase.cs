@@ -75,6 +75,18 @@ public abstract class FactoryBase : BuildingBase
         World.Character.DisableMove();
     }
 
+    [Button]
+    public void TestAddInput()
+    {
+        Input.Add(10);
+    }
+
+    [Button]
+    public void TestAddOutput()
+    {
+        Output.Add(10);
+    }
+
     public IEnumerator WorkCo()
     {
         IsWorking = false;
@@ -85,7 +97,7 @@ public abstract class FactoryBase : BuildingBase
             if (Input.Count >= Input.Number && Output.CanAdd)
             {
                 IsWorking = true;
-                TweenWork.Value.Sample(0f);
+                TweenWork.Sample(0f);
                 while (timer <= WorkDuration)
                 {
                     timer += DeltaTime;
@@ -106,13 +118,13 @@ public abstract class FactoryBase : BuildingBase
                         Output.Add(Output.Number);
                         IsWorking = false;
 
-                        TweenWork.Value.Sample(WorkProgress);
+                        TweenWork.Sample(WorkProgress);
                         Refresh();
                         break;
                     }
 
                     Refresh();
-                    TweenWork.Value.Sample(0f);
+                    TweenWork.Sample(0f);
                     yield return null;
                 }
 

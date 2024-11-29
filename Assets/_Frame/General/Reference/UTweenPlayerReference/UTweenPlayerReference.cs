@@ -27,4 +27,10 @@ public class UTweenPlayerReference : CustomTypeReference<UTweenPlayer>
         if (Value == null) return;
         Value.Stop();
     }
+
+    public void Sample(float normalizedDuration)
+    {
+        if (Value == null) return;
+        Value.Sample(normalizedDuration);
+    }
 }
