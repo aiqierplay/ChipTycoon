@@ -67,6 +67,7 @@ public abstract class FactoryBase : BuildingBase
 
     public virtual void OnClick()
     {
+        if (UI.Current is not UIGame) return;
         UI.Show<UIFactory>(this);
         World.Character.DisableMove();
     }

@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 1189539756843625234}
   - component: {fileID: 3090076996114714099}
   m_Layer: 15
-  m_Name: Factory_Product_01
+  m_Name: Factory_Product_02_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,21 +241,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ea89d383f4eae4ea4ce9ba258bcdcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataKey: Factory_01
+  DataKey: Factory_03
   Input:
-    Enable: 0
+    Enable: 1
     RootObj: {fileID: 377112399302860110}
-    Type: Product_01
+    Type: Product_02
     Max: -1
     Pos: {fileID: 6123234807666335199}
     StackList: {fileID: 7442202682850186953}
-    Number: 1
+    Number: 3
     TextCount: {fileID: 7144148047952877870}
     MaxTipObj: {fileID: 0}
   Output:
     Enable: 1
     RootObj: {fileID: 1524857835041897730}
-    Type: Product_01
+    Type: Product_03
     Max: -1
     Pos: {fileID: 3484190210551688453}
     StackList: {fileID: 6026419197688667960}
@@ -443,7 +443,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1e8d614b2f7f5f8439ef666f27d30f5e, type: 2}
+  - {fileID: 2100000, guid: fce0c3d5d9856be44bffc8f3a4b85f92, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -7,6 +7,9 @@ using UnityEngine;
 [Serializable]
 public class FactoryPoint
 {
+    public bool Enable;
+    public GameObject RootObj;
+
     [ValueDropdown(nameof(TypeGetter))]
     public string Type;
 
@@ -39,10 +42,12 @@ public class FactoryPoint
     {
         StackList.Init();
         StackList.Prefab = TypeData.Prefab;
+        Refresh();
     }
 
     public void Refresh()
     {
+        if (RootObj != null) RootObj.SetActive(Enable);
         if (TextCount != null) TextCount.text = Count.ToString();
         if (MaxTipObj != null) MaxTipObj.SetActive(!CanAdd);
     }
