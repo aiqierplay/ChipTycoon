@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using Aya.Async;
 using Aya.Events;
+using Aya.TweenPro;
 using TMPro;
 using UnityEngine;
 
@@ -18,6 +19,8 @@ public abstract class FactoryBase : BuildingBase
     [BoxGroup("State")] public GameObject CanUnlockTip;
     [BoxGroup("State")] public GameObject UnlockObj;
     [BoxGroup("State")] public TMP_Text TextUnlockCost;
+
+    public UTweenPlayerReference TweenWork;
 
     [NonSerialized] public int Index; 
     [NonSerialized] public FactoryInfo Info;
@@ -82,6 +85,7 @@ public abstract class FactoryBase : BuildingBase
             if (Input.Count >= Input.Number && Output.CanAdd)
             {
                 IsWorking = true;
+                TweenWork.Value.Sample(0f);
                 while (timer <= WorkDuration)
                 {
                     timer += DeltaTime;
@@ -102,11 +106,13 @@ public abstract class FactoryBase : BuildingBase
                         Output.Add(Output.Number);
                         IsWorking = false;
 
+                        TweenWork.Value.Sample(WorkProgress);
                         Refresh();
                         break;
                     }
 
                     Refresh();
+                    TweenWork.Value.Sample(0f);
                     yield return null;
                 }
 
