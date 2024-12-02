@@ -16,13 +16,16 @@ public abstract class FactoryBase : BuildingBase
     [BoxGroup("Output")] public FactoryPoint Output = new FactoryPoint();
 
     [BoxGroup("State")] public GameObject LockObj;
-    [BoxGroup("State")] public GameObject CanUnlockTip;
     [BoxGroup("State")] public GameObject UnlockObj;
+    [BoxGroup("State")] public TMP_Text TextUnlockSpent;
     [BoxGroup("State")] public TMP_Text TextUnlockCost;
+    [BoxGroup("State")] public int UnlockSpeed = 1;
 
-    public UTweenPlayerReference TweenWork;
+    [BoxGroup("Effect")] public UTweenPlayerReference TweenWork;
+    [BoxGroup("Effect")] public GameObject FxUnlock;
 
-    [NonSerialized] public int Index; 
+    [NonSerialized] public int Index;
+    [NonSerialized] public FactoryData Data;
     [NonSerialized] public FactoryInfo Info;
     [NonSerialized] public bool IsWorking = false;
     [NonSerialized] public float WorkProgress;
@@ -32,7 +35,13 @@ public abstract class FactoryBase : BuildingBase
     public virtual void Init(int index)
     {
         Index = index;
+        Data = Config.GetData<FactoryData>(index, CurrentLevel.SaveKey);
         Info = FactoryInfo.GetInfo(index, true);
+        if (!Info.Unlock && Data.DefaultUnlock)
+        {
+            Info.Unlock = true;
+        }
+
         Input.Init();
         Output.Init();
         LoadState();
@@ -66,6 +75,11 @@ public abstract class FactoryBase : BuildingBase
         base.Refresh();
         Input.Refresh();
         Output.Refresh();
+
+        if (LockObj != null) LockObj.SetActive(!Info.Unlock);
+        if (UnlockObj != null) UnlockObj.SetActive(Info.Unlock);
+        if (TextUnlockSpent != null) TextUnlockSpent.text = Info.UnlockSpent.ToString();
+        if (TextUnlockCost != null) TextUnlockCost.text = Data.UnlockCost.ToString();
     }
 
     public virtual void OnClick()
@@ -87,10 +101,56 @@ public abstract class FactoryBase : BuildingBase
         Output.Add(10);
     }
 
+    [NonSerialized] public Coroutine UnlockCoroutine;
+
+    public override void OnEnterImpl(Worker worker)
+    {
+        if (!Info.Unlock)
+        {
+            UnlockCoroutine = StartCoroutine(UnlockCo());
+        }
+    }
+
+    public override void OnExitImpl(Worker worker)
+    {
+        if (UnlockCoroutine != null)
+        {
+            StopCoroutine(UnlockCoroutine);
+            UnlockCoroutine = null;
+        }
+    }
+
+    public IEnumerator UnlockCo()
+    {
+        while (!Info.Unlock)
+        {
+            Info.UnlockSpent += UnlockSpeed;
+            Info.Save();
+            Refresh();
+            yield return null;
+
+            if (Info.UnlockSpent >= Data.UnlockCost)
+            {
+                Info.Unlock = true;
+                Info.Save();
+
+                SpawnFx(FxUnlock);
+                Refresh();
+                StartCoroutine(WorkCo());
+                break;
+            }
+        }
+    }
+
     public IEnumerator WorkCo()
     {
         IsWorking = false;
         WorkProgress = 0f;
+        while (!Info.Unlock)
+        {
+            yield return YieldBuilder.WaitForSeconds(1f);
+        }
+
         while (true)
         {
             var timer = 0f;

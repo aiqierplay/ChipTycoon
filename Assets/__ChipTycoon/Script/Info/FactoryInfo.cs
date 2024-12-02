@@ -1,10 +1,11 @@
 using System;
-using System.Collections.Generic;
 
 [Serializable]
 public class FactoryInfo : SaveInfoList<FactoryInfo>
 {
-    public bool Unlock = true;
+    public bool Unlock;
+    public int UnlockSpent;
+
     public int InputCount;
     public int OutputCount;
 
@@ -13,5 +14,7 @@ public class FactoryInfo : SaveInfoList<FactoryInfo>
         base.Reset();
         InputCount = 0;
         OutputCount = 0;
+        UnlockSpent = 0;
+        Unlock = false;
     }
 }

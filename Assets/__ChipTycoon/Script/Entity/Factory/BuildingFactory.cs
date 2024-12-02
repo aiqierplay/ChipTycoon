@@ -4,13 +4,5 @@ using UnityEngine;
 
 public class BuildingFactory : FactoryBase
 {
-    public override void OnEnterImpl(Worker worker)
-    {
-        
-    }
 
-    public override void OnExitImpl(Worker worker)
-    {
-       
-    }
 }
