@@ -6,6 +6,7 @@ using Aya.Extension;
 using Aya.TweenPro;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public enum WorkerType
 {
@@ -177,7 +178,7 @@ public class Worker : EntityBase
 
     public FactoryBase FindOutputFactory()
     {
-       var factoryList = World.FactoryList.FindAll(f => f.Output.Count > 0);
+       var factoryList = World.FactoryList.FindAll(f => f.Output.Count > 0 && !f.Output.TypeData.IsFinal);
        if (factoryList.Count == 0) return null;
        var factory = factoryList.Random();
        return factory;
@@ -270,7 +271,26 @@ public class Worker : EntityBase
         while (!IsFull && !factory.Output.IsEmpty)
         {
             var product = factory.Output.StackList.Pop() as Product;
-            StackList.AddParabola(product);
+            if (product == null) yield break;
+            if (product.TypeData.IsFinal)
+            {
+                StackList.AddParabola(product, () =>
+                {
+                    var value = product.TypeData.CostCoin;
+                    UIFlyIcon.Ins.Fly(UIFlyIcon.Coin, WorldToUiPosition(), 1, () =>
+                    {
+                        Save.Coin.Value += value;
+                    });
+
+                    StackList.Remove(product);
+                });
+            }
+            else
+            {
+                StackList.AddParabola(product);
+                
+            }
+
             factory.Output.Refresh();
             yield return null;
         }

@@ -10,4 +10,5 @@ public class ProductTypeData : SettingDataBase
     public Sprite Icon;
     public Product Prefab;
     public int CostCoin;
+    public bool IsFinal;
 }

@@ -31,3 +31,8 @@ MonoBehaviour:
     Prefab: {fileID: 5102741648946911573, guid: 8243dbd67ef39e54da01b94e29709001,
       type: 3}
     CostCoin: 100
+  - Key: Product_04
+    Name: 
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    CostCoin: 0
