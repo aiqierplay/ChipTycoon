@@ -40,4 +40,4 @@ MonoBehaviour:
     Prefab: {fileID: 5102741648946911573, guid: a16fc5c76f0974d4db0471b551fee155,
       type: 3}
     CostCoin: 100
-    IsFinal: 0
+    IsFinal: 1
