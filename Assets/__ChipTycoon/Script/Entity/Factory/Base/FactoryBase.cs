@@ -88,18 +88,18 @@ public abstract class FactoryBase : BuildingBase
         UI.Show<UIFactory>(this);
         World.Character.DisableMove();
     }
-
-    [Button]
-    public void TestAddInput()
-    {
-        Input.Add(10);
-    }
-
-    [Button]
-    public void TestAddOutput()
-    {
-        Output.Add(10);
-    }
+    
+    // [Button]
+    // public void TestAddInput()
+    // {
+    //     Input.Add(10);
+    // }
+    //
+    // [Button]
+    // public void TestAddOutput()
+    // {
+    //     Output.Add(10);
+    // }
 
     [NonSerialized] public Coroutine UnlockCoroutine;
 

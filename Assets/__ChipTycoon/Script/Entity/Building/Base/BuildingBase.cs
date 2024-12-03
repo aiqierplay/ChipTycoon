@@ -6,10 +6,7 @@ using UnityEngine;
 
 public abstract class BuildingBase : EntityBase
 {
-    [GetComponentInChildren, NonSerialized]
     public ColliderListenerEnter ColliderListenerEnter;
-
-    [GetComponentInChildren, NonSerialized]
     public ColliderListenerExit ColliderListenerExit;
 
     [NonSerialized] public List<Worker> WorkerList = new List<Worker>();
