@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 [Serializable]
 public class LevelSaveInfo : SaveInfoList<LevelSaveInfo>
@@ -7,6 +8,9 @@ public class LevelSaveInfo : SaveInfoList<LevelSaveInfo>
 
     public bool IsLock = true;
     public bool IsPass = false;
+
+    public int DropProductCount;
+    public List<int> DiggableState = new List<int>();
 
     public void UnLock()
     {
@@ -27,5 +31,7 @@ public class LevelSaveInfo : SaveInfoList<LevelSaveInfo>
         IsLock = true;
         IsPass = false;
         if (Index <= 1) IsLock = false;
+        DiggableState.Clear();
+        DropProductCount = 0;
     }
 }

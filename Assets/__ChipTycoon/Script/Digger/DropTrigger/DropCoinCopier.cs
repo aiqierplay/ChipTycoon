@@ -19,7 +19,6 @@ public class DropCoinCopier : DropTriggerBase
         for (var i = 0; i < CopyCount - 1; i++)
         {
             var coin = GamePool.Spawn(prefab, CurrentLevel.Trans, dropItem.Position);
-            World.DropList.Add(coin);
             coin.Prefab = prefab;
             coin.Value = dropItem.Value;
             DropList.Add(coin);

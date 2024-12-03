@@ -8,7 +8,6 @@ public abstract class DropBase : EntityBase
     public void Init()
     {
         EnablePhysic();
-        World.DropList.Add(this);
     }
 
     public void EnablePhysic()
@@ -29,9 +28,8 @@ public abstract class DropBase : EntityBase
 
     public abstract void GetImpl();
 
-    public void DeSpawn()
+    public virtual void DeSpawn()
     {
-        World.DropList.Remove(this);
         GamePool.DeSpawn(this);
     }
 }

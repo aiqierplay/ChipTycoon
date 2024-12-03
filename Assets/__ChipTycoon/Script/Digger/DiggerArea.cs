@@ -18,6 +18,7 @@ public class DiggerArea : EntityBase
     public List<DropTriggerBase> DropTriggerList;
 
     [NonSerialized] public List<DiggableOre> OreList = new List<DiggableOre>();
+    [NonSerialized] public List<DropProduct> DropProductList = new List<DropProduct>();
 
     public void Init()
     {
@@ -32,6 +33,45 @@ public class DiggerArea : EntityBase
         }
 
         DiggerTool.RefreshLine();
+
+        LoadState();
+    }
+
+    public void LoadState()
+    {
+        if (CurrentLevel.Info.DiggableState.Count == 0)
+        {
+            CurrentLevel.Info.DiggableState = new List<int>();
+            for (var i = 0; i < DiggableList.Count; i++)
+            {
+                CurrentLevel.Info.DiggableState.Add(1);
+            }
+        }
+
+        for (var i = 0; i < DiggableList.Count; i++)
+        {
+            var diggable = DiggableList[i];
+            var active = CurrentLevel.Info.DiggableState[i];
+            diggable.IsBroken = active == 0 ? true : false;
+            if (active == 0) diggable.SetActive(false);
+        }
+
+        for (var i = 0; i < CurrentLevel.Info.DropProductCount; i++)
+        {
+            DiggableOre.CreateDropProduct(Position);
+        }
+    }
+
+    public void SaveState()
+    {
+        for (var i = 0; i < DiggableList.Count; i++)
+        {
+            var diggable = DiggableList[i];
+            CurrentLevel.Info.DiggableState[i] = diggable.IsBroken ? 0 : 1;
+        }
+
+        CurrentLevel.Info.DropProductCount = DropProductList.Count;
+        CurrentLevel.Info.Save();
     }
 
     public void StartDigger()

@@ -14,4 +14,10 @@ public class DropProduct : DropBase
     {
         World.Factory01.Output.Add(1);
     }
+
+    public override void DeSpawn()
+    {
+        World.DiggerArea.DropProductList.Remove(this);
+        base.DeSpawn();
+    }
 }

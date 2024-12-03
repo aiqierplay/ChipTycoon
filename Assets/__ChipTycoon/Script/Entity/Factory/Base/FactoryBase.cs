@@ -125,15 +125,12 @@ public abstract class FactoryBase : BuildingBase
         while (!Info.Unlock)
         {
             Info.UnlockSpent += UnlockSpeed;
-            Info.Save();
             Refresh();
             yield return null;
 
             if (Info.UnlockSpent >= Data.UnlockCost)
             {
                 Info.Unlock = true;
-                Info.Save();
-
                 SpawnFx(FxUnlock);
                 Refresh();
                 StartCoroutine(WorkCo());

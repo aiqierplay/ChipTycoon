@@ -105,6 +105,7 @@ public class Worker : EntityBase
     {
         ActiveMove = false;
         IsMoving = false;
+        Play(IdleClip);
     }
 
     public void OnTouchStart(Vector3 pos)
@@ -140,12 +141,13 @@ public class Worker : EntityBase
         Play(WalkClip);
         var tweenMove = UTween.Position(Trans, position, MoveSpeed)
             .SetSpeedBased();
-        yield return tweenMove.WaitForComplete();
         var forward = (position - Position).normalized;
         if (forward != Vector3.zero)
         {
             UTween.Forward(Trans, forward, 0.2f);
         }
+
+        yield return tweenMove.WaitForComplete();
 
         Play(IdleClip);
         yield return null;

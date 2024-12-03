@@ -1,22 +1,19 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Aya.Physical;
 using Aya.Util;
 using UnityEngine;
 
 public class DiggableOre : DiggableBase
 {
-    public DropBase DropPrefab;
-    public int RewardValue;
-
     public override void OnEnterImpl(DiggerTool digger)
+    {  
+        CreateDropProduct(Position);
+    }
+
+    public static void CreateDropProduct(Vector3 position)
     {
-        if (RewardValue <= 0) return;
-        var dropItem = GamePool.Spawn(DropPrefab, CurrentLevel.Trans, Position + RandUtil.RandVector3(-0.05f, 0.05f));
-        World.DropList.Add(dropItem);
+        var prefab = GeneralSetting.Ins.DropPrefab;
+        var dropItem = AppManager.Ins.GamePool.Spawn(prefab, AppManager.Ins.CurrentLevel.Trans, position + RandUtil.RandVector3(-0.05f, 0.05f));
+        AppManager.Ins.World.DiggerArea.DropProductList.Add(dropItem);
         dropItem.Init();
-        dropItem.Prefab = DropPrefab;
-        dropItem.Value = RewardValue;
+        dropItem.Prefab = prefab;
     }
 }

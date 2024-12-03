@@ -114,16 +114,19 @@ public class AppManager : EntityBase<AppManager>
 
     public void OnApplicationFocus(bool isFocusOn)
     {
-
+        if (CurrentLevel == null) return;
+        World.SaveState();
     }
 
     public void OnApplicationPause()
     {
-
+        if (CurrentLevel == null) return;
+        World.SaveState();
     }
 
     public void OnApplicationQuit()
     {
-
+        if (CurrentLevel == null) return;
+        World.SaveState();
     }
 }
