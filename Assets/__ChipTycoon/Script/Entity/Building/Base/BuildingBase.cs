@@ -2,25 +2,33 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Aya.Physical;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public abstract class BuildingBase : EntityBase
 {
-    [GetComponentInChildren, NonSerialized]
-    public ColliderListenerEnter ColliderListenerEnter;
+    [GetComponentInChildren, NonSerialized] [CanBeNull]
+    public List<ColliderListenerEnter> ColliderListenerEnter;
 
     [GetComponentInChildren, NonSerialized]
-    public ColliderListenerExit ColliderListenerExit;
+    public List<ColliderListenerExit> ColliderListenerExit;
 
     [NonSerialized] public List<Worker> WorkerList = new List<Worker>();
 
     public virtual void Init()
     {
-        ColliderListenerEnter.Clear();
-        ColliderListenerEnter.onTriggerEnter.Add<Worker>(OnEnter, LayerManager.Ins.Player);
-        ColliderListenerExit.Clear();
-        ColliderListenerExit.onTriggerExit.Add<Worker>(OnExit, LayerManager.Ins.Player);
+        foreach (var enter in ColliderListenerEnter)
+        {
+            enter.Clear();
+            enter.onTriggerEnter.Add<Worker>(OnEnter, LayerManager.Ins.Player);
+        }
 
+        foreach (var exit in ColliderListenerExit)
+        {
+            exit.Clear();
+            exit.onTriggerExit.Add<Worker>(OnExit, LayerManager.Ins.Player);
+        }
+        
         WorkerList.Clear();
     }
 
