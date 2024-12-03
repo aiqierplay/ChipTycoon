@@ -65,6 +65,8 @@ public class Worker : EntityBase
     #region Trigger
 
     [NonSerialized] public BuildingBase CurrentBuilding;
+    [NonSerialized] public FactoryBase CurrentFactory;
+    [NonSerialized] public FactoryPoint CurrentFactoryPoint;
     [NonSerialized] public bool IsWorking= false;
     [NonSerialized] public Coroutine WorkCoroutine;
 
@@ -77,6 +79,14 @@ public class Worker : EntityBase
         }
     }
 
+    public void OnEnter(FactoryBase factory, FactoryPoint point)
+    {
+        CurrentFactory = factory;
+        CurrentFactoryPoint = point;
+        OnEnter(factory);
+    }
+
+
     public void OnExit(BuildingBase building)
     {
         CurrentBuilding = null;
@@ -88,10 +98,17 @@ public class Worker : EntityBase
         }
     }
 
+    public void OnExit(FactoryBase factory, FactoryPoint point)
+    {
+        CurrentFactory = null;
+        CurrentFactoryPoint = null;
+        OnExit(factory);
+    }
+
     #endregion
 
     #region Move
-  
+
     [NonSerialized] public bool ActiveMove;
     [NonSerialized] public bool IsMoving;
     [NonSerialized] public Vector3 StartPos;
@@ -254,7 +271,7 @@ public class Worker : EntityBase
 
     public IEnumerator TransferInputCo(FactoryBase factory)
     {
-        while (!IsEmpty && factory.Input.CanAdd)
+        while (!IsEmpty && factory.Input.CanAdd && CurrentFactoryPoint != null && CurrentFactoryPoint.Mode == FactoryPointMode.Input)
         {
             var product = StackList.Pop() as Product;
             factory.Input.StackList.AddParabola(product);
@@ -268,7 +285,7 @@ public class Worker : EntityBase
 
     public IEnumerator TransferOutputCo(FactoryBase factory)
     {
-        while (!IsFull && !factory.Output.IsEmpty)
+        while (!IsFull && !factory.Output.IsEmpty && CurrentFactoryPoint != null && CurrentFactoryPoint.Mode == FactoryPointMode.Output)
         {
             var product = factory.Output.StackList.Pop() as Product;
             if (product == null) yield break;

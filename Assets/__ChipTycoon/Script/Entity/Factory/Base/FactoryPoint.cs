@@ -1,13 +1,21 @@
+using Aya.Physical;
 using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 
+public enum FactoryPointMode
+{
+    Input = 0,
+    Output = 1,
+}
+
 [Serializable]
 public class FactoryPoint
 {
     public bool Enable;
+    public FactoryPointMode Mode;
     public GameObject RootObj;
 
     [ValueDropdown(nameof(TypeGetter))]
@@ -21,6 +29,9 @@ public class FactoryPoint
     public int Number = 1;
     public TMP_Text TextCount;
     public GameObject MaxTipObj;
+
+    public ColliderListenerEnter ColliderListenerEnter;
+    public ColliderListenerExit ColliderListenerExit;
 
     public ProductTypeData TypeData => ProductSetting.Ins.DataDic[Type];
 
@@ -38,11 +49,39 @@ public class FactoryPoint
     public int Count => StackList.Count;
     public bool IsEmpty => StackList.Count == 0;
 
-    public void Init()
+    [NonSerialized] public FactoryBase Factory;
+
+    public void Init(FactoryBase factory)
     {
+        Factory = factory;
         StackList.Init();
         StackList.Prefab = TypeData.Prefab;
+
+        if (ColliderListenerEnter != null)
+        {
+            ColliderListenerEnter.Clear();
+            ColliderListenerEnter.onTriggerEnter.Add<Worker>(OnEnter, LayerManager.Ins.Player);
+        }
+
+        if (ColliderListenerExit != null)
+        {
+            ColliderListenerExit.Clear();
+            ColliderListenerExit.onTriggerExit.Add<Worker>(OnExit, LayerManager.Ins.Player);
+        }
+
         Refresh();
+    }
+
+    public virtual void OnEnter(Worker worker)
+    {
+        if (worker.Type != WorkerType.Player) return;
+        worker.OnEnter(Factory, this);
+    }
+
+    public virtual void OnExit(Worker worker)
+    {
+        if (worker.Type != WorkerType.Player) return;
+        worker.OnExit(Factory, this);
     }
 
     public void Refresh()

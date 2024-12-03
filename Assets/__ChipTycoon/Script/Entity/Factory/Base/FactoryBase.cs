@@ -42,8 +42,8 @@ public abstract class FactoryBase : BuildingBase
             Info.Unlock = true;
         }
 
-        Input.Init();
-        Output.Init();
+        Input.Init(this);
+        Output.Init(this);
         LoadState();
         RefreshData();
         Refresh();
