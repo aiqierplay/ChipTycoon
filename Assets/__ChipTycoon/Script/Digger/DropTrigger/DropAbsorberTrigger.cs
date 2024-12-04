@@ -17,6 +17,12 @@ public class DropAbsorberTrigger : DropTriggerBase
         dropItem.DisablePhysic();
         while (true)
         {
+            if (CurrentLevel == null || World == null || World.DiggerArea.DiggerTool.CurrentTool == null)
+            {
+                yield return null;
+                continue;
+            }
+
             var targetPos = World.DiggerArea.DiggerTool.CurrentTool.Target.transform.position;
             var fromPos = dropItem.Position;
             var pos = Vector3.Lerp(fromPos, targetPos, Speed * DeltaTime);
