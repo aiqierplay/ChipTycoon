@@ -181,8 +181,8 @@ public abstract class FactoryBase : BuildingBase
 
             if (Input.Count > 0 && ProduceLine.CheckCanInput())
             {
-                Input.StackList.Remove(1);
                 ProduceLine.AddInput();
+                Input.StackList.Remove(1);
                 Refresh();
 
                 inputTimer = 0f;

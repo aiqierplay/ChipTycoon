@@ -16,8 +16,11 @@ public abstract class DiggableBase : EntityBase
     {
         IsBroken = false;
         gameObject.SetActive(true);
-        ColliderListenerEnter.Clear();
-        ColliderListenerEnter.onTriggerEnter.Add<DiggerTool>(OnEnter, LayerManager.Ins.Player);
+        if (ColliderListenerEnter != null)
+        {
+            ColliderListenerEnter.Clear();
+            ColliderListenerEnter.onTriggerEnter.Add<DiggerTool>(OnEnter, LayerManager.Ins.Player);
+        }
     }
 
     public virtual bool CheckCanBreak()

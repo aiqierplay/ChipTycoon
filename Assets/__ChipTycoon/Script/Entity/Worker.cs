@@ -197,7 +197,7 @@ public class Worker : EntityBase
     {
        var factoryList = World.FactoryList.FindAll(f => f.Output.Count > 0 && !f.Output.TypeData.IsFinal);
        if (factoryList.Count == 0) return null;
-       var factory = factoryList.Random();
+       var factory = factoryList.First();
        return factory;
     }
 
@@ -222,6 +222,8 @@ public class Worker : EntityBase
                 {
                     var targetPos = targetFactory.Output.Pos.position;
                     yield return MoveTo(targetPos);
+                    CurrentFactory = targetFactory;
+                    CurrentFactoryPoint = targetFactory.Output;
                     yield return TransferOutputCo(targetFactory);
                 }
 
@@ -235,11 +237,16 @@ public class Worker : EntityBase
                 {
                     var targetPos = targetFactory.Input.Pos.position;
                     yield return MoveTo(targetPos);
+                    CurrentFactory = targetFactory;
+                    CurrentFactoryPoint = targetFactory.Input;
                     yield return TransferInputCo(targetFactory);
                 }
 
                 yield return YieldBuilder.WaitForSeconds(0.5f);
             }
+
+            CurrentFactory = null;
+            CurrentFactoryPoint = null;
 
             yield return YieldBuilder.WaitForSeconds(0.5f);
         }
@@ -255,18 +262,24 @@ public class Worker : EntityBase
         IsWorking = true;
         if (StackList.IsEmpty)
         {
+            CurrentFactory = factory;
+            CurrentFactoryPoint = factory.Output;
             yield return TransferOutputCo(factory);
         }
         else
         {
             if (factory.Input.Type == CurrentProductType.Key)
             {
+                CurrentFactory = factory;
+                CurrentFactoryPoint = factory.Input;
                 yield return TransferInputCo(factory);
             }
         }
 
         yield return null;
         IsWorking = false;
+        CurrentFactory = null;
+        CurrentFactoryPoint = null;
     }
 
     public IEnumerator TransferInputCo(FactoryBase factory)
@@ -274,17 +287,18 @@ public class Worker : EntityBase
         while (!IsEmpty && factory.Input.CanAdd && CurrentFactoryPoint != null && CurrentFactoryPoint.Mode == FactoryPointMode.Input)
         {
             var product = StackList.Pop() as Product;
+            if (product == null) yield break;
             factory.Input.StackList.AddParabola(product);
             factory.Input.Refresh();
             yield return null;
         }
-
 
         yield return null;
     }
 
     public IEnumerator TransferOutputCo(FactoryBase factory)
     {
+        // Log(StackList.Count, factory.name, CurrentFactory.name, factory.Output.IsEmpty, CurrentFactoryPoint.Mode);
         while (!IsFull && !factory.Output.IsEmpty && CurrentFactoryPoint != null && CurrentFactoryPoint.Mode == FactoryPointMode.Output)
         {
             var product = factory.Output.StackList.Pop() as Product;
@@ -305,7 +319,6 @@ public class Worker : EntityBase
             else
             {
                 StackList.AddParabola(product);
-                
             }
 
             factory.Output.Refresh();
