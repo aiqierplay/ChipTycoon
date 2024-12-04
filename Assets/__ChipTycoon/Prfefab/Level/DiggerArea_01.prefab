@@ -1008,10 +1008,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Digger
       objectReference: {fileID: 0}
-    - target: {fileID: 2797011991858667969, guid: 9f9ca7716c5be5a4d83362aa70e56f90,
+    - target: {fileID: 3807494366536795155, guid: 9f9ca7716c5be5a4d83362aa70e56f90,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807494366536795155, guid: 9f9ca7716c5be5a4d83362aa70e56f90,
+        type: 3}
+      propertyPath: textureScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5165681743868788520, guid: 9f9ca7716c5be5a4d83362aa70e56f90,
         type: 3}
@@ -1068,12 +1073,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6548038017408718094, guid: 9f9ca7716c5be5a4d83362aa70e56f90,
-        type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 0.647026
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3364966878201792353, guid: 9f9ca7716c5be5a4d83362aa70e56f90, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9f9ca7716c5be5a4d83362aa70e56f90, type: 3}
 --- !u!4 &8256036805679866978 stripped
 Transform:
