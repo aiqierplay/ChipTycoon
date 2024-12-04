@@ -390,6 +390,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -859,6 +864,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -1330,6 +1340,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1799,6 +1814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -2270,6 +2290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2739,6 +2764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -3210,6 +3240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3679,6 +3714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -4150,6 +4190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4619,6 +4664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -5090,6 +5140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5559,6 +5614,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -6030,6 +6090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6499,6 +6564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -6970,6 +7040,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7440,6 +7515,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7909,6 +7989,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -8455,6 +8540,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8924,6 +9014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -9395,6 +9490,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9864,6 +9964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -10335,6 +10440,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10804,6 +10914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -11275,6 +11390,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11744,6 +11864,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -12215,6 +12340,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12684,6 +12814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -13155,6 +13290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13624,6 +13764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
@@ -14095,6 +14240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneCell (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14564,6 +14714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneCell (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019259695317642358, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213231102859713280, guid: cc5cb0d021c28a64a874ae7bbf9d5fa8,
         type: 3}
