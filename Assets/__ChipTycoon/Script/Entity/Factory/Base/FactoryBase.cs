@@ -21,7 +21,7 @@ public abstract class FactoryBase : BuildingBase
     [BoxGroup("State")] public TMP_Text TextUnlockCost;
     [BoxGroup("State")] public int UnlockSpeed = 1;
 
-    [BoxGroup("Effect")] public UTweenPlayerReference TweenWork;
+    // [BoxGroup("Effect")] public UTweenPlayerReference TweenWork;
     [BoxGroup("Effect")] public GameObject FxUnlock;
 
     [NonSerialized] public int Index;
@@ -30,7 +30,10 @@ public abstract class FactoryBase : BuildingBase
     [NonSerialized] public bool IsWorking = false;
     [NonSerialized] public float WorkProgress;
     [NonSerialized] public float WorkDuration = 1f;
-    [NonSerialized] public float WorkInterval = 0.5f;
+    // [NonSerialized] public float WorkInterval = 0.5f;
+
+    [GetComponentInChildren, NonSerialized]
+    public ProduceLine ProduceLine;
 
     public virtual void Init(int index)
     {
@@ -47,6 +50,15 @@ public abstract class FactoryBase : BuildingBase
         LoadState();
         RefreshData();
         Refresh();
+
+        ProduceLine.InputNum = Input.Number;
+        ProduceLine.OutputNum = Output.Number;
+        ProduceLine.WorkDuration = WorkDuration;
+        ProduceLine.OnOutput = () =>
+        {
+            Output.Add(1);
+            Refresh();
+        };
 
         StartCoroutine(WorkCo());
     }
@@ -89,17 +101,17 @@ public abstract class FactoryBase : BuildingBase
         World.Character.DisableMove();
     }
     
-    // [Button]
-    // public void TestAddInput()
-    // {
-    //     Input.Add(10);
-    // }
-    //
-    // [Button]
-    // public void TestAddOutput()
-    // {
-    //     Output.Add(10);
-    // }
+    [Button]
+    public void TestAddInput()
+    {
+        Input.Add(10);
+    }
+    
+    [Button]
+    public void TestAddOutput()
+    {
+        Output.Add(10);
+    }
 
     [NonSerialized] public Coroutine UnlockCoroutine;
 
@@ -141,6 +153,8 @@ public abstract class FactoryBase : BuildingBase
 
     public IEnumerator WorkCo()
     {
+        ProduceLine.Init();
+
         IsWorking = false;
         WorkProgress = 0f;
         while (!Info.Unlock)
@@ -148,47 +162,64 @@ public abstract class FactoryBase : BuildingBase
             yield return YieldBuilder.WaitForSeconds(1f);
         }
 
+        var inputTimer = 0f;
         while (true)
         {
-            var timer = 0f;
-            if (Input.Count >= Input.Number && Output.CanAdd)
+            while (inputTimer <= ProduceLine.InputInterval)
             {
-                IsWorking = true;
-                TweenWork.Sample(0f);
-                while (timer <= WorkDuration)
-                {
-                    timer += DeltaTime;
-                    if (timer >= WorkDuration)
-                    {
-                        timer = WorkDuration;
-                    }
+                inputTimer += DeltaTime;
+                yield return null;
+            }
 
-                    WorkProgress = timer / WorkDuration;
+            if (Input.Count > 0 && ProduceLine.CheckCanInput())
+            {
+                Input.StackList.Remove(1);
+                ProduceLine.AddInput();
+                Refresh();
 
-                    if (WorkProgress >= 1)
-                    {
-                        for (var i = 0; i < Input.Number; i++)
-                        {
-                            Input.Remove(Input.Number);
-                        }
-
-                        Output.Add(Output.Number);
-                        IsWorking = false;
-
-                        TweenWork.Sample(WorkProgress);
-                        Refresh();
-                        break;
-                    }
-
-                    Refresh();
-                    TweenWork.Sample(0f);
-                    yield return null;
-                }
-
-                yield return YieldBuilder.WaitForSeconds(WorkInterval);
+                inputTimer = 0f;
             }
 
             yield return null;
         }
+        // while (true)
+        // {
+        //     var timer = 0f;
+        //     if (Input.Count >= Input.Number && Output.CanAdd)
+        //     {
+        //         IsWorking = true;
+        //         TweenWork.Sample(0f);
+        //         while (timer <= WorkDuration)
+        //         {
+        //             timer += DeltaTime;
+        //             if (timer >= WorkDuration)
+        //             {
+        //                 timer = WorkDuration;
+        //             }
+        //
+        //             WorkProgress = timer / WorkDuration;
+        //
+        //             if (WorkProgress >= 1)
+        //             {
+        //                 for (var i = 0; i < Input.Number; i++)
+        //                 {
+        //                     Input.Remove(Input.Number);
+        //                 }
+        //
+        //                 Output.Add(Output.Number);
+        //                 IsWorking = false;
+        //
+        //                 TweenWork.Sample(WorkProgress);
+        //                 Refresh();
+        //                 break;
+        //             }
+        //
+        //             Refresh();
+        //             TweenWork.Sample(0f);
+        //             yield return null;
+        //         }
+        //
+        //         yield return YieldBuilder.WaitForSeconds(WorkInterval);
+        //     }
     }
 }
