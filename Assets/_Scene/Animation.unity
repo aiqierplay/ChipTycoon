@@ -134,6 +134,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Product _02
       objectReference: {fileID: 0}
+    - target: {fileID: 534217210432217683, guid: 7aed1ba62cab16e4889db9d3c050cc10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_RootOrder
@@ -142,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.54
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
@@ -152,7 +157,7 @@ PrefabInstance:
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
@@ -194,6 +199,12 @@ PrefabInstance:
 --- !u!4 &37558672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
+    type: 3}
+  m_PrefabInstance: {fileID: 37558671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &37558673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 534217210432217683, guid: 7aed1ba62cab16e4889db9d3c050cc10,
     type: 3}
   m_PrefabInstance: {fileID: 37558671}
   m_PrefabAsset: {fileID: 0}
@@ -401,6 +412,7 @@ MonoBehaviour:
     SpeedBased: 0
     TweenerList:
     - rid: 7391153651098845185
+    - rid: 7391153651098845195
     OnStart:
       Event:
         m_PersistentCalls:
@@ -450,7 +462,7 @@ MonoBehaviour:
         Active: 1
         Duration: 1
         Delay: 0
-        HoldStart: 1
+        HoldStart: 0
         HoldEnd: 0
         Ease: 0
         Strength: 1
@@ -512,7 +524,7 @@ MonoBehaviour:
         AngleMode: 0
         From:
           Mode: 0
-          Value: {x: 3.97, y: 1.2, z: -0.07}
+          Value: {x: 3.8, y: 1.2, z: 0}
           RandomFrom: {x: 3.5, y: 1.2, z: 0.3}
           RandomTo: {x: 3.8, y: 1.2, z: -0.6}
         To:
@@ -520,6 +532,81 @@ MonoBehaviour:
           Value: {x: 0.28, y: 1.2, z: 0}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 1}
+    - rid: 7391153651098845195
+      type: {class: TweenGameObjectActive, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.01
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 1
+        Ease: 0
+        Strength: 1
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 460466055}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: 0
+          RandomFrom: 0
+          RandomTo: 0
+        To:
+          Mode: 0
+          Value: 1
+          RandomFrom: 0
+          RandomTo: 1
 --- !u!4 &227564323
 Transform:
   m_ObjectHideFlags: 0
@@ -548,6 +635,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Product _02
       objectReference: {fileID: 0}
+    - target: {fileID: 534217210432217683, guid: 7aed1ba62cab16e4889db9d3c050cc10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_RootOrder
@@ -556,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8041718
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
@@ -566,7 +658,7 @@ PrefabInstance:
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.16365927
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
@@ -608,6 +700,12 @@ PrefabInstance:
 --- !u!4 &286803152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
+    type: 3}
+  m_PrefabInstance: {fileID: 286803151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &286803153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 534217210432217683, guid: 7aed1ba62cab16e4889db9d3c050cc10,
     type: 3}
   m_PrefabInstance: {fileID: 286803151}
   m_PrefabAsset: {fileID: 0}
@@ -806,6 +904,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Product _02
       objectReference: {fileID: 0}
+    - target: {fileID: 534217210432217683, guid: 7aed1ba62cab16e4889db9d3c050cc10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_RootOrder
@@ -814,7 +917,7 @@ PrefabInstance:
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.97
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
@@ -824,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
@@ -866,6 +969,12 @@ PrefabInstance:
 --- !u!4 &460466054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
+    type: 3}
+  m_PrefabInstance: {fileID: 460466053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &460466055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 534217210432217683, guid: 7aed1ba62cab16e4889db9d3c050cc10,
     type: 3}
   m_PrefabInstance: {fileID: 460466053}
   m_PrefabAsset: {fileID: 0}
@@ -917,6 +1026,7 @@ MonoBehaviour:
     SpeedBased: 0
     TweenerList:
     - rid: 7391153651098845185
+    - rid: 7391153651098845193
     OnStart:
       Event:
         m_PersistentCalls:
@@ -966,7 +1076,7 @@ MonoBehaviour:
         Active: 1
         Duration: 1
         Delay: 0
-        HoldStart: 1
+        HoldStart: 0
         HoldEnd: 0
         Ease: 0
         Strength: 1
@@ -1028,7 +1138,7 @@ MonoBehaviour:
         AngleMode: 0
         From:
           Mode: 0
-          Value: {x: 3.8041718, y: 1.2, z: 0.16365927}
+          Value: {x: 3.8, y: 1.2, z: 0}
           RandomFrom: {x: 3.5, y: 1.2, z: 0.3}
           RandomTo: {x: 3.8, y: 1.2, z: -0.6}
         To:
@@ -1036,6 +1146,81 @@ MonoBehaviour:
           Value: {x: 0.28, y: 1.2, z: 0}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 1}
+    - rid: 7391153651098845193
+      type: {class: TweenGameObjectActive, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.01
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 1
+        Ease: 0
+        Strength: 1
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 286803153}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: 0
+          RandomFrom: 0
+          RandomTo: 0
+        To:
+          Mode: 0
+          Value: 1
+          RandomFrom: 0
+          RandomTo: 1
 --- !u!4 &625876508
 Transform:
   m_ObjectHideFlags: 0
@@ -1184,6 +1369,7 @@ MonoBehaviour:
     SpeedBased: 0
     TweenerList:
     - rid: 7391153651098845185
+    - rid: 7391153651098845194
     OnStart:
       Event:
         m_PersistentCalls:
@@ -1233,7 +1419,7 @@ MonoBehaviour:
         Active: 1
         Duration: 1
         Delay: 0
-        HoldStart: 1
+        HoldStart: 0
         HoldEnd: 0
         Ease: 0
         Strength: 1
@@ -1295,7 +1481,7 @@ MonoBehaviour:
         AngleMode: 0
         From:
           Mode: 0
-          Value: {x: 3.54, y: 1.2, z: -0.07}
+          Value: {x: 3.8, y: 1.2, z: 0}
           RandomFrom: {x: 3.5, y: 1.2, z: 0.3}
           RandomTo: {x: 3.8, y: 1.2, z: -0.6}
         To:
@@ -1303,6 +1489,81 @@ MonoBehaviour:
           Value: {x: 0.28, y: 1.2, z: 0}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 1}
+    - rid: 7391153651098845194
+      type: {class: TweenGameObjectActive, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.01
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 1
+        Ease: 0
+        Strength: 1
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 37558673}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: 0
+          RandomFrom: 0
+          RandomTo: 0
+        To:
+          Mode: 0
+          Value: 1
+          RandomFrom: 0
+          RandomTo: 1
 --- !u!4 &654930858
 Transform:
   m_ObjectHideFlags: 0
@@ -1351,7 +1612,7 @@ MonoBehaviour:
   Animation:
     EnableIdentifier: 0
     Identifier: 
-    Duration: 5
+    Duration: 1
     Delay: 0
     Backward: 0
     PlayMode: 1
@@ -1418,10 +1679,10 @@ MonoBehaviour:
       type: {class: TweenSubAnimation, ns: Aya.TweenPro, asm: Aya.TweenPro}
       data:
         Active: 1
-        Duration: 2.5
-        Delay: 2.5
+        Duration: 0.3
+        Delay: 0.7
         HoldStart: 1
-        HoldEnd: 0
+        HoldEnd: 1
         Ease: 0
         Strength: 1
         CurveMode: 0
@@ -1493,7 +1754,7 @@ MonoBehaviour:
       type: {class: TweenSubAnimation, ns: Aya.TweenPro, asm: Aya.TweenPro}
       data:
         Active: 1
-        Duration: 2.5
+        Duration: 0.5
         Delay: 0
         HoldStart: 0
         HoldEnd: 1
@@ -1568,9 +1829,9 @@ MonoBehaviour:
       type: {class: TweenSubAnimation, ns: Aya.TweenPro, asm: Aya.TweenPro}
       data:
         Active: 1
-        Duration: 2.5
-        Delay: 0
-        HoldStart: 0
+        Duration: 0.5
+        Delay: 0.1
+        HoldStart: 1
         HoldEnd: 1
         Ease: 0
         Strength: 1
@@ -1643,9 +1904,9 @@ MonoBehaviour:
       type: {class: TweenSubAnimation, ns: Aya.TweenPro, asm: Aya.TweenPro}
       data:
         Active: 1
-        Duration: 2.5
-        Delay: 0
-        HoldStart: 0
+        Duration: 0.5
+        Delay: 0.2
+        HoldStart: 1
         HoldEnd: 1
         Ease: 0
         Strength: 1
@@ -1718,9 +1979,9 @@ MonoBehaviour:
       type: {class: TweenSubAnimation, ns: Aya.TweenPro, asm: Aya.TweenPro}
       data:
         Active: 1
-        Duration: 2.5
-        Delay: 0
-        HoldStart: 0
+        Duration: 0.5
+        Delay: 0.3
+        HoldStart: 1
         HoldEnd: 1
         Ease: 0
         Strength: 1
@@ -1896,6 +2157,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Product _02
       objectReference: {fileID: 0}
+    - target: {fileID: 534217210432217683, guid: 7aed1ba62cab16e4889db9d3c050cc10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_RootOrder
@@ -1904,7 +2170,7 @@ PrefabInstance:
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.85
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
@@ -1914,7 +2180,7 @@ PrefabInstance:
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
         type: 3}
@@ -1956,6 +2222,12 @@ PrefabInstance:
 --- !u!4 &1176314141 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1107550454055044427, guid: 7aed1ba62cab16e4889db9d3c050cc10,
+    type: 3}
+  m_PrefabInstance: {fileID: 1176314140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1176314142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 534217210432217683, guid: 7aed1ba62cab16e4889db9d3c050cc10,
     type: 3}
   m_PrefabInstance: {fileID: 1176314140}
   m_PrefabAsset: {fileID: 0}
@@ -2007,6 +2279,7 @@ MonoBehaviour:
     SpeedBased: 0
     TweenerList:
     - rid: 7391153651098845185
+    - rid: 7391153651098845197
     OnStart:
       Event:
         m_PersistentCalls:
@@ -2056,7 +2329,7 @@ MonoBehaviour:
         Active: 1
         Duration: 1
         Delay: 0
-        HoldStart: 1
+        HoldStart: 0
         HoldEnd: 0
         Ease: 0
         Strength: 1
@@ -2118,7 +2391,7 @@ MonoBehaviour:
         AngleMode: 0
         From:
           Mode: 0
-          Value: {x: 3.85, y: 1.2, z: -0.35}
+          Value: {x: 3.8, y: 1.2, z: 0}
           RandomFrom: {x: 3.5, y: 1.2, z: 0.3}
           RandomTo: {x: 3.8, y: 1.2, z: -0.6}
         To:
@@ -2126,6 +2399,81 @@ MonoBehaviour:
           Value: {x: 0.28, y: 1.2, z: 0}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 1}
+    - rid: 7391153651098845197
+      type: {class: TweenGameObjectActive, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.01
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 1
+        Ease: 0
+        Strength: 1
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 1176314142}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: 0
+          RandomFrom: 0
+          RandomTo: 0
+        To:
+          Mode: 0
+          Value: 1
+          RandomFrom: 0
+          RandomTo: 1
 --- !u!4 &1593655823
 Transform:
   m_ObjectHideFlags: 0
