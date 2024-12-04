@@ -136,7 +136,15 @@ public abstract class FactoryBase : BuildingBase
     {
         while (!Info.Unlock)
         {
-            Info.UnlockSpent += UnlockSpeed;
+            var spend = UnlockSpeed;
+            var spendMax = Data.UnlockCost - Info.UnlockSpent;
+            if (spendMax < spend)
+            {
+                spend = spendMax;
+            }
+
+            Info.UnlockSpent += spend;
+            Save.Coin.Value -= spend;
             Refresh();
             yield return null;
 

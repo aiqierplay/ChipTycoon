@@ -85,7 +85,7 @@ public class World : EntityBase
                 Camera.Switch("Game", Character.Trans);
                 break;
             case GameMode.Digger:
-                Camera.Switch("Digger", DiggerArea.DiggerTool.Trans);
+                Camera.Switch("Digger", DiggerArea.DiggerTool.RootTrans);
                 break;
         }
     }

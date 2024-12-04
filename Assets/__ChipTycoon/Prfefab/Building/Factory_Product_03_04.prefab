@@ -475,7 +475,7 @@ MonoBehaviour:
     ColliderListenerExit: {fileID: 4533612815035539911}
   Output:
     Enable: 1
-    Mode: 0
+    Mode: 1
     RootObj: {fileID: 1524857835041897730}
     Type: Product_04
     Max: -1
