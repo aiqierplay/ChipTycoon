@@ -17,7 +17,7 @@ public abstract class FactoryBase : BuildingBase
 
     [BoxGroup("State")] public GameObject LockObj;
     [BoxGroup("State")] public GameObject UnlockObj;
-    [BoxGroup("State")] public TMP_Text TextUnlockSpent;
+    // [BoxGroup("State")] public TMP_Text TextUnlockSpent;
     [BoxGroup("State")] public TMP_Text TextUnlockCost;
     [BoxGroup("State")] public int UnlockSpeed = 1;
 
@@ -90,8 +90,8 @@ public abstract class FactoryBase : BuildingBase
 
         if (LockObj != null) LockObj.SetActive(!Info.Unlock);
         if (UnlockObj != null) UnlockObj.SetActive(Info.Unlock);
-        if (TextUnlockSpent != null) TextUnlockSpent.text = Info.UnlockSpent.ToString();
-        if (TextUnlockCost != null) TextUnlockCost.text = Data.UnlockCost.ToString();
+        // if (TextUnlockSpent != null) TextUnlockSpent.text = Info.UnlockSpent.ToString();
+        if (TextUnlockCost != null) TextUnlockCost.text = (Data.UnlockCost - Info.UnlockSpent).ToString();
     }
 
     public virtual void OnClick()
