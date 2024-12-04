@@ -12,7 +12,7 @@ public class ProductionLine : MonoBehaviour
     public float conveyorSpeed = 2f; // 传送带速度
     public float productSpawnDelay = 0.2f; // 每个输出产品生成的延迟
     public float outputProductSpeed = 1.5f; // 输出产品沿传送带的移动速度
-    public float spawnInterval = 2f; // 每个输入产品进入传送带的时间间隔
+    public float spawnInterval = 2f; // 每批输入产品进入传送带的时间间隔
 
     public int input = 5; // 输入产品数量
     public int output = 10; // 输出产品数量
@@ -41,7 +41,7 @@ public class ProductionLine : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isRunning = !isRunning; // 切换生成状态
-            if (isRunning)
+            if (isRunning && spawnCoroutine == null)
             {
                 // 恢复生成输入产品
                 spawnCoroutine = StartCoroutine(SpawnInputProducts());
@@ -50,6 +50,7 @@ public class ProductionLine : MonoBehaviour
             {
                 // 停止生成输入产品
                 StopCoroutine(spawnCoroutine);
+                spawnCoroutine = null;
             }
         }
     }
@@ -59,7 +60,8 @@ public class ProductionLine : MonoBehaviour
     {
         while (isRunning)
         {
-            for (int i = 0; i < input; i++) // 生成 input 个输入产品
+            // 生成 input 个输入产品
+            for (int i = 0; i < input; i++) 
             {
                 Vector3 spawnPosition = GetRandomSpawnPosition();
 
@@ -79,8 +81,8 @@ public class ProductionLine : MonoBehaviour
             // 重置输入产品计数
             currentInputCount = 0;
 
-            // 延迟一段时间再生成下一个输入产品组
-            yield return new WaitForSeconds(spawnInterval); // 这里应该是最新的 spawnInterval
+            // 等待一段时间再生成下一批输入产品
+            yield return new WaitForSeconds(spawnInterval); // 控制批次之间的间隔
         }
     }
 

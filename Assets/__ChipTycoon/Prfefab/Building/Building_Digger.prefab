@@ -218,6 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2bc92a83b3c88740a6ff15957518e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ColliderListenerEnter: {fileID: 7725929125329559698}
+  ColliderListenerExit: {fileID: 4541882127612751401}
   TextCountDown: {fileID: 1597582764068718950}
 --- !u!1 &2262716195967837793
 GameObject:

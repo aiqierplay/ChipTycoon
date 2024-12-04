@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12da7d8dbb785d1408eedfdf97501fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ColliderListenerEnter: {fileID: 7725929125329559698}
+  ColliderListenerExit: {fileID: 4541882127612751401}
 --- !u!1 &2262716195967837793
 GameObject:
   m_ObjectHideFlags: 0

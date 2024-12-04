@@ -18,26 +18,26 @@ MonoBehaviour:
     Icon: {fileID: 0}
     Prefab: {fileID: 5102741648946911573, guid: 40bb45e084470b9469033bd6cc1a0e28,
       type: 3}
-    CostCoin: 10
+    CostCoin: 0
     IsFinal: 0
   - Key: Product_02
     Name: 
     Icon: {fileID: 0}
     Prefab: {fileID: 5102741648946911573, guid: 7aed1ba62cab16e4889db9d3c050cc10,
       type: 3}
-    CostCoin: 20
+    CostCoin: 0
     IsFinal: 0
   - Key: Product_03
     Name: 
     Icon: {fileID: 0}
     Prefab: {fileID: 5102741648946911573, guid: 8243dbd67ef39e54da01b94e29709001,
       type: 3}
-    CostCoin: 100
+    CostCoin: 0
     IsFinal: 0
   - Key: Product_04
     Name: 
     Icon: {fileID: 0}
     Prefab: {fileID: 5102741648946911573, guid: a16fc5c76f0974d4db0471b551fee155,
       type: 3}
-    CostCoin: 100
+    CostCoin: 10
     IsFinal: 1

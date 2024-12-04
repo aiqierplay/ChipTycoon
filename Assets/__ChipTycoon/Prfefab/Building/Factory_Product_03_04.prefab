@@ -467,7 +467,7 @@ MonoBehaviour:
     Max: -1
     Pos: {fileID: 3484190210551688453}
     StackList: {fileID: 6026419197688667960}
-    Number: 1
+    Number: 20
     TextCount: {fileID: 7144148047952877870}
     MaxTipObj: {fileID: 0}
     ColliderListenerEnter: {fileID: 5171224966572602257}
@@ -480,7 +480,7 @@ MonoBehaviour:
     Max: -1
     Pos: {fileID: 8344834025374648202}
     StackList: {fileID: 5460182739446972240}
-    Number: 1
+    Number: 100
     TextCount: {fileID: 8400070086215691059}
     MaxTipObj: {fileID: 0}
     ColliderListenerEnter: {fileID: 4005723293858263535}
