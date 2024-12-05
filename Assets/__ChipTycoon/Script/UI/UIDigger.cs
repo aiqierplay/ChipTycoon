@@ -7,11 +7,13 @@ public class UIDigger : UIPage<UIDigger>
 {
     public GameObject SelectDigger;
     public GameObject SelectAbsorber;
+    public GameObject ControlObj;
 
     public override void Show(params object[] args)
     {
         base.Show(args);
         Refresh();
+        UIDigger.Ins.ControlObj.SetActive(true);
     }
 
 

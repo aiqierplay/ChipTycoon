@@ -82,6 +82,7 @@ public class DiggerTool : EntityBase
     {
         StartPos = pos;
         CurrentTool.Start();
+        UIDigger.Ins.ControlObj.SetActive(false);
     }
 
     public void OnTouch(Vector3 pos)
@@ -96,6 +97,7 @@ public class DiggerTool : EntityBase
     {
         Direction = Vector3.zero;
         CurrentTool.Stop();
+        UIDigger.Ins.ControlObj.SetActive(true);
     }
 
     public void LateUpdate()
