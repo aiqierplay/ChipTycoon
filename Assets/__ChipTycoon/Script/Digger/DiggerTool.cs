@@ -22,6 +22,7 @@ public class DiggerTool : EntityBase
 
     public Transform RootTrans;
     public Transform MoveTrans;
+    public Transform AbsorberPos;
     public LineRenderer Line;
 
     public GameObject MaxLengthTip;

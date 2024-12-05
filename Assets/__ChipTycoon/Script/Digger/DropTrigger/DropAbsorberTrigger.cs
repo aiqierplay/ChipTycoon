@@ -21,9 +21,9 @@ public class DropAbsorberTrigger : DropTriggerBase
                 continue;
             }
 
-            var targetPos = World.DiggerArea.DiggerTool.CurrentTool.Target.transform.position;
+            var targetPos = World.DiggerArea.DiggerTool.AbsorberPos.position;
             var fromPos = dropItem.Position;
-            var pos = Vector3.Lerp(fromPos, targetPos, Speed * DeltaTime);
+            var pos = Vector3.MoveTowards(fromPos, targetPos, Speed * DeltaTime);
             dropItem.Position = pos;
             var dis = (targetPos - pos).magnitude;
             if (dis < 0.1f) break;
