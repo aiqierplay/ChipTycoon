@@ -143,11 +143,14 @@ public abstract class FactoryBase : BuildingBase
                 spend = spendMax;
             }
 
-            Info.UnlockSpent += spend;
-            Save.Coin.Value -= spend;
-            Refresh();
-            yield return null;
-
+            if (Save.Coin.Value >= spend)
+            {
+                Info.UnlockSpent += spend;
+                Save.Coin.Value -= spend;
+                Refresh();
+                yield return null;
+            }
+            
             if (Info.UnlockSpent >= Data.UnlockCost)
             {
                 Info.Unlock = true;
@@ -156,6 +159,8 @@ public abstract class FactoryBase : BuildingBase
                 StartCoroutine(WorkCo());
                 break;
             }
+
+            yield return null;
         }
     }
 

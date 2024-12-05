@@ -6,6 +6,7 @@ using Aya.Maths;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.Port;
+using static UnityEditor.PlayerSettings;
 
 public enum DiggerToolMode
 {
@@ -23,6 +24,8 @@ public class DiggerTool : EntityBase
     public Transform RootTrans;
     public Transform MoveTrans;
     public LineRenderer Line;
+
+    public GameObject MaxLengthTip;
 
     public float MoveSpeed = 5;
     public float RotateSpeed = 10;
@@ -138,5 +141,9 @@ public class DiggerTool : EntityBase
 
         Line.SetPositions(new Vector3[]{Position, MoveTrans.position});
         Line.positionCount = 2;
+
+        var length = (MoveTrans.position - Position).magnitude;
+        var max = length >= Length * 0.98f;
+        MaxLengthTip.SetActive(max);
     }
 }
