@@ -174,7 +174,7 @@ MonoBehaviour:
   Animation:
     EnableIdentifier: 0
     Identifier: 
-    Duration: 0.1
+    Duration: 0.2
     Delay: 0
     Backward: 0
     PlayMode: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
     AutoKill: 0
     SpeedBased: 0
     TweenerList:
-    - rid: 1318882092252921856
+    - rid: 7391153676799180801
     OnStart:
       Event:
         m_PersistentCalls:
@@ -233,16 +233,16 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1318882092252921856
-      type: {class: TweenEulerAngles, ns: Aya.TweenPro, asm: Aya.TweenPro}
+    - rid: 7391153676799180801
+      type: {class: TweenScale, ns: Aya.TweenPro, asm: Aya.TweenPro}
       data:
         Active: 1
-        Duration: 0.1
+        Duration: 0.2
         Delay: 0
         HoldStart: 1
         HoldEnd: 0
-        Ease: 0
-        Strength: 1
+        Ease: 25
+        Strength: 0
         CurveMode: 0
         EditCurve:
           serializedVersion: 2
@@ -298,17 +298,17 @@ MonoBehaviour:
         Target: {fileID: 5058903439952298597}
         Axis: 30
         EnableAxis: 0
-        AngleMode: 1
+        AngleMode: 0
         From:
-          Mode: 2
-          Value: {x: 0, y: -45, z: 0}
+          Mode: 0
+          Value: {x: 0, y: 0, z: 0}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 0}
         To:
-          Mode: 2
-          Value: {x: 0, y: 45, z: 0}
+          Mode: 0
+          Value: {x: 0.4, y: 0.4, z: 0.4}
           RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 0, y: 360, z: 0}
+          RandomTo: {x: 1, y: 1, z: 1}
 --- !u!1001 &7754494244370165926
 PrefabInstance:
   m_ObjectHideFlags: 0

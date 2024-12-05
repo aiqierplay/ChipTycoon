@@ -74,12 +74,14 @@ public class FactoryPoint
 
     public virtual void OnEnter(Worker worker)
     {
+        if (worker == null) return;
         if (worker.Type != WorkerType.Player) return;
         worker.OnEnter(Factory, this);
     }
 
     public virtual void OnExit(Worker worker)
     {
+        if (worker == null) return;
         if (worker.Type != WorkerType.Player) return;
         worker.OnExit(Factory, this);
     }

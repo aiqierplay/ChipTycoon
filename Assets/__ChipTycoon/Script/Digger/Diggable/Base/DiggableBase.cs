@@ -1,5 +1,8 @@
 using Aya.Physical;
 using System;
+using Aya.Extension;
+using Aya.TweenPro;
+using Aya.Util;
 using UnityEngine;
 
 public abstract class DiggableBase : EntityBase
@@ -55,9 +58,13 @@ public abstract class DiggableBase : EntityBase
         if (Hp == 0)
         {
             SpawnFx(FxBreak, CurrentLevel.Trans, Position);
-            OnEnterImpl(digger);
-            gameObject.SetActive(false);
             IsBroken = true;
+            UTween.Shake(Trans, RandUtil.RandVector3(-0.15f, 0.15f), RandUtil.RandVector3(-5f, 5f), RandUtil.RandVector3(-0.1f, 0.1f), 3, 0.25f);
+            this.ExecuteDelay(() =>
+            {
+                OnEnterImpl(digger);
+                gameObject.SetActive(false);
+            }, 0.3f);
         }
     }
 

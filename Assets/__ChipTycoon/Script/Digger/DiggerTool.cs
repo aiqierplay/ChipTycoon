@@ -6,8 +6,6 @@ using Aya.Maths;
 using Aya.TweenPro;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.Port;
-using static UnityEditor.PlayerSettings;
 
 public enum DiggerToolMode
 {

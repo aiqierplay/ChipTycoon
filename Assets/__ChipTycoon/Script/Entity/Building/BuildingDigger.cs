@@ -36,6 +36,7 @@ public class BuildingDigger : BuildingBase
     {
         for (var i = 3; i >= 1; i--)
         {
+            TweenCountDown.Stop();
             TweenCountDown.Play();
             TextCountDown.text = i.ToString();
             yield return YieldBuilder.WaitForSeconds(1f);

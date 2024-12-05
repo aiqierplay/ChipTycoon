@@ -2,6 +2,7 @@ using Aya.Events;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Aya.Extension;
 using UnityEngine;
 
 public enum GameMode
