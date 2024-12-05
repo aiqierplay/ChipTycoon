@@ -49,7 +49,7 @@ public class DiggerTool : EntityBase
         RootTrans.ResetLocal();
         MoveTrans.ResetLocal();
         RefreshData();
-        RefreshLine();
+        RefreshLine(true);
         SwitchTool(DiggerToolMode.Digger);
     }
 
@@ -135,7 +135,7 @@ public class DiggerTool : EntityBase
 
     [NonSerialized] public bool IsMaxLength;
 
-    public void RefreshLine()
+    public void RefreshLine(bool force = false)
     {
         if (World.Mode != GameMode.Digger)
         {
@@ -149,7 +149,7 @@ public class DiggerTool : EntityBase
         var length = (MoveTrans.position - Position).magnitude;
         var max = length >= Length * 0.98f;
 
-        if (IsMaxLength != max)
+        if (IsMaxLength != max || force)
         {
             IsMaxLength = max;
             MaxLengthTip.SetActive(max);
