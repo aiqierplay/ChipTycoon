@@ -57,7 +57,7 @@ public class DiggerArea : EntityBase
 
         for (var i = 0; i < CurrentLevel.Info.DropProductCount; i++)
         {
-            DiggableOre.CreateDropProduct(Position + Vector3.down * 8f + new Vector3(RandUtil.RandFloat(-5f, 5f), 0f, 0f));
+            DiggableOre.CreateDropProduct(Position + Vector3.down * RandUtil.RandFloat(5, 8) + new Vector3(RandUtil.RandFloat(-5f, 5f), 0f, 0f));
         }
     }
 

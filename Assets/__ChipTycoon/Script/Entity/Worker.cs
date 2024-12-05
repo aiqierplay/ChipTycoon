@@ -262,16 +262,12 @@ public class Worker : EntityBase
         IsWorking = true;
         if (StackList.IsEmpty)
         {
-            CurrentFactory = factory;
-            CurrentFactoryPoint = factory.Output;
             yield return TransferOutputCo(factory);
         }
         else
         {
             if (factory.Input.Type == CurrentProductType.Key)
             {
-                CurrentFactory = factory;
-                CurrentFactoryPoint = factory.Input;
                 yield return TransferInputCo(factory);
             }
         }
