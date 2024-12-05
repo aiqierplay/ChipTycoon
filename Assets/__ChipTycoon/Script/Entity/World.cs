@@ -31,7 +31,12 @@ public class World : EntityBase
     public void Init()
     {
         Mode = GameMode.Work;
-        if (DiggerArea != null) DiggerArea.Init();
+        if (DiggerArea != null)
+        {
+            DiggerArea.Init();
+            DiggerArea.LoadState();
+        }
+
         foreach (var building in BuildingList)
         {
             building.Init();
@@ -94,7 +99,7 @@ public class World : EntityBase
     {
         Mode = GameMode.Digger;
         SwitchCam(GameMode.Digger);
-        DiggerArea.Init();
+        // DiggerArea.Init();
         DiggerArea.StartDigger();
         UI.Show<UIDigger>();
     }

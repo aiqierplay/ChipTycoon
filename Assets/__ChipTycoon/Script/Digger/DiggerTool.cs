@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Aya.Events;
 using Aya.Extension;
 using Aya.Maths;
+using Aya.TweenPro;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.Port;
@@ -26,6 +27,7 @@ public class DiggerTool : EntityBase
     public LineRenderer Line;
 
     public GameObject MaxLengthTip;
+    public UTweenPlayerReference TweenMaxTip;
 
     public float MoveSpeed = 5;
     public float RotateSpeed = 10;
@@ -131,6 +133,8 @@ public class DiggerTool : EntityBase
         RefreshLine();
     }
 
+    [NonSerialized] public bool IsMaxLength;
+
     public void RefreshLine()
     {
         if (World.Mode != GameMode.Digger)
@@ -144,6 +148,13 @@ public class DiggerTool : EntityBase
 
         var length = (MoveTrans.position - Position).magnitude;
         var max = length >= Length * 0.98f;
-        MaxLengthTip.SetActive(max);
+
+        if (IsMaxLength != max)
+        {
+            IsMaxLength = max;
+            MaxLengthTip.SetActive(max);
+            if (max) TweenMaxTip.Play();
+            else TweenMaxTip.Value.PlayBackward();
+        }
     }
 }

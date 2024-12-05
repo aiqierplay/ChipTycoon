@@ -62,6 +62,8 @@ MonoBehaviour:
   MoveTrans: {fileID: 7950491758452122470}
   Line: {fileID: 6548038017408718094}
   MaxLengthTip: {fileID: 1258674881572105226}
+  TweenMaxTip:
+    Value: {fileID: 5739968867767959636}
   MoveSpeed: 0.05
   RotateSpeed: 1
   MaxTouchDis: 10

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Aya.Extension;
+using Aya.Util;
 using Dreamteck.Splines.Primitives;
 using UnityEngine;
 
@@ -33,8 +34,6 @@ public class DiggerArea : EntityBase
         }
 
         DiggerTool.RefreshLine();
-
-        LoadState();
     }
 
     public void LoadState()
@@ -58,7 +57,7 @@ public class DiggerArea : EntityBase
 
         for (var i = 0; i < CurrentLevel.Info.DropProductCount; i++)
         {
-            DiggableOre.CreateDropProduct(Position);
+            DiggableOre.CreateDropProduct(Position + Vector3.down * 3f + new Vector3(RandUtil.RandFloat(-3f, 3f), 0f, 0f));
         }
     }
 
@@ -92,6 +91,7 @@ public class DiggerArea : EntityBase
     public void EndDigger()
     {
         // UIGame.Ins.DiggerEnd();
+        SaveState();
         TweenDiggerEnd.Play();
         DiggerTool.SetActive(false);
         World.Mode = GameMode.Work;
