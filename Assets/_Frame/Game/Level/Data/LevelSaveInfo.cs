@@ -4,7 +4,7 @@ using System.Collections.Generic;
 [Serializable]
 public class LevelSaveInfo : SaveInfoList<LevelSaveInfo>
 {
-    public float Power;
+    public int Power;
 
     public bool IsLock = true;
     public bool IsPass = false;

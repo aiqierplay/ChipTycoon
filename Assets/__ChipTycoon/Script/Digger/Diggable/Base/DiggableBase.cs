@@ -1,7 +1,5 @@
 using Aya.Physical;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class DiggableBase : EntityBase
@@ -11,9 +9,12 @@ public abstract class DiggableBase : EntityBase
 
     [GetComponentInChildren, NonSerialized] public ColliderListenerEnter ColliderListenerEnter;
     [NonSerialized] public bool IsBroken;
+    [NonSerialized] public int Hp;
+
 
     public virtual void Init()
     {
+        Hp = RequirePower;
         IsBroken = false;
         gameObject.SetActive(true);
         if (ColliderListenerEnter != null)
@@ -28,7 +29,7 @@ public abstract class DiggableBase : EntityBase
         if (IsBroken) return false;
         if (World.DiggerArea.DiggerTool.Mode != DiggerToolMode.Digger) return false;
         if (RequirePower <= 0) return true;
-        return CurrentLevel.Info.Power >= RequirePower;
+        return true;
     }
 
     public virtual void OnEnterForce(DiggerTool digger, bool force)
@@ -36,13 +37,28 @@ public abstract class DiggableBase : EntityBase
         if (!force && !CheckCanBreak()) return;
         if (!force)
         {
-            CurrentLevel.Info.Power -= RequirePower;
+            if (Hp > digger.Power)
+            {
+                Hp -= digger.Power;
+                return;
+            }
+            else
+            {
+                Hp = 0;
+            }
         }
-      
-        SpawnFx(FxBreak, CurrentLevel.Trans, Position);
-        OnEnterImpl(digger);
-        gameObject.SetActive(false);
-        IsBroken = true;
+        else
+        {
+            Hp = 0;
+        }
+
+        if (Hp == 0)
+        {
+            SpawnFx(FxBreak, CurrentLevel.Trans, Position);
+            OnEnterImpl(digger);
+            gameObject.SetActive(false);
+            IsBroken = true;
+        }
     }
 
     public virtual void OnEnter(DiggerTool digger)

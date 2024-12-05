@@ -33,6 +33,7 @@ public class DiggerArea : EntityBase
             dropTriggerBase.Init();
         }
 
+        DiggerTool.SwitchTool(DiggerToolMode.Digger);
         DiggerTool.RefreshLine();
     }
 

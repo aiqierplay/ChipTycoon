@@ -38,7 +38,7 @@ public class DiggerTool : EntityBase
     [NonSerialized] public Vector3 Direction;
     [NonSerialized] public DiggerToolData CurrentTool;
 
-    [NonSerialized] public float Power;
+    [NonSerialized] public int Power;
     [NonSerialized] public float Length;
     [NonSerialized] public float AbsorberSpeed;
 
@@ -56,7 +56,7 @@ public class DiggerTool : EntityBase
     [Listen(GameEvent.Upgrade)]
     public void RefreshData()
     {
-        Power = Upgrade.GetInfo<DiggerPowerData>(CurrentLevel.SaveKey).Current.Value;
+        Power = Upgrade.GetInfo<DiggerPowerData>(CurrentLevel.SaveKey).Current.IntValue;
         Length = Upgrade.GetInfo<DiggerLengthData>(CurrentLevel.SaveKey).Current.Value;
         AbsorberSpeed = Upgrade.GetInfo<AbsorberSpeedData>(CurrentLevel.SaveKey).Current.Value;
     }

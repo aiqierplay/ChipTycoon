@@ -8,6 +8,7 @@ using UnityEngine;
 public class BuildingDigger : BuildingBase
 {
     public TMP_Text TextCountDown;
+    public UTweenPlayerReference TweenCountDown;
 
     [NonSerialized] public Coroutine EnterCo;
 
@@ -35,6 +36,7 @@ public class BuildingDigger : BuildingBase
     {
         for (var i = 3; i >= 1; i--)
         {
+            TweenCountDown.Play();
             TextCountDown.text = i.ToString();
             yield return YieldBuilder.WaitForSeconds(1f);
         }
