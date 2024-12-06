@@ -30,9 +30,10 @@ public class DiggerTool : EntityBase
     public List<GameObject> DiggerLevelList;
 
     public float MoveSpeed = 5;
-    public float WorkSpeedMultiply = 0.5f;
     public float RotateSpeed = 10;
     public float MaxTouchDis = 10;
+    public float WorkSpeedMultiply = 0.5f;
+    public float WorkSpeedDuration = 1f;
 
     [NonSerialized] public DiggerToolMode Mode;
     [NonSerialized] public Vector3 StartPos;
@@ -133,7 +134,7 @@ public class DiggerTool : EntityBase
             moveSpeed *= WorkSpeedMultiply;
             rotateSpeed *= WorkSpeedMultiply;
             WorkTimer += DeltaTime;
-            if (WorkTimer > 1f) IsWorking = false;
+            if (WorkTimer > WorkSpeedDuration) IsWorking = false;
         }
 
         var pos = MoveTrans.position + Direction * moveSpeed * DeltaTime;

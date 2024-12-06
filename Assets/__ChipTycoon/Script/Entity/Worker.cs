@@ -4,6 +4,7 @@ using Aya.Async;
 using Aya.Events;
 using Aya.Extension;
 using Aya.TweenPro;
+using Aya.Util;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
@@ -306,17 +307,18 @@ public class Worker : EntityBase
             if (product.TypeData.IsFinal)
             {
                 product.IsWorking = true;
-                StackList.AddParabola(product, () =>
-                {
-                    var value = product.TypeData.CostCoin;
-                    UIFlyIcon.Ins.Fly(UIFlyIcon.Coin, WorldToUiPosition(), 1, () =>
+                product.ParabolaFlyTo(StackList.Position, RandUtil.RandFloat(2f, 3f), RandUtil.RandFloat(0.25f, 0.35f),
+                    () =>
                     {
-                        Save.Coin.Value += value;
-                    });
+                        var value = product.TypeData.CostCoin;
+                        UIFlyIcon.Ins.Fly(UIFlyIcon.Coin, WorldToUiPosition(), 1, () =>
+                        {
+                            Save.Coin.Value += value;
+                        });
 
-                    StackList.Remove(product);
-                    product.IsWorking = false;
-                });
+                        product.IsWorking = false;
+                        GamePool.DeSpawn(product);
+                    });
             }
             else
             {
