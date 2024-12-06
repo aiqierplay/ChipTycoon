@@ -22,7 +22,7 @@ public abstract class FactoryBase : BuildingBase
     [BoxGroup("State")] public TMP_Text TextUnlockCost;
     [BoxGroup("State")] public int UnlockSpeed = 1;
 
-    // [BoxGroup("Effect")] public UTweenPlayerReference TweenWork;
+    [BoxGroup("Effect")] public UTweenPlayerReference TweenWork;
     [BoxGroup("Effect")] public GameObject FxUnlock;
 
     [NonSerialized] public int Index;
@@ -30,11 +30,11 @@ public abstract class FactoryBase : BuildingBase
     [NonSerialized] public FactoryInfo Info;
     [NonSerialized] public float WorkProgress;
     [NonSerialized] public float WorkDuration = 1f;
-    // [NonSerialized] public float WorkInterval = 0.5f;
+    [NonSerialized] public float WorkInterval = 0.5f;
 
     public bool IsWorking => WorkerList.Count > 0;
 
-    [GetComponentInChildren, NonSerialized]
+    [GetComponentInChildren(true), NonSerialized]
     public ProduceLine ProduceLine;
 
     public virtual void Init(int index)
@@ -53,15 +53,18 @@ public abstract class FactoryBase : BuildingBase
         RefreshData();
         Refresh();
 
-        ProduceLine.InputNum = Input.Number;
-        ProduceLine.OutputNum = Output.Number;
-        ProduceLine.WorkDuration = WorkDuration;
-        ProduceLine.OnOutput = output =>
+        if (ProduceLine != null)
         {
-            var product = output as Product;
-            Output.StackList.AddParabola(product);
-            Refresh();
-        };
+            ProduceLine.InputNum = Input.Number;
+            ProduceLine.OutputNum = Output.Number;
+            ProduceLine.WorkDuration = WorkDuration;
+            ProduceLine.OnOutput = output =>
+            {
+                var product = output as Product;
+                Output.StackList.AddParabola(product);
+                Refresh();
+            };
+        }
 
         StartCoroutine(WorkCo());
     }
@@ -172,7 +175,7 @@ public abstract class FactoryBase : BuildingBase
         Refresh();
     }
 
-    public IEnumerator WorkCo()
+    public virtual IEnumerator WorkCo()
     {
         WorkProgress = 0f;
         while (!Info.Unlock)
@@ -180,85 +183,88 @@ public abstract class FactoryBase : BuildingBase
             yield return YieldBuilder.WaitForSeconds(0.1f);
         }
 
-        ProduceLine.Init();
-
-        var inputTimer = 0f;
-        while (true)
+        if (ProduceLine != null)
         {
-            while (IsWorking)
+            ProduceLine.Init();
+            var inputTimer = 0f;
+            while (true)
             {
+                while (IsWorking)
+                {
+                    yield return null;
+                }
+
+                while (inputTimer <= ProduceLine.InputInterval)
+                {
+                    inputTimer += DeltaTime;
+                    yield return null;
+                }
+
+                while (IsWorking)
+                {
+                    yield return null;
+                }
+
+                yield return YieldBuilder.WaitForSeconds(0.1f);
+
+                if (Input.Count > 0 && ProduceLine.CheckCanInput())
+                {
+                    var product = Input.StackList.Pop();
+                    yield return product.WaitForParabolaFlyTo(ProduceLine.InputStart.position, 2f,
+                        RandUtil.RandFloat(0.25f, 0.35f),
+                        () =>
+                        {
+                            GamePool.DeSpawn(product);
+                        });
+
+                    ProduceLine.AddInput();
+                    Refresh();
+
+                    inputTimer = 0f;
+                }
+
                 yield return null;
             }
-
-            while (inputTimer <= ProduceLine.InputInterval)
-            {
-                inputTimer += DeltaTime;
-                yield return null;
-            }
-
-            while (IsWorking)
-            {
-                yield return null;
-            }
-
-            yield return YieldBuilder.WaitForSeconds(0.1f);
-
-            if (Input.Count > 0 && ProduceLine.CheckCanInput())
-            {
-                var product = Input.StackList.Pop();
-                yield return product.WaitForParabolaFlyTo(ProduceLine.InputStart.position, 2f,
-                    RandUtil.RandFloat(0.25f, 0.35f),
-                    () =>
-                    {
-                        GamePool.DeSpawn(product);
-                    });
-
-                ProduceLine.AddInput();
-                Refresh();
-
-                inputTimer = 0f;
-            }
-
-            yield return null;
         }
-        // while (true)
-        // {
-        //     var timer = 0f;
-        //     if (Input.Count >= Input.Number && Output.CanAdd)
-        //     {
-        //         IsWorking = true;
-        //         TweenWork.Sample(0f);
-        //         while (timer <= WorkDuration)
-        //         {
-        //             timer += DeltaTime;
-        //             if (timer >= WorkDuration)
-        //             {
-        //                 timer = WorkDuration;
-        //             }
-        //
-        //             WorkProgress = timer / WorkDuration;
-        //
-        //             if (WorkProgress >= 1)
-        //             {
-        //                 for (var i = 0; i < Input.Number; i++)
-        //                 {
-        //                     Input.Remove(Input.Number);
-        //                 }
-        //
-        //                 Output.Add(Output.Number);
-        //                 IsWorking = false;
-        //
-        //                 TweenWork.Sample(WorkProgress);
-        //                 Refresh();
-        //                 break;
-        //             }
-        //
-        //             Refresh();
-        //             TweenWork.Sample(0f);
-        //             yield return null;
-        //         }
-        //
-        //         yield return YieldBuilder.WaitForSeconds(WorkInterval);
-        //     }
+        else
+        {
+            while (true)
+            {
+                var timer = 0f;
+                if (Input.Count >= Input.Number && Output.CanAdd)
+                {
+                    TweenWork.Sample(0f);
+                    while (timer <= WorkDuration)
+                    {
+                        timer += DeltaTime;
+                        if (timer >= WorkDuration)
+                        {
+                            timer = WorkDuration;
+                        }
+
+                        WorkProgress = timer / WorkDuration;
+
+                        if (WorkProgress >= 1)
+                        {
+                            for (var i = 0; i < Input.Number; i++)
+                            {
+                                Input.Remove(Input.Number);
+                            }
+
+                            Output.Add(Output.Number);
+                            TweenWork.Sample(WorkProgress);
+                            Refresh();
+                            break;
+                        }
+
+                        Refresh();
+                        TweenWork.Sample(0f);
+                        yield return null;
+                    }
+
+                    yield return YieldBuilder.WaitForSeconds(WorkInterval);
+                }
+            }
+        }
     }
 }
