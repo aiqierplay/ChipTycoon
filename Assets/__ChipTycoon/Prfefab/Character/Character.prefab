@@ -235,6 +235,10 @@ MonoBehaviour:
   IdleClip: Idle
   WalkClip: Walk
   RotateSpeed: 50
+  ClampPosWithLayer: 1
+  WalkLayer:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!54 &1977392817805692070
 Rigidbody:
   m_ObjectHideFlags: 0

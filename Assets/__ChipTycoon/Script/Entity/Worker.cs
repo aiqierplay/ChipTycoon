@@ -3,12 +3,11 @@ using System.Collections;
 using Aya.Async;
 using Aya.Events;
 using Aya.Extension;
+using Aya.Physical;
 using Aya.TweenPro;
 using Aya.Util;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
-
 public enum WorkerType
 {
     Player = 0,
@@ -25,6 +24,9 @@ public class Worker : EntityBase
 
     [GetComponentInChildren, NonSerialized]
     public StackList StackList;
+
+    public bool ClampPosWithLayer;
+    [ShowIf(nameof(ClampPosWithLayer))] public LayerMask WalkLayer;
 
     public bool IsFull => StackList.Count >= Capacity;
     public bool IsEmpty => StackList.IsEmpty;
@@ -179,8 +181,15 @@ public class Worker : EntityBase
         if (ActiveMove && IsMoving)
         {
             if (Direction == Vector3.zero) return;
-            Trans.position += Direction * MoveSpeed * DeltaTime;
+            var targetPos = Trans.position + Direction * MoveSpeed * DeltaTime;
             Trans.forward = Vector3.MoveTowards(Forward, Direction, RotateSpeed * DeltaTime);
+
+            if (ClampPosWithLayer)
+            {
+                var (target, pos) = PhysicsUtil.Raycast<Transform>(targetPos + Vector3.up, Vector3.down, 10f, WalkLayer);
+                if (target == null) return;
+                 Trans.position = targetPos;
+            }
         }
     }
 

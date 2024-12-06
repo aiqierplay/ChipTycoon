@@ -32,6 +32,8 @@ public class World : EntityBase
     public void Init()
     {
         Mode = GameMode.Work;
+        SpawnPlayer();
+      
         if (DiggerArea != null)
         {
             DiggerArea.Init();
@@ -49,8 +51,8 @@ public class World : EntityBase
             factory.Init(index);
         }
 
-        SpawnPlayer();
         SpawnWorker();
+
         SwitchCam(Mode);
     }
 
