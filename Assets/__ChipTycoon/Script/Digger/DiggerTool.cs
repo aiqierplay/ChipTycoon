@@ -59,7 +59,7 @@ public class DiggerTool : EntityBase
         Length = Upgrade.GetInfo<DiggerLengthData>(CurrentLevel.SaveKey).Current.Value;
         AbsorberSpeed = Upgrade.GetInfo<AbsorberSpeedData>(CurrentLevel.SaveKey).Current.Value;
 
-        var diggerLevel = Upgrade.GetInfo<DiggerPowerData>().Current.Index;
+        var diggerLevel = Upgrade.GetInfo<DiggerPowerData>(CurrentLevel.SaveKey).Current.Index;
         for (var i = 0; i < DiggerLevelList.Count; i++)
         {
             var digger = DiggerLevelList[i];
