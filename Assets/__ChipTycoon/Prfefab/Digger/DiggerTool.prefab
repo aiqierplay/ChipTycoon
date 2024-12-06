@@ -320,6 +320,13 @@ MonoBehaviour:
   MaxLengthTip: {fileID: 1258674881572105226}
   TweenMaxTip:
     Value: {fileID: 2370141086092925887}
+  DiggerLevelList:
+  - {fileID: 1344711620558642012}
+  - {fileID: 4094647354136864789}
+  - {fileID: 3049892389062078176}
+  - {fileID: 92480070527273748}
+  - {fileID: 3083154150092931689}
+  - {fileID: 5933461944566671421}
   MoveSpeed: 0.05
   RotateSpeed: 1
   MaxTouchDis: 10
