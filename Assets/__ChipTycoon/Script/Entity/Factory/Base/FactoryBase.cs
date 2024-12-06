@@ -63,10 +63,7 @@ public abstract class FactoryBase : BuildingBase
             Refresh();
         };
 
-        if (Info.Unlock)
-        {
-            StartCoroutine(WorkCo());
-        }
+        StartCoroutine(WorkCo());
     }
 
     [Listen(GameEvent.Upgrade)]
@@ -159,10 +156,7 @@ public abstract class FactoryBase : BuildingBase
             
             if (Info.UnlockSpent >= Data.UnlockCost)
             {
-                Info.Unlock = true;
-                SpawnFx(FxUnlock);
-                Refresh();
-                StartCoroutine(WorkCo());
+                Unlock();
                 break;
             }
 
@@ -170,15 +164,23 @@ public abstract class FactoryBase : BuildingBase
         }
     }
 
+    public void Unlock()
+    {
+        WorkerList.Clear();
+        Info.Unlock = true;
+        SpawnFx(FxUnlock);
+        Refresh();
+    }
+
     public IEnumerator WorkCo()
     {
-        ProduceLine.Init();
-
         WorkProgress = 0f;
         while (!Info.Unlock)
         {
-            yield return YieldBuilder.WaitForSeconds(1f);
+            yield return YieldBuilder.WaitForSeconds(0.1f);
         }
+
+        ProduceLine.Init();
 
         var inputTimer = 0f;
         while (true)

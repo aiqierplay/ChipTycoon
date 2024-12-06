@@ -1401,7 +1401,7 @@ MonoBehaviour:
     Backward: 0
     PlayMode: 1
     PlayCount: 0
-    AutoPlay: 2
+    AutoPlay: 0
     UpdateMode: 0
     Interval: 0.5
     Interval2: 0

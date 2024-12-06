@@ -47,6 +47,8 @@ public class ProduceLine : EntityBase
         IsWorking = false;
         IsWorkComplete = false;
         WorkStop();
+        InputLineStop();
+        OutputLineStop();
         StartCoroutine(WorkCo());
     }
 
