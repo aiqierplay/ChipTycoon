@@ -1,5 +1,5 @@
 ID,Value,DefaultUnlock,Description,UnlockCost
 1,,TRUE,,100
-2,,FALSE,,200
-3,,FALSE,,300
-4,,FALSE,,300
+2,,FALSE,,100
+3,,FALSE,,100
+4,,TRUE,,300
