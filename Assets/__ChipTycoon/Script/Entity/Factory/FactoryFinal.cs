@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Aya.Async;
 using Aya.TweenPro;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 
 public class FactoryFinal : FactoryBase
@@ -14,6 +15,15 @@ public class FactoryFinal : FactoryBase
     public UTweenPlayerReference TweenCarEnter;
     public UTweenPlayerReference TweenCarExit;
     public float CarWaitInterval = 1f;
+    public TMP_Text TextCarValue;
+    public TMP_Text TextCarCount;
+
+    public override void Refresh()
+    {
+        base.Refresh();
+        if (TextCarValue != null) TextCarValue.text = CarStackList.Count.ToString();
+        if (TextCarCount != null) TextCarCount.text = CarCapacity.ToString();
+    }
 
     public override IEnumerator WorkCo()
     {
@@ -36,6 +46,7 @@ public class FactoryFinal : FactoryBase
                 {
                     var product = Input.StackList.Pop();
                     CarStackList.AddParabola(product);
+                    Refresh();
                 }
 
                 yield return null;

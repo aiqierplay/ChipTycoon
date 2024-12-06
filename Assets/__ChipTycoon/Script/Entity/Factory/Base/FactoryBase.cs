@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using Aya.Async;
 using Aya.Events;
-using Aya.TweenPro;
 using Aya.Util;
 using TMPro;
 using UnityEngine;
@@ -22,7 +21,7 @@ public abstract class FactoryBase : BuildingBase
     [BoxGroup("State")] public TMP_Text TextUnlockCost;
     [BoxGroup("State")] public int UnlockSpeed = 1;
 
-    [BoxGroup("Effect")] public UTweenPlayerReference TweenWork;
+    // [BoxGroup("Effect")] public UTweenPlayerReference TweenWork;
     [BoxGroup("Effect")] public GameObject FxUnlock;
 
     [NonSerialized] public int Index;
@@ -30,9 +29,9 @@ public abstract class FactoryBase : BuildingBase
     [NonSerialized] public FactoryInfo Info;
     [NonSerialized] public float WorkProgress;
     [NonSerialized] public float WorkDuration = 1f;
-    [NonSerialized] public float WorkInterval = 0.5f;
+    // [NonSerialized] public float WorkInterval = 0.5f;
 
-    public bool IsWorking => WorkerList.Count > 0;
+    // public bool IsWorking => WorkerList.Count > 0;
 
     [GetComponentInChildren(true), NonSerialized]
     public ProduceLine ProduceLine;
@@ -169,10 +168,24 @@ public abstract class FactoryBase : BuildingBase
 
     public void Unlock()
     {
-        WorkerList.Clear();
+        // WorkerList.Clear();
         Info.Unlock = true;
         SpawnFx(FxUnlock);
         Refresh();
+    }
+
+    public bool IsWorking
+    {
+        get
+        {
+            if (World.Character.CurrentFactory == this) return true;
+            foreach (var worker in World.WorkerList)
+            {
+                if (worker.CurrentFactory == this) return true;
+            }
+
+            return false;
+        }
     }
 
     public virtual IEnumerator WorkCo()

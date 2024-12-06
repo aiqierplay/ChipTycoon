@@ -1,15 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Aya.Physical;
-using UnityEngine;
 
 public abstract class BuildingBase : EntityBase
 {
     public ColliderListenerEnter ColliderListenerEnter;
     public ColliderListenerExit ColliderListenerExit;
 
-    [NonSerialized] public List<Worker> WorkerList = new List<Worker>();
+    // [NonSerialized] public List<Worker> WorkerList = new List<Worker>();
 
     public virtual void Init()
     {
@@ -25,7 +21,7 @@ public abstract class BuildingBase : EntityBase
             ColliderListenerExit.onTriggerExit.Add<Worker>(OnExit, LayerManager.Ins.Player);
         }
 
-        WorkerList.Clear();
+        // WorkerList.Clear();
     }
 
     public virtual void Refresh()
@@ -35,7 +31,7 @@ public abstract class BuildingBase : EntityBase
 
     public virtual void OnEnter(Worker worker)
     {
-        WorkerList.Add(worker);
+        // WorkerList.Add(worker);
         if (worker.Type != WorkerType.Player) return;
         worker.OnEnter(this);
         OnEnterImpl(worker);
@@ -43,7 +39,7 @@ public abstract class BuildingBase : EntityBase
 
     public virtual void OnExit(Worker worker)
     {
-        WorkerList.Remove(worker);
+        // WorkerList.Remove(worker);
         if (worker.Type != WorkerType.Player) return;
         worker.OnExit(this);
         OnExitImpl(worker);
