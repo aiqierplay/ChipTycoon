@@ -74,7 +74,7 @@ public class Worker : EntityBase
     public void OnEnter(BuildingBase building)
     {
         CurrentBuilding = building;
-        if (CurrentBuilding is BuildingFactory factory)
+        if (CurrentBuilding is FactoryBase factory)
         {
             WorkCoroutine = StartCoroutine(FactoryWorkCo(factory));
         }
@@ -253,7 +253,7 @@ public class Worker : EntityBase
         }
     }
 
-    public IEnumerator FactoryWorkCo(BuildingFactory factory)
+    public IEnumerator FactoryWorkCo(FactoryBase factory)
     {
         while (IsWorking)
         {
