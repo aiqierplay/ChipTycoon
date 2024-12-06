@@ -4,6 +4,7 @@ using System.Collections;
 using Aya.Async;
 using Aya.Events;
 using Aya.TweenPro;
+using Aya.Util;
 using TMPro;
 using UnityEngine;
 
@@ -27,10 +28,11 @@ public abstract class FactoryBase : BuildingBase
     [NonSerialized] public int Index;
     [NonSerialized] public FactoryData Data;
     [NonSerialized] public FactoryInfo Info;
-    [NonSerialized] public bool IsWorking = false;
     [NonSerialized] public float WorkProgress;
     [NonSerialized] public float WorkDuration = 1f;
     // [NonSerialized] public float WorkInterval = 0.5f;
+
+    public bool IsWorking => WorkerList.Count > 0;
 
     [GetComponentInChildren, NonSerialized]
     public ProduceLine ProduceLine;
@@ -54,13 +56,17 @@ public abstract class FactoryBase : BuildingBase
         ProduceLine.InputNum = Input.Number;
         ProduceLine.OutputNum = Output.Number;
         ProduceLine.WorkDuration = WorkDuration;
-        ProduceLine.OnOutput = () =>
+        ProduceLine.OnOutput = output =>
         {
-            Output.Add(1);
+            var product = output as Product;
+            Output.StackList.AddParabola(product);
             Refresh();
         };
 
-        StartCoroutine(WorkCo());
+        if (Info.Unlock)
+        {
+            StartCoroutine(WorkCo());
+        }
     }
 
     [Listen(GameEvent.Upgrade)]
@@ -168,7 +174,6 @@ public abstract class FactoryBase : BuildingBase
     {
         ProduceLine.Init();
 
-        IsWorking = false;
         WorkProgress = 0f;
         while (!Info.Unlock)
         {
@@ -178,16 +183,35 @@ public abstract class FactoryBase : BuildingBase
         var inputTimer = 0f;
         while (true)
         {
+            while (IsWorking)
+            {
+                yield return null;
+            }
+
             while (inputTimer <= ProduceLine.InputInterval)
             {
                 inputTimer += DeltaTime;
                 yield return null;
             }
 
+            while (IsWorking)
+            {
+                yield return null;
+            }
+
+            yield return YieldBuilder.WaitForSeconds(0.1f);
+
             if (Input.Count > 0 && ProduceLine.CheckCanInput())
             {
+                var product = Input.StackList.Pop();
+                yield return product.WaitForParabolaFlyTo(ProduceLine.InputStart.position, 2f,
+                    RandUtil.RandFloat(0.25f, 0.35f),
+                    () =>
+                    {
+                        GamePool.DeSpawn(product);
+                    });
+
                 ProduceLine.AddInput();
-                Input.StackList.Remove(1);
                 Refresh();
 
                 inputTimer = 0f;

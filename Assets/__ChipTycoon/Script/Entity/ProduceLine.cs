@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Aya.Extension;
+using Aya.TweenPro;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ public class ProduceLine : EntityBase
     public float InputInterval;
     public int InputNum;
     public int InputMax;
+    public UVScroller InputLineUv;
     [Title("Output")]
     public Transform OutputStart;
     public Transform OutputEnd;
@@ -22,15 +24,19 @@ public class ProduceLine : EntityBase
     public float OutputInterval;
     public int OutputNum;
     public int OutputMax;
+    public UVScroller OutputLineUv;
     [Title("Work")] 
     public float WorkDuration;
+    public UTweenPlayer TweenWork;
 
     [NonSerialized] public List<EntityBase> InputList = new List<EntityBase>();
     [NonSerialized] public int InputCount;
     [NonSerialized] public List<EntityBase> OutputList = new List<EntityBase>();
     [NonSerialized] public int OutputCount;
+    [NonSerialized] public Action<EntityBase> OnOutput = delegate { };
 
-    [NonSerialized] public Action OnOutput = delegate { };
+    [NonSerialized] public bool IsWorking;
+    [NonSerialized] public bool IsWorkComplete;
 
     public void Init()
     {
@@ -38,7 +44,9 @@ public class ProduceLine : EntityBase
         OutputList.Clear();
         InputCount = 0;
         OutputCount = 0;
-
+        IsWorking = false;
+        IsWorkComplete = false;
+        WorkStop();
         StartCoroutine(WorkCo());
     }
 
@@ -64,6 +72,37 @@ public class ProduceLine : EntityBase
         return (pos - OutputStart.position).magnitude / (OutputEnd.position - OutputStart.position).magnitude;
     }
 
+    public void WorkStart()
+    {
+        if (TweenWork != null) TweenWork.Play();
+    }
+
+    public void WorkStop()
+    {
+        if (TweenWork != null) TweenWork.Stop();
+    }
+
+    public void InputLineStart()
+    {
+        if (InputLineUv != null) InputLineUv.enabled = true;
+    }
+
+    public void InputLineStop()
+    {
+        if (InputLineUv != null) InputLineUv.enabled = false;
+    }
+
+    public void OutputLineStart()
+    {
+        if (OutputLineUv != null) OutputLineUv.enabled = true;
+    }
+
+    public void OutputLineStop()
+    {
+        if (OutputLineUv != null) OutputLineUv.enabled = false;
+    }
+
+
     public IEnumerator WorkCo()
     {
         var workTimer = 0f;
@@ -82,6 +121,12 @@ public class ProduceLine : EntityBase
                     {
                         input.Position += inputDirection * MoveSpeed * DeltaTime;
                     }
+
+                    InputLineStart();
+                }
+                else
+                {
+                    InputLineStop();
                 }
 
                 inputFirstProgress = GetInputProgress(inputFirst.Position);
@@ -92,17 +137,40 @@ public class ProduceLine : EntityBase
                     InputCount++;
                 }
             }
+            else
+            {
+                InputLineStop();
+            }
 
             // Work
-            if (InputCount >= InputNum && OutputCount < OutputNum)
+            var checkCanWork = InputCount >= InputNum && OutputCount < OutputNum;
+            if (checkCanWork && !IsWorking)
+            {
+                IsWorking = true;
+                IsWorkComplete = false;
+                WorkStart();
+            }
+
+            if (!checkCanWork && IsWorking)
+            {
+                IsWorking = false;
+                WorkStop();
+            }
+
+            if (IsWorking)
             {
                 // Wait Work
-                if (workTimer < WorkDuration)
+                if (!IsWorkComplete && workTimer < WorkDuration)
                 {
                     workTimer += DeltaTime;
+                    if (workTimer >= WorkDuration)
+                    {
+                        workTimer = WorkDuration;
+                        IsWorkComplete = true;
+                    }
                 }
 
-                if (workTimer >= WorkDuration)
+                if (IsWorkComplete)
                 {
                     outputTimer += DeltaTime;
                     if (outputTimer >= OutputInterval && OutputList.Count < OutputMax)
@@ -120,6 +188,7 @@ public class ProduceLine : EntityBase
                             OutputCount = 0;
                             workTimer = 0f;
                             outputTimer = 0f;
+                            IsWorkComplete = false;
                         }
                     }
                 }
@@ -139,9 +208,14 @@ public class ProduceLine : EntityBase
                 if (outputFirstProgress >= 1f)
                 {
                     OutputList.Remove(outputFirst);
-                    GamePool.DeSpawn(outputFirst);
-                    OnOutput?.Invoke();
+                    OnOutput?.Invoke(outputFirst);
                 }
+
+                OutputLineStart();
+            }
+            else
+            {
+                OutputLineStop();
             }
 
             yield return null;

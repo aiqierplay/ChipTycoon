@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Aya.Extension;
 using Aya.TweenPro;
 using UnityEngine;
@@ -126,6 +127,28 @@ public abstract partial class EntityBase
         Animator.Play(CurrentAnimationClip, 0, normalizedProgress);
         Animator.Update(0);
         Animator.speed = 1f;
+    }
+
+    #endregion
+
+    #region Parabola Fly To
+
+    public TweenParabola ParabolaFlyTo(Vector3 targetPos, float height, float duration, Action onDone = null)
+    {
+        var from = Position;
+        var tweener = UTween.Parabola(Trans, from, targetPos, height, duration)
+            .SetOnStop(() =>
+            {
+                onDone?.Invoke();
+            });
+
+        return tweener;
+    }
+
+    public IEnumerator WaitForParabolaFlyTo(Vector3 targetPos, float height, float duration, Action onDone = null)
+    {
+        var tweener = ParabolaFlyTo(targetPos, height, duration, onDone);
+        yield return tweener.WaitForComplete();
     }
 
     #endregion

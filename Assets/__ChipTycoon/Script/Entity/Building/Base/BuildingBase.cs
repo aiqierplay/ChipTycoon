@@ -35,6 +35,7 @@ public abstract class BuildingBase : EntityBase
 
     public virtual void OnEnter(Worker worker)
     {
+        WorkerList.Add(worker);
         if (worker.Type != WorkerType.Player) return;
         worker.OnEnter(this);
         OnEnterImpl(worker);
@@ -42,6 +43,7 @@ public abstract class BuildingBase : EntityBase
 
     public virtual void OnExit(Worker worker)
     {
+        WorkerList.Remove(worker);
         if (worker.Type != WorkerType.Player) return;
         worker.OnExit(this);
         OnExitImpl(worker);
