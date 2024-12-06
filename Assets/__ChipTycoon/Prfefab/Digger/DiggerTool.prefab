@@ -328,6 +328,7 @@ MonoBehaviour:
   - {fileID: 3083154150092931689}
   - {fileID: 5933461944566671421}
   MoveSpeed: 0.05
+  WorkSpeedMultiply: 0.2
   RotateSpeed: 1
   MaxTouchDis: 10
 --- !u!54 &6001713344971937411

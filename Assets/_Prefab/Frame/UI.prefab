@@ -4338,29 +4338,29 @@ MonoBehaviour:
   AutoRefreshInterval: 1
   FlyDuration: 1
   Interval: 0.05
-  RandomStartPos: 5
+  RandomStartPos: 10
   PerFrameLimit: 10
   MaxCount: 100
   CurveX:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.4
       value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      inSlope: 1.6666666
+      outSlope: 1.6666666
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 1.6666666
+      outSlope: 1.6666666
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -4369,22 +4369,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.4
       value: 0
-      inSlope: -1.261884
-      outSlope: -1.261884
-      tangentMode: 0
+      inSlope: 1.6666666
+      outSlope: 1.6666666
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.08054283
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 1.6666666
+      outSlope: 1.6666666
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -4458,7 +4458,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   TargetList:
   - Name: Coin
-    Target: {fileID: 1269429030062008410}
+    Target: {fileID: 3985063035273014502}
     Prefab: {fileID: 4966422483829602007, guid: f2da8f21541a9704db3353e99cee6081,
       type: 3}
   - Name: Diamond

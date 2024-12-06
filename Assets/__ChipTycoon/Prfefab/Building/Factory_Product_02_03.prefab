@@ -421,7 +421,7 @@ MonoBehaviour:
     Max: -1
     Pos: {fileID: 3484190210551688453}
     StackList: {fileID: 6026419197688667960}
-    Number: 20
+    Number: 1
     TextCount: {fileID: 7144148047952877870}
     MaxTipObj: {fileID: 0}
     ColliderListenerEnter: {fileID: 7681695706178277824}

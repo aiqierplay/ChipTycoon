@@ -727,8 +727,8 @@ MonoBehaviour:
   OutputLineUv: {fileID: 0}
   WorkDuration: 0
   TweenWork: {fileID: 0}
-  TextInputValue: {fileID: 7882680228524373069}
-  TextInputCount: {fileID: 5261846953950788952}
+  TextInputValue: {fileID: 5261846953950788952}
+  TextInputCount: {fileID: 7882680228524373069}
 --- !u!1 &8746610035018550141
 GameObject:
   m_ObjectHideFlags: 0
