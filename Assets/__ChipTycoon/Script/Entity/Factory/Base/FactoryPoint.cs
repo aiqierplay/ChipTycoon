@@ -30,8 +30,7 @@ public class FactoryPoint
     public TMP_Text TextCount;
     public GameObject MaxTipObj;
 
-    public ColliderListenerEnter ColliderListenerEnter;
-    public ColliderListenerExit ColliderListenerExit;
+    public TriggerArea TriggerArea;
 
     public ProductTypeData TypeData => ProductSetting.Ins.DataDic[Type];
 
@@ -57,16 +56,11 @@ public class FactoryPoint
         StackList.Init();
         StackList.Prefab = TypeData.Prefab;
 
-        if (ColliderListenerEnter != null)
+        if (TriggerArea != null)
         {
-            ColliderListenerEnter.Clear();
-            ColliderListenerEnter.onTriggerEnter.Add<Worker>(OnEnter, LayerManager.Ins.Player);
-        }
-
-        if (ColliderListenerExit != null)
-        {
-            ColliderListenerExit.Clear();
-            ColliderListenerExit.onTriggerExit.Add<Worker>(OnExit, LayerManager.Ins.Player);
+            TriggerArea.Init();
+            TriggerArea.Enter.onTriggerEnter.Add<Worker>(OnEnter, LayerManager.Ins.Player);
+            TriggerArea.Exit.onTriggerExit.Add<Worker>(OnExit, LayerManager.Ins.Player);
         }
 
         Refresh();
@@ -77,6 +71,7 @@ public class FactoryPoint
         if (worker == null) return;
         if (worker.Type != WorkerType.Player) return;
         worker.OnEnter(Factory, this);
+        TriggerArea.OnEnter();
     }
 
     public virtual void OnExit(Worker worker)
@@ -84,6 +79,7 @@ public class FactoryPoint
         if (worker == null) return;
         if (worker.Type != WorkerType.Player) return;
         worker.OnExit(Factory, this);
+        TriggerArea.OnExit();
     }
 
     public void Refresh()

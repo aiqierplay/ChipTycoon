@@ -2,26 +2,17 @@ using Aya.Physical;
 
 public abstract class BuildingBase : EntityBase
 {
-    public ColliderListenerEnter ColliderListenerEnter;
-    public ColliderListenerExit ColliderListenerExit;
+    public TriggerArea TriggerArea;
 
     // [NonSerialized] public List<Worker> WorkerList = new List<Worker>();
 
     public virtual void Init()
     {
-        if (ColliderListenerEnter != null)
+        if (TriggerArea != null)
         {
-            ColliderListenerEnter.Clear();
-            ColliderListenerEnter.onTriggerEnter.Add<Worker>(OnEnter, LayerManager.Ins.Player);
+            TriggerArea.Enter.onTriggerEnter.Add<Worker>(OnEnter, LayerManager.Ins.Player);
+            TriggerArea.Exit.onTriggerExit.Add<Worker>(OnExit, LayerManager.Ins.Player);
         }
-
-        if (ColliderListenerExit != null)
-        {
-            ColliderListenerExit.Clear();
-            ColliderListenerExit.onTriggerExit.Add<Worker>(OnExit, LayerManager.Ins.Player);
-        }
-
-        // WorkerList.Clear();
     }
 
     public virtual void Refresh()
@@ -35,6 +26,7 @@ public abstract class BuildingBase : EntityBase
         if (worker.Type != WorkerType.Player) return;
         worker.OnEnter(this);
         OnEnterImpl(worker);
+        TriggerArea.OnEnter();
     }
 
     public virtual void OnExit(Worker worker)
@@ -43,6 +35,7 @@ public abstract class BuildingBase : EntityBase
         if (worker.Type != WorkerType.Player) return;
         worker.OnExit(this);
         OnExitImpl(worker);
+        TriggerArea.OnExit();
     }
 
     public abstract void OnEnterImpl(Worker worker);

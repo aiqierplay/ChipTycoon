@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Aya.Extension;
+using Aya.TweenPro;
 using UnityEngine;
 
 public enum GameMode
