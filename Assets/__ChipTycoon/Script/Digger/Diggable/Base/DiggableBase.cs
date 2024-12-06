@@ -70,6 +70,7 @@ public abstract class DiggableBase : EntityBase
 
     public virtual void OnEnter(DiggerTool digger)
     {
+        digger.StartWork();
         OnEnterForce(digger, false);
     }
 

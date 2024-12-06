@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Aya.Extension;
 using Aya.TweenPro;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 
 public class ProduceLine : EntityBase
@@ -29,6 +30,10 @@ public class ProduceLine : EntityBase
     public float WorkDuration;
     public UTweenPlayer TweenWork;
 
+    [Title("Info")] 
+    public TMP_Text TextInputValue;
+    public TMP_Text TextInputCount;
+
     [NonSerialized] public List<EntityBase> InputList = new List<EntityBase>();
     [NonSerialized] public int InputCount;
     [NonSerialized] public List<EntityBase> OutputList = new List<EntityBase>();
@@ -49,7 +54,14 @@ public class ProduceLine : EntityBase
         WorkStop();
         InputLineStop();
         OutputLineStop();
+        Refresh();
         StartCoroutine(WorkCo());
+    }
+
+    public void Refresh()
+    {
+        if (TextInputValue != null) TextInputValue.text = InputCount.ToString();
+        if (TextInputCount != null) TextInputCount.text = InputNum.ToString();
     }
 
     public bool CheckCanInput()
@@ -137,6 +149,7 @@ public class ProduceLine : EntityBase
                     InputList.Remove(inputFirst);
                     GamePool.DeSpawn(inputFirst);
                     InputCount++;
+                    Refresh();
                 }
             }
             else
@@ -191,6 +204,7 @@ public class ProduceLine : EntityBase
                             workTimer = 0f;
                             outputTimer = 0f;
                             IsWorkComplete = false;
+                            Refresh();
                         }
                     }
                 }

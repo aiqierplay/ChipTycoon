@@ -30,6 +30,7 @@ public class DiggerTool : EntityBase
     public List<GameObject> DiggerLevelList;
 
     public float MoveSpeed = 5;
+    public float WorkSpeedMultiply = 0.5f;
     public float RotateSpeed = 10;
     public float MaxTouchDis = 10;
 
@@ -42,9 +43,13 @@ public class DiggerTool : EntityBase
     [NonSerialized] public float Length;
     [NonSerialized] public float AbsorberSpeed;
 
+    [NonSerialized] public bool IsWorking;
+    [NonSerialized] public float WorkTimer;
+
     public void Init()
     {
         Direction = Vector3.zero;
+        IsWorking = false;
         Trans.ResetLocal();
         RootTrans.ResetLocal();
         RefreshData();
@@ -89,6 +94,12 @@ public class DiggerTool : EntityBase
         }
     }
 
+    public void StartWork()
+    {
+        IsWorking = true;
+        WorkTimer = 0f;
+    }
+
     public void OnTouchStart(Vector3 pos)
     {
         StartPos = pos;
@@ -115,12 +126,22 @@ public class DiggerTool : EntityBase
     {
         if (World.Mode != GameMode.Digger) return;
 
-        var pos = MoveTrans.position + Direction * MoveSpeed * DeltaTime;
+        var moveSpeed = MoveSpeed;
+        var rotateSpeed = RotateSpeed;
+        if (IsWorking)
+        {
+            moveSpeed *= WorkSpeedMultiply;
+            rotateSpeed *= WorkSpeedMultiply;
+            WorkTimer += DeltaTime;
+            if (WorkTimer > 1f) IsWorking = false;
+        }
+
+        var pos = MoveTrans.position + Direction * moveSpeed * DeltaTime;
         var length = (pos - Position).magnitude;
         if (length > Length)
         {
             var targetPos = Position + Direction.normalized * Length;
-            pos = Vector3.Lerp(MoveTrans.position, targetPos, MoveSpeed * DeltaTime * 5f);
+            pos = Vector3.Lerp(MoveTrans.position, targetPos, moveSpeed * DeltaTime * 5f);
         }
 
         pos = MathUtil.Clamp(pos, PosMin, PosMax);
@@ -132,7 +153,7 @@ public class DiggerTool : EntityBase
         if (Mode == DiggerToolMode.Absorber)
         {
             var targetDirection = -Direction;
-            var toolDirection = Vector3.Lerp(CurrentTool.Target.transform.up, targetDirection, RotateSpeed * DeltaTime);
+            var toolDirection = Vector3.Lerp(CurrentTool.Target.transform.up, targetDirection, rotateSpeed * DeltaTime);
             CurrentTool.Target.transform.up = toolDirection;
         }
 
