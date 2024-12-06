@@ -4634,6 +4634,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563763015180863222, guid: fdfc558e43567b541b7b94d03eae85e8,
         type: 3}
+      propertyPath: InputMax
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563763015180863222, guid: fdfc558e43567b541b7b94d03eae85e8,
+        type: 3}
+      propertyPath: OutputMax
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563763015180863222, guid: fdfc558e43567b541b7b94d03eae85e8,
+        type: 3}
       propertyPath: TweenWork
       value: 
       objectReference: {fileID: 9472064786874607}
@@ -4647,6 +4657,11 @@ PrefabInstance:
       propertyPath: OutputLineUv
       value: 
       objectReference: {fileID: 7239645624550929936}
+    - target: {fileID: 1563763015180863222, guid: fdfc558e43567b541b7b94d03eae85e8,
+        type: 3}
+      propertyPath: OutputInterval
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3464640063814121290, guid: fdfc558e43567b541b7b94d03eae85e8,
         type: 3}
       propertyPath: m_LocalPosition.x
