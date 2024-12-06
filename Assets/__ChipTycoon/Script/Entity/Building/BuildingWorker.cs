@@ -6,6 +6,7 @@ public class BuildingWorker : BuildingBase
 {
     public override void OnEnterImpl(Worker worker)
     {
+        if (UI.Current is not UIGame) return;
         UI.Show<UIWorker>();
         World.Character.DisableMove();
     }
