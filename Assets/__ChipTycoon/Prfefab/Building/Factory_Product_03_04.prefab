@@ -327,7 +327,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        Space: 0
+        Space: 1
         FoldOut: 1
         DurationMode: 0
         Target: {fileID: 4351962189092008417}
@@ -745,12 +745,12 @@ MonoBehaviour:
   Output:
     Enable: 1
     Mode: 1
-    RootObj: {fileID: 0}
+    RootObj: {fileID: 1524857835041897730}
     Type: Product_04
     Max: -1
     Pos: {fileID: 9055617790633882516}
     StackList: {fileID: 5460182739446972240}
-    Number: 1
+    Number: 10
     TextCount: {fileID: 0}
     MaxTipObj: {fileID: 0}
     ColliderListenerEnter: {fileID: 4005723293858263535}
@@ -2212,7 +2212,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        Space: 0
+        Space: 1
         FoldOut: 1
         DurationMode: 0
         Target: {fileID: 4351962189092008417}

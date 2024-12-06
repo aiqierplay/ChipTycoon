@@ -32,7 +32,7 @@ public class FactoryFinal : FactoryBase
 
             while (CarStackList.Count < CarCapacity)
             {
-                if (Input.Count >= 0)
+                if (Input.Count > 0)
                 {
                     var product = Input.StackList.Pop();
                     CarStackList.AddParabola(product);
@@ -52,6 +52,8 @@ public class FactoryFinal : FactoryBase
             TweenCarExit.Play();
             var tweenExit = TweenCarExit.Value.Animation;
             yield return tweenExit.WaitForComplete();
+
+            CarStackList.Clear();
         }
     }
 }

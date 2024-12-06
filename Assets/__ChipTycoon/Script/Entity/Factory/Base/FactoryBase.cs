@@ -228,43 +228,44 @@ public abstract class FactoryBase : BuildingBase
         }
         else
         {
-            while (true)
-            {
-                var timer = 0f;
-                if (Input.Count >= Input.Number && Output.CanAdd)
-                {
-                    TweenWork.Sample(0f);
-                    while (timer <= WorkDuration)
-                    {
-                        timer += DeltaTime;
-                        if (timer >= WorkDuration)
-                        {
-                            timer = WorkDuration;
-                        }
-
-                        WorkProgress = timer / WorkDuration;
-
-                        if (WorkProgress >= 1)
-                        {
-                            for (var i = 0; i < Input.Number; i++)
-                            {
-                                Input.Remove(Input.Number);
-                            }
-
-                            Output.Add(Output.Number);
-                            TweenWork.Sample(WorkProgress);
-                            Refresh();
-                            break;
-                        }
-
-                        Refresh();
-                        TweenWork.Sample(0f);
-                        yield return null;
-                    }
-
-                    yield return YieldBuilder.WaitForSeconds(WorkInterval);
-                }
-            }
+            yield return null;
+            // while (true)
+            // {
+            //     var timer = 0f;
+            //     if (Input.Count >= Input.Number && Output.CanAdd)
+            //     {
+            //         TweenWork.Sample(0f);
+            //         while (timer <= WorkDuration)
+            //         {
+            //             timer += DeltaTime;
+            //             if (timer >= WorkDuration)
+            //             {
+            //                 timer = WorkDuration;
+            //             }
+            //
+            //             WorkProgress = timer / WorkDuration;
+            //
+            //             if (WorkProgress >= 1)
+            //             {
+            //                 for (var i = 0; i < Input.Number; i++)
+            //                 {
+            //                     Input.Remove(Input.Number);
+            //                 }
+            //
+            //                 Output.Add(Output.Number);
+            //                 TweenWork.Sample(WorkProgress);
+            //                 Refresh();
+            //                 break;
+            //             }
+            //
+            //             Refresh();
+            //             TweenWork.Sample(0f);
+            //             yield return null;
+            //         }
+            //
+            //         yield return YieldBuilder.WaitForSeconds(WorkInterval);
+            //     }
+            // }
         }
     }
 }
