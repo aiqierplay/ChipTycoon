@@ -113,6 +113,7 @@ MonoBehaviour:
     SpeedBased: 0
     TweenerList:
     - rid: 7391153701323014144
+    - rid: 7391153701323014151
     OnStart:
       Event:
         m_PersistentCalls:
@@ -162,7 +163,7 @@ MonoBehaviour:
         Active: 1
         Duration: 0.25
         Delay: 0
-        HoldStart: 1
+        HoldStart: 0
         HoldEnd: 0
         Ease: 25
         Strength: 0
@@ -232,6 +233,116 @@ MonoBehaviour:
           Value: {x: 1.05, y: 1.05, z: 1.05}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 1, y: 1, z: 1}
+    - rid: 7391153701323014151
+      type: {class: TweenMaterialPropertyColor, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.25
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 0
+        Ease: 0
+        Strength: 1
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 1415525768762741265}
+        Axis: 30
+        EnableAxis: 0
+        ColorMode: 0
+        ColorLerpMode: 0
+        Gradient:
+          serializedVersion: 2
+          key0: {r: 0, g: 0, b: 0, a: 1}
+          key1: {r: 1, g: 1, b: 1, a: 1}
+          key2: {r: 0, g: 0, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 65535
+          ctime2: 0
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 2
+          m_NumAlphaKeys: 2
+        From:
+          Mode: 0
+          Value: {r: 0, g: 0, b: 0, a: 0.29803923}
+          RandomFrom: {r: 0, g: 0, b: 0, a: 0}
+          RandomTo: {r: 0, g: 0, b: 0, a: 1}
+        To:
+          Mode: 0
+          Value: {r: 0.15887952, g: 0.3962264, b: 0, a: 0.29803923}
+          RandomFrom: {r: 0, g: 0, b: 0, a: 0}
+          RandomTo: {r: 1, g: 1, b: 1, a: 1}
+        MaterialData:
+          Mode: 0
+          Index: 0
+          Property: _Color
 --- !u!1 &5405985456242347770
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +499,7 @@ MonoBehaviour:
     SpeedBased: 0
     TweenerList:
     - rid: 7391153701323014144
+    - rid: 7391153701323014152
     OnStart:
       Event:
         m_PersistentCalls:
@@ -437,7 +549,7 @@ MonoBehaviour:
         Active: 1
         Duration: 0.25
         Delay: 0
-        HoldStart: 1
+        HoldStart: 0
         HoldEnd: 0
         Ease: 24
         Strength: 0
@@ -507,6 +619,116 @@ MonoBehaviour:
           Value: {x: 1, y: 1, z: 1}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 0}
+    - rid: 7391153701323014152
+      type: {class: TweenMaterialPropertyColor, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.25
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 0
+        Ease: 0
+        Strength: 1
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 1415525768762741265}
+        Axis: 30
+        EnableAxis: 0
+        ColorMode: 0
+        ColorLerpMode: 0
+        Gradient:
+          serializedVersion: 2
+          key0: {r: 1, g: 1, b: 1, a: 1}
+          key1: {r: 0, g: 0, b: 0, a: 1}
+          key2: {r: 0, g: 0, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 65535
+          ctime2: 0
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 2
+          m_NumAlphaKeys: 2
+        From:
+          Mode: 0
+          Value: {r: 0.15887952, g: 0.3962264, b: 0, a: 0.29803923}
+          RandomFrom: {r: 0, g: 0, b: 0, a: 0}
+          RandomTo: {r: 1, g: 1, b: 1, a: 1}
+        To:
+          Mode: 0
+          Value: {r: 0, g: 0, b: 0, a: 0.29803923}
+          RandomFrom: {r: 0, g: 0, b: 0, a: 0}
+          RandomTo: {r: 0, g: 0, b: 0, a: 1}
+        MaterialData:
+          Mode: 0
+          Index: 0
+          Property: _Color
 --- !u!1001 &316765511987842709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -609,6 +831,12 @@ PrefabInstance:
 --- !u!4 &283684941221079422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac1634a5242a987429c576ab08a4a862,
+    type: 3}
+  m_PrefabInstance: {fileID: 316765511987842709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1415525768762741265 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: ac1634a5242a987429c576ab08a4a862,
     type: 3}
   m_PrefabInstance: {fileID: 316765511987842709}
   m_PrefabAsset: {fileID: 0}
