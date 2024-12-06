@@ -27,6 +27,7 @@ public class DiggerTool : EntityBase
 
     public GameObject MaxLengthTip;
     public UTweenPlayerReference TweenMaxTip;
+    public List<GameObject> DiggerLevelList;
 
     public float MoveSpeed = 5;
     public float RotateSpeed = 10;
@@ -46,7 +47,6 @@ public class DiggerTool : EntityBase
         Direction = Vector3.zero;
         Trans.ResetLocal();
         RootTrans.ResetLocal();
-        MoveTrans.ResetLocal();
         RefreshData();
         RefreshLine(true);
         SwitchTool(DiggerToolMode.Digger);
@@ -58,6 +58,13 @@ public class DiggerTool : EntityBase
         Power = Upgrade.GetInfo<DiggerPowerData>(CurrentLevel.SaveKey).Current.IntValue;
         Length = Upgrade.GetInfo<DiggerLengthData>(CurrentLevel.SaveKey).Current.Value;
         AbsorberSpeed = Upgrade.GetInfo<AbsorberSpeedData>(CurrentLevel.SaveKey).Current.Value;
+
+        var diggerLevel = Upgrade.GetInfo<DiggerPowerData>().Current.Index;
+        for (var i = 0; i < DiggerLevelList.Count; i++)
+        {
+            var digger = DiggerLevelList[i];
+            digger.SetActive(diggerLevel == i);
+        }
     }
 
     public void SwitchTool(DiggerToolMode mode)

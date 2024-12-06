@@ -284,7 +284,11 @@ public class Worker : EntityBase
         {
             var product = StackList.Pop() as Product;
             if (product == null) yield break;
-            factory.Input.StackList.AddParabola(product);
+            product.IsWorking = true;
+            factory.Input.StackList.AddParabola(product, () =>
+            {
+                product.IsWorking = false;
+            });
             factory.Input.Refresh();
             yield return null;
         }
@@ -301,6 +305,7 @@ public class Worker : EntityBase
             if (product == null) yield break;
             if (product.TypeData.IsFinal)
             {
+                product.IsWorking = true;
                 StackList.AddParabola(product, () =>
                 {
                     var value = product.TypeData.CostCoin;
@@ -310,6 +315,7 @@ public class Worker : EntityBase
                     });
 
                     StackList.Remove(product);
+                    product.IsWorking = false;
                 });
             }
             else
