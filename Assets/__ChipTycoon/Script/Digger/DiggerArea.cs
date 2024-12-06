@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Aya.Extension;
 using Aya.Util;
-using Dreamteck.Splines.Primitives;
 using UnityEngine;
 
 public class DiggerArea : EntityBase
@@ -56,10 +55,14 @@ public class DiggerArea : EntityBase
             if (active == 0) diggable.SetActive(false);
         }
 
-        for (var i = 0; i < CurrentLevel.Info.DropProductCount; i++)
+        this.ExecuteNextFrame(() =>
         {
-            DiggableOre.CreateDropProduct(Position + Vector3.down * RandUtil.RandFloat(5, 8) + new Vector3(RandUtil.RandFloat(-5f, 5f), 0f, 0f));
-        }
+            for (var i = 0; i < CurrentLevel.Info.DropProductCount; i++)
+            {
+                DiggableOre.CreateDropProduct(Position + Vector3.down * RandUtil.RandFloat(8, 10) +
+                                              new Vector3(RandUtil.RandFloat(-5f, 5f), 0f, 0f));
+            }
+        });
     }
 
     public void SaveState()
