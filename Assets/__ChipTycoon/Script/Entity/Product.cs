@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
@@ -7,6 +8,8 @@ public class Product : EntityBase
 {
     [ValueDropdown(nameof(TypeGetter))]
     public string Type;
+
+    [NonSerialized] public bool IsWorking;
 
     public IEnumerable TypeGetter() => ProductSetting.Ins.GetValueDropdownKeyList();
     

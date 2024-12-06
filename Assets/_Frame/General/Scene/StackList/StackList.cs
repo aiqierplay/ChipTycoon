@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Aya.Extension;
 using Aya.TweenPro;
@@ -145,6 +146,11 @@ public class StackList : EntityBase
 
     public void AddParabola(EntityBase instance, float height, float duration, Action onDone = null)
     {
+        instance.StartCoroutine(AddParabolaCo(instance, height, duration, onDone));
+    }
+
+    public IEnumerator AddParabolaCo(EntityBase instance, float height, float duration, Action onDone = null)
+    {
         var startPos = instance.Position;
         var startEulerAngle = instance.LocalEulerAngles;
         var startScale = instance.LocalScale;
@@ -154,20 +160,21 @@ public class StackList : EntityBase
         var endEulerAngle = data.EulerAngle;
         var endScale = data.Scale;
         var tweenDuration = duration * RandUtil.RandFloat(0.8f, 1.1f);
-        var tweenParabola = UTween.Value(0f, 1f, duration, value =>
+        var speed = 1f / tweenDuration;
+        var timer = 0f;
+        var tweenScale = UTween.Scale(instance.Trans, startScale, endScale, tweenDuration);
+        var tweenRotate = UTween.LocalEulerAngles(instance.Trans, startEulerAngle, endEulerAngle, tweenDuration);
+        while (timer <= tweenDuration)
         {
+            timer += speed * DeltaTime;
+            var value = timer / tweenDuration;
             var endPos = LocalToWorldPosition(data.Position);
             var localPos = TweenParabola.GetPositionByFactor(startPos, endPos, height, value);
             instance.Position = localPos;
-        })
-            .SetUpdateMode(UpdateMode.LateUpdate)
-            .SetOnStop(() =>
-        {
-            onDone?.Invoke();
-        });
+            yield return null;
+        }
 
-        var tweenScale = UTween.Scale(instance.Trans, startScale, endScale, tweenDuration);
-        var tweenRotate = UTween.LocalEulerAngles(instance.Trans, startEulerAngle, endEulerAngle, tweenDuration);
+        onDone?.Invoke();
     }
 
     public void Add(int count, bool refreshPos)
@@ -199,6 +206,7 @@ public class StackList : EntityBase
             var instance = List.Last();
             if (instance == null) return;
             List.Remove(instance);
+            instance.StopAllCoroutines();
             if (deSpawn) GamePool.DeSpawn(instance);
         }
     }
@@ -208,6 +216,7 @@ public class StackList : EntityBase
         if (instance == null) return;
         if (!List.Contains(instance)) return;
         List.Remove(instance);
+        instance.StopAllCoroutines();
         if (deSpawn) GamePool.DeSpawn(instance);
     }
 
@@ -219,6 +228,7 @@ public class StackList : EntityBase
         var index = List.Count - 1;
         var result = List[index];
         List.Remove(result);
+        result.StopAllCoroutines();
         return result;
     }
 
@@ -228,6 +238,7 @@ public class StackList : EntityBase
         for (var i = 0; i < count; i++)
         {
             var item = List[i];
+            item.StopAllCoroutines();
             if (deSpawn) GamePool.DeSpawn(item);
         }
 
