@@ -11,6 +11,8 @@ Material:
   m_Shader: {fileID: 4800000, guid: 7d42628fba85ccc49b31ca2d1a16f238, type: 3}
   m_ValidKeywords:
   - TCP2_DISABLE_WRAPPED_LIGHT
+  - TCP2_STYLIZED_FRESNEL
+  - _GLOSSYREFLECTIONS_OFF
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -80,7 +82,7 @@ Material:
     - _EnableZSmooth: 0
     - _GlossMapScale: 1
     - _Glossiness: 1
-    - _GlossyReflections: 1
+    - _GlossyReflections: 0
     - _HSV_H: 0
     - _HSV_S: 0
     - _HSV_V: 0
@@ -94,11 +96,11 @@ Material:
     - _RampSmooth: 0.1
     - _RampSmoothAdd: 0.2
     - _RampSmoothOtherLights: 0.5
-    - _RampThreshold: 0.5
+    - _RampThreshold: 0.91
     - _RampThresholdOtherLights: 0.5
     - _RimMax: 0.85
-    - _RimMin: 0.6
-    - _RimStrength: 0.5
+    - _RimMin: 0.149
+    - _RimStrength: 0
     - _SketchSpeed: 6
     - _Smoothness: 0.2
     - _SmoothnessTextureChannel: 0
@@ -109,7 +111,7 @@ Material:
     - _TCP2_DISABLE_WRAPPED_LIGHT: 1
     - _TCP2_RAMPTEXT: 0
     - _TCP2_SPEC_TOON: 0
-    - _TCP2_STYLIZED_FRESNEL: 0
+    - _TCP2_STYLIZED_FRESNEL: 1
     - _TexLod: 5
     - _UVSec: 0
     - _ZSmooth: -0.5
