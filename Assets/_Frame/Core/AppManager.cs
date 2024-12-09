@@ -43,11 +43,11 @@ public class AppManager : EntityBase<AppManager>
 
     public virtual void OnLoadComplete()
     {
+        SDKUtil.Init();
+        StartApp();
         UILoading.Ins.Hide(() =>
         {
-            SDKUtil.Init();
             Dispatch(GameEvent.Launch);
-            StartApp();
         });
     }
 
