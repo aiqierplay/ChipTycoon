@@ -9,7 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: TCP2_Demo_Ground
   m_Shader: {fileID: 4800000, guid: ccfc7d68845db8341944b3091b59be55, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - TCP2_RAMPTEXT
   m_InvalidKeywords:
   - _EMISSION
   m_LightmapFlags: 1
@@ -111,10 +112,10 @@ Material:
     - __EndGroup: 0
     - __dummy__: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.8605551, g: 1, b: 0.5803922, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
-    - _SColor: {r: 0.63235295, g: 0.63235295, b: 0.63235295, a: 1}
+    - _SColor: {r: 0.043141816, g: 0.3490566, b: 0, a: 1}
     - _VColorBlendOffset: {r: 1, g: 0.5, b: 0, a: 0}
     - _VColorBlendSmooth: {r: 0.3, g: 0.65, b: 0.25, a: 0.25}
   m_BuildTextureStacks: []
