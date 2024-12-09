@@ -328,9 +328,10 @@ MonoBehaviour:
   - {fileID: 3083154150092931689}
   - {fileID: 5933461944566671421}
   MoveSpeed: 0.05
-  WorkSpeedMultiply: 0.2
   RotateSpeed: 1
   MaxTouchDis: 10
+  WorkSpeedMultiply: 0.2
+  WorkSpeedDuration: 1
 --- !u!54 &6001713344971937411
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12507,8 +12508,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 392370765392286917, guid: 49f6928ab00a9314092e1c78109b0ae9,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1151968
+      objectReference: {fileID: 0}
+    - target: {fileID: 392370765392286917, guid: 49f6928ab00a9314092e1c78109b0ae9,
+        type: 3}
       propertyPath: m_LocalScale.y
-      value: -0.007553581
+      value: -0.0034953232
+      objectReference: {fileID: 0}
+    - target: {fileID: 392370765392286917, guid: 49f6928ab00a9314092e1c78109b0ae9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.92547446
       objectReference: {fileID: 0}
     - target: {fileID: 2265511570838700703, guid: 49f6928ab00a9314092e1c78109b0ae9,
         type: 3}

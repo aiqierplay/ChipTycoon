@@ -2283,6 +2283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerArea
       objectReference: {fileID: 0}
+    - target: {fileID: 2413247512381218382, guid: 80cdf934236acf648877299e9d766a7b,
+        type: 3}
+      propertyPath: managedReferences[7391153701323014151].Active
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8451293084307952554, guid: 80cdf934236acf648877299e9d766a7b,
         type: 3}
       propertyPath: m_RootOrder
