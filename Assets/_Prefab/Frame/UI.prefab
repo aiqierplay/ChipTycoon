@@ -1,44 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6261488921783329
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7062981776373146263}
-  m_Layer: 5
-  m_Name: TweenShow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7062981776373146263
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6261488921783329}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 408154006940615696}
-  - {fileID: 1738095632680981931}
-  - {fileID: 2392456272360097635}
-  m_Father: {fileID: 703115400754658688}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &92391858926477451
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &364371489064806964
+--- !u!1 &157587018655379441
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,10 +84,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1745527296671584235}
-  - component: {fileID: 1021069039695459930}
-  - component: {fileID: 7496036023890098992}
-  - component: {fileID: 1836912540716049386}
+  - component: {fileID: 5370820284670662756}
+  - component: {fileID: 2951728909987267078}
+  - component: {fileID: 931096083129663989}
+  - component: {fileID: 5437681175646398370}
   m_Layer: 5
   m_Name: BtnClose
   m_TagString: Untagged
@@ -134,56 +95,57 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1745527296671584235
+--- !u!224 &5370820284670662756
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364371489064806964}
+  m_GameObject: {fileID: 157587018655379441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7563357257374578999}
-  m_RootOrder: 1
+  m_Children:
+  - {fileID: 5298361515357996512}
+  m_Father: {fileID: 4339091615459137018}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19, y: -6}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1, y: -647.00006}
+  m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1021069039695459930
+--- !u!222 &2951728909987267078
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364371489064806964}
+  m_GameObject: {fileID: 157587018655379441}
   m_CullTransparentMesh: 0
---- !u!114 &7496036023890098992
+--- !u!114 &931096083129663989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364371489064806964}
+  m_GameObject: {fileID: 157587018655379441}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8234501, b: 0.8234501, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c6e5e6cd3d4daf745a8c4becb2b52d5a, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -192,13 +154,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1836912540716049386
+--- !u!114 &5437681175646398370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364371489064806964}
+  m_GameObject: {fileID: 157587018655379441}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -232,12 +194,12 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 7496036023890098992}
+  m_TargetGraphic: {fileID: 931096083129663989}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 552517153007675648}
-        m_TargetAssemblyTypeName: UIWorker, Assembly-CSharp
+      - m_Target: {fileID: 8893742129696891493}
+        m_TargetAssemblyTypeName: UIFactory, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
         m_Arguments:
@@ -414,86 +376,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &520317943584800905
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9129985153428762535}
-  - component: {fileID: 1233595261362581752}
-  - component: {fileID: 7583107282759866994}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &9129985153428762535
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520317943584800905}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5902317663502180697}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1233595261362581752
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520317943584800905}
-  m_CullTransparentMesh: 0
---- !u!114 &7583107282759866994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520317943584800905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 62
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 148
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Digger
 --- !u!1 &577381334512158851
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,86 +608,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Next
---- !u!1 &958237502950631946
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6161584922434483965}
-  - component: {fileID: 288493536090931687}
-  - component: {fileID: 8444798537426831363}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6161584922434483965
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958237502950631946}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 283558236547501341}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &288493536090931687
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958237502950631946}
-  m_CullTransparentMesh: 0
---- !u!114 &8444798537426831363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958237502950631946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 62
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 148
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Exit
 --- !u!1 &1050666517058882383
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,14 +719,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6161584922434483965}
+  - {fileID: 2370440316373400138}
   m_Father: {fileID: 1555233808642688351}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -376, y: -861}
-  m_SizeDelta: {x: 250, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 179, y: 329.8}
+  m_SizeDelta: {x: 275.38, y: 158.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2210094345535452861
 CanvasRenderer:
@@ -947,14 +749,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8234501, b: 0.8234501, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 0d8a14063c2c82a40afd38b3b85e4b65, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1048,18 +850,18 @@ RectTransform:
   m_GameObject: {fileID: 1106235906491995942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7098916966588850259}
-  - {fileID: 8501242646508822030}
+  - {fileID: 2839045217968959471}
   m_Father: {fileID: 1555233808642688351}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 374, y: -829}
-  m_SizeDelta: {x: 250, y: 100}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -149, y: 329.8}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8162948505716912770
 CanvasRenderer:
@@ -1089,7 +891,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 15aaea509701c2446ae9732ff16d2b68, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1316,12 +1118,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197618969384142247}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7775307345454706055}
+  m_Father: {fileID: 1610340639196032111}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1344,7 +1146,7 @@ MonoBehaviour:
   Animation:
     EnableIdentifier: 1
     Identifier: Show
-    Duration: 0.5
+    Duration: 0.25
     Delay: 0
     Backward: 0
     PlayMode: 0
@@ -1359,8 +1161,7 @@ MonoBehaviour:
     AutoKill: 0
     SpeedBased: 0
     TweenerList:
-    - rid: 1398658504383528960
-    - rid: 1398658504383528961
+    - rid: 1398658505592537088
     OnStart:
       Event:
         m_PersistentCalls:
@@ -1404,16 +1205,16 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1398658504383528960
-      type: {class: TweenAnchoredPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
+    - rid: 1398658505592537088
+      type: {class: TweenCanvasGroupAlpha, ns: Aya.TweenPro, asm: Aya.TweenPro}
       data:
         Active: 1
-        Duration: 0.5
+        Duration: 0.25
         Delay: 0
-        HoldStart: 0
+        HoldStart: 1
         HoldEnd: 0
-        Ease: 29
-        Strength: 0
+        Ease: 0
+        Strength: 1
         CurveMode: 0
         EditCurve:
           serializedVersion: 2
@@ -1466,94 +1267,19 @@ MonoBehaviour:
         Space: 0
         FoldOut: 1
         DurationMode: 0
-        Target: {fileID: 1250221206977408070}
+        Target: {fileID: 7860124151857083217}
         Axis: 30
         EnableAxis: 0
         From:
           Mode: 0
-          Value: {x: -600, y: 0}
-          RandomFrom: {x: 0, y: 0}
-          RandomTo: {x: 0, y: 0}
+          Value: 0
+          RandomFrom: 0
+          RandomTo: 0
         To:
           Mode: 0
-          Value: {x: 0, y: 0}
-          RandomFrom: {x: 0, y: 0}
-          RandomTo: {x: 1, y: 1}
-    - rid: 1398658504383528961
-      type: {class: TweenAnchoredPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.5
-        Delay: 0
-        HoldStart: 0
-        HoldEnd: 0
-        Ease: 29
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 8339688230160574873}
-        Axis: 30
-        EnableAxis: 0
-        From:
-          Mode: 0
-          Value: {x: 600, y: 0}
-          RandomFrom: {x: 0, y: 0}
-          RandomTo: {x: 0, y: 0}
-        To:
-          Mode: 0
-          Value: {x: 0, y: 0}
-          RandomFrom: {x: 0, y: 0}
-          RandomTo: {x: 1, y: 1}
+          Value: 1
+          RandomFrom: 0
+          RandomTo: 1
 --- !u!1 &1259896198533090671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,8 +1745,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7837435254121691417}
-  - {fileID: 3638232643136807454}
+  - {fileID: 5947644303851640478}
+  - {fileID: 1059026677525542049}
   - {fileID: 4432004457266179493}
   m_Father: {fileID: 3911794835538711329}
   m_RootOrder: 0
@@ -2046,9 +1772,9 @@ MonoBehaviour:
   AutoRefresh: 0
   AutoRefreshInterval: 1
   TweenShow:
-    Value: {fileID: 7929851573669979356}
+    Value: {fileID: 2011758005025704344}
   TweenHide:
-    Value: {fileID: 1800052313109117735}
+    Value: {fileID: 7481300050997441969}
   WaitDuration: 0.2
   ImgProgress: {fileID: 0}
   TextProgress: {fileID: 0}
@@ -2283,414 +2009,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &2271017362277262297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6280964292309709078}
-  - component: {fileID: 5693551873014953041}
-  - component: {fileID: 4702862755759306045}
-  m_Layer: 5
-  m_Name: Tween1 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6280964292309709078
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2271017362277262297}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6664354634638118378}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5693551873014953041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2271017362277262297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 0
-    Identifier: 
-    Duration: 0.25
-    Delay: 0.1
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 2
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 1
-    SelfScale: 1
-    PrepareSampleMode: 0
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 7391153767240433664
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7391153767240433664
-      type: {class: TweenScale, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.25
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 25
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 9011227524135291766}
-        Axis: 30
-        EnableAxis: 0
-        AngleMode: 0
-        From:
-          Mode: 0
-          Value: {x: 0, y: 0, z: 0}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 0, y: 0, z: 0}
-        To:
-          Mode: 0
-          Value: {x: 1, y: 1, z: 1}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 1, y: 1, z: 1}
---- !u!114 &4702862755759306045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2271017362277262297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fd2336b4e9e6043919d7738f527b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TweenPlayer: {fileID: 5693551873014953041}
-  Target: {fileID: 2271017362277262297}
-  Control: 1
-  Trigger: 0
---- !u!1 &2546880043685568417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4581034601441237792}
-  - component: {fileID: 4304063554027872254}
-  - component: {fileID: 4280812559342921857}
-  m_Layer: 5
-  m_Name: Tween1 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4581034601441237792
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2546880043685568417}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6664354634638118378}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4304063554027872254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2546880043685568417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 0
-    Identifier: 
-    Duration: 0.25
-    Delay: 0.2
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 2
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 1
-    SelfScale: 1
-    PrepareSampleMode: 0
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 7391153767240433664
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7391153767240433664
-      type: {class: TweenScale, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.25
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 25
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 4254568192355765785}
-        Axis: 30
-        EnableAxis: 0
-        AngleMode: 0
-        From:
-          Mode: 0
-          Value: {x: 0, y: 0, z: 0}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 0, y: 0, z: 0}
-        To:
-          Mode: 0
-          Value: {x: 1, y: 1, z: 1}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 1, y: 1, z: 1}
---- !u!114 &4280812559342921857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2546880043685568417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fd2336b4e9e6043919d7738f527b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TweenPlayer: {fileID: 4304063554027872254}
-  Target: {fileID: 2546880043685568417}
-  Control: 1
-  Trigger: 0
 --- !u!1 &2554549520490044879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,7 +2083,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4953118104603365835}
+  - {fileID: 5370820284670662756}
   - {fileID: 9178955812078329714}
   m_Father: {fileID: 2863483065888243390}
   m_RootOrder: 5
@@ -3157,15 +2475,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8762272, b: 0.46226406, a: 0.43137255}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: c8412a34480042f4183b20076ea060b2, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3174,192 +2492,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &2660165684213647182
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7837435254121691417}
-  - component: {fileID: 7929851573669979356}
-  m_Layer: 5
-  m_Name: TweenShow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7837435254121691417
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2660165684213647182}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1610340639196032111}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7929851573669979356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2660165684213647182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 1
-    Identifier: Show
-    Duration: 0.25
-    Delay: 0
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 0
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 0
-    SelfScale: 1
-    PrepareSampleMode: 2
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 1398658505592537088
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 1398658505592537088
-      type: {class: TweenCanvasGroupAlpha, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.25
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 0
-        Strength: 1
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 7860124151857083217}
-        Axis: 30
-        EnableAxis: 0
-        From:
-          Mode: 0
-          Value: 0
-          RandomFrom: 0
-          RandomTo: 0
-        To:
-          Mode: 0
-          Value: 1
-          RandomFrom: 0
-          RandomTo: 1
 --- !u!1 &2701770378719795056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3379,7 +2511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6251249026861216328
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3473,210 +2605,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 27959
---- !u!1 &2731057984061786858
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8600204776118131419}
-  - component: {fileID: 325299385100996721}
-  - component: {fileID: 1288506093493556434}
-  m_Layer: 5
-  m_Name: Tween1 (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8600204776118131419
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2731057984061786858}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6664354634638118378}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &325299385100996721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2731057984061786858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 0
-    Identifier: 
-    Duration: 0.25
-    Delay: 0.4
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 2
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 1
-    SelfScale: 1
-    PrepareSampleMode: 0
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 7391153767240433664
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7391153767240433664
-      type: {class: TweenScale, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.25
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 25
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 6929018270584155394}
-        Axis: 30
-        EnableAxis: 0
-        AngleMode: 0
-        From:
-          Mode: 0
-          Value: {x: 0, y: 0, z: 0}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 0, y: 0, z: 0}
-        To:
-          Mode: 0
-          Value: {x: 1, y: 1, z: 1}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 1, y: 1, z: 1}
---- !u!114 &1288506093493556434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2731057984061786858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fd2336b4e9e6043919d7738f527b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TweenPlayer: {fileID: 325299385100996721}
-  Target: {fileID: 2731057984061786858}
-  Control: 1
-  Trigger: 0
 --- !u!1 &2863483064896907824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,7 +2787,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -3913,7 +2841,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4953118104603365835}
+  m_Father: {fileID: 5370820284670662756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4040,210 +2968,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &3032874507727461772
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 408154006940615696}
-  - component: {fileID: 4082754160462525283}
-  - component: {fileID: 6488977009242901728}
-  m_Layer: 5
-  m_Name: Tween1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &408154006940615696
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3032874507727461772}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7062981776373146263}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4082754160462525283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3032874507727461772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 0
-    Identifier: 
-    Duration: 0.25
-    Delay: 0
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 2
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 1
-    SelfScale: 1
-    PrepareSampleMode: 0
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 7391153767240433664
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7391153767240433664
-      type: {class: TweenScale, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.25
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 25
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 896004561093857010}
-        Axis: 30
-        EnableAxis: 0
-        AngleMode: 0
-        From:
-          Mode: 0
-          Value: {x: 0, y: 0, z: 0}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 0, y: 0, z: 0}
-        To:
-          Mode: 0
-          Value: {x: 1, y: 1, z: 1}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 1, y: 1, z: 1}
---- !u!114 &6488977009242901728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3032874507727461772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fd2336b4e9e6043919d7738f527b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TweenPlayer: {fileID: 4082754160462525283}
-  Target: {fileID: 3032874507727461772}
-  Control: 1
-  Trigger: 0
 --- !u!1 &3129534642097669937
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,18 +3253,18 @@ RectTransform:
   m_GameObject: {fileID: 3321502352884392875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6531866876151524690}
-  - {fileID: 9129985153428762535}
+  - {fileID: 1555134998514079431}
   m_Father: {fileID: 1555233808642688351}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 374, y: -673}
-  m_SizeDelta: {x: 250, y: 100}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -419, y: 330}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5205425639241748637
 CanvasRenderer:
@@ -4570,7 +3294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 15aaea509701c2446ae9732ff16d2b68, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4599,7 +3323,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4609,10 +3333,11 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: c8412a34480042f4183b20076ea060b2,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: da3c893f5c5ece64a840e68e6828a805, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: c8412a34480042f4183b20076ea060b2, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 15aaea509701c2446ae9732ff16d2b68, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -4736,12 +3461,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3433483504376273730}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7775307345454706055}
+  m_Father: {fileID: 1610340639196032111}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4779,8 +3504,7 @@ MonoBehaviour:
     AutoKill: 0
     SpeedBased: 0
     TweenerList:
-    - rid: 1398658504383528960
-    - rid: 1398658504383528961
+    - rid: 1398658505592537089
     OnStart:
       Event:
         m_PersistentCalls:
@@ -4824,16 +3548,16 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1398658504383528960
-      type: {class: TweenAnchoredPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
+    - rid: 1398658505592537089
+      type: {class: TweenCanvasGroupAlpha, ns: Aya.TweenPro, asm: Aya.TweenPro}
       data:
         Active: 1
         Duration: 0.35
         Delay: 0
-        HoldStart: 0
+        HoldStart: 1
         HoldEnd: 0
-        Ease: 9
-        Strength: 0
+        Ease: 0
+        Strength: 1
         CurveMode: 0
         EditCurve:
           serializedVersion: 2
@@ -4886,94 +3610,19 @@ MonoBehaviour:
         Space: 0
         FoldOut: 1
         DurationMode: 0
-        Target: {fileID: 1250221206977408070}
+        Target: {fileID: 7860124151857083217}
         Axis: 30
         EnableAxis: 0
         From:
           Mode: 0
-          Value: {x: 0, y: 0}
-          RandomFrom: {x: 0, y: 0}
-          RandomTo: {x: 0, y: 0}
+          Value: 1
+          RandomFrom: 0
+          RandomTo: 0
         To:
           Mode: 0
-          Value: {x: -600, y: 0}
-          RandomFrom: {x: 0, y: 0}
-          RandomTo: {x: 1, y: 1}
-    - rid: 1398658504383528961
-      type: {class: TweenAnchoredPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.35
-        Delay: 0
-        HoldStart: 0
-        HoldEnd: 0
-        Ease: 3
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 8339688230160574873}
-        Axis: 30
-        EnableAxis: 0
-        From:
-          Mode: 0
-          Value: {x: 0, y: 0}
-          RandomFrom: {x: 0, y: 0}
-          RandomTo: {x: 0, y: 0}
-        To:
-          Mode: 0
-          Value: {x: 600, y: 0}
-          RandomFrom: {x: 0, y: 0}
-          RandomTo: {x: 1, y: 1}
+          Value: 0
+          RandomFrom: 0
+          RandomTo: 1
 --- !u!1 &3728575356802718490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5005,7 +3654,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3395618590238506683}
-  - {fileID: 1745527296671584235}
+  - {fileID: 4953118104603365835}
   m_Father: {fileID: 8513948085374805600}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6070,210 +4719,6 @@ MonoBehaviour:
     ActiveRoot: {fileID: 0}
     TextValue: {fileID: 7583030223632699842}
     ShowBigNumber: 0
---- !u!1 &5266128222737919773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1738095632680981931}
-  - component: {fileID: 158315227011612288}
-  - component: {fileID: 6582173589100913676}
-  m_Layer: 5
-  m_Name: Tween1 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1738095632680981931
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5266128222737919773}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7062981776373146263}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &158315227011612288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5266128222737919773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 0
-    Identifier: 
-    Duration: 0.25
-    Delay: 0.1
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 2
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 1
-    SelfScale: 1
-    PrepareSampleMode: 0
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 7391153767240433664
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7391153767240433664
-      type: {class: TweenScale, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.25
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 25
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 3531605266675254900}
-        Axis: 30
-        EnableAxis: 0
-        AngleMode: 0
-        From:
-          Mode: 0
-          Value: {x: 0, y: 0, z: 0}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 0, y: 0, z: 0}
-        To:
-          Mode: 0
-          Value: {x: 1, y: 1, z: 1}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 1, y: 1, z: 1}
---- !u!114 &6582173589100913676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5266128222737919773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fd2336b4e9e6043919d7738f527b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TweenPlayer: {fileID: 158315227011612288}
-  Target: {fileID: 5266128222737919773}
-  Control: 1
-  Trigger: 0
 --- !u!1 &5295509452756680709
 GameObject:
   m_ObjectHideFlags: 0
@@ -6409,15 +4854,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8762272, b: 0.46226406, a: 0.43137255}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: c8412a34480042f4183b20076ea060b2, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6502,210 +4947,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &5435689669725958005
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4169147111911549433}
-  - component: {fileID: 4403766604544114612}
-  - component: {fileID: 7989823150376201046}
-  m_Layer: 5
-  m_Name: Tween1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4169147111911549433
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5435689669725958005}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6664354634638118378}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4403766604544114612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5435689669725958005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 0
-    Identifier: 
-    Duration: 0.25
-    Delay: 0
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 2
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 1
-    SelfScale: 1
-    PrepareSampleMode: 0
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 7391153767240433664
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7391153767240433664
-      type: {class: TweenScale, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.25
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 25
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 8816500136483064625}
-        Axis: 30
-        EnableAxis: 0
-        AngleMode: 0
-        From:
-          Mode: 0
-          Value: {x: 0, y: 0, z: 0}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 0, y: 0, z: 0}
-        To:
-          Mode: 0
-          Value: {x: 1, y: 1, z: 1}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 1, y: 1, z: 1}
---- !u!114 &7989823150376201046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5435689669725958005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fd2336b4e9e6043919d7738f527b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TweenPlayer: {fileID: 4403766604544114612}
-  Target: {fileID: 5435689669725958005}
-  Control: 1
-  Trigger: 0
 --- !u!1 &5683435838479130321
 GameObject:
   m_ObjectHideFlags: 0
@@ -6743,7 +4984,7 @@ RectTransform:
   m_AnchoredPosition: {x: -224.26, y: -0.0051009273}
   m_SizeDelta: {x: 175.12, y: 93.24}
   m_Pivot: {x: 1, y: 1}
---- !u!1 &5689387193697262031
+--- !u!1 &5716355021543710381
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6751,9 +4992,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8501242646508822030}
-  - component: {fileID: 6201283577186712737}
-  - component: {fileID: 7469242945633474871}
+  - component: {fileID: 8834408216031621617}
+  - component: {fileID: 6264784756730386318}
+  - component: {fileID: 7600274314365745439}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6761,93 +5002,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8501242646508822030
+--- !u!224 &8834408216031621617
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5689387193697262031}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3754328444344823681}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6201283577186712737
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5689387193697262031}
-  m_CullTransparentMesh: 0
---- !u!114 &7469242945633474871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5689387193697262031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 62
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 148
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Absorber
---- !u!1 &5724761676220677064
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2370440316373400138}
-  - component: {fileID: 5088680884388293165}
-  - component: {fileID: 2509019366917512424}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2370440316373400138
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5724761676220677064}
+  m_GameObject: {fileID: 5716355021543710381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -6861,21 +5022,21 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030518, y: 277}
   m_SizeDelta: {x: 828.8989, y: 353.3012}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5088680884388293165
+--- !u!222 &6264784756730386318
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5724761676220677064}
+  m_GameObject: {fileID: 5716355021543710381}
   m_CullTransparentMesh: 0
---- !u!114 &2509019366917512424
+--- !u!114 &7600274314365745439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5724761676220677064}
+  m_GameObject: {fileID: 5716355021543710381}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -6905,6 +5066,86 @@ MonoBehaviour:
   m_Text: 'Win
 
 '
+--- !u!1 &5724761676220677064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2370440316373400138}
+  - component: {fileID: 5088680884388293165}
+  - component: {fileID: 2509019366917512424}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2370440316373400138
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724761676220677064}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 283558236547501341}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5088680884388293165
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724761676220677064}
+  m_CullTransparentMesh: 0
+--- !u!114 &2509019366917512424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724761676220677064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 4d66840bdc9a1b24dab71e56e5f38819, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 148
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: EXIT
 --- !u!1 &5802905892109683528
 GameObject:
   m_ObjectHideFlags: 0
@@ -7141,8 +5382,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5947644303851640478}
-  - {fileID: 1059026677525542049}
+  - {fileID: 3081660866074346812}
+  - {fileID: 5074703583712615644}
   - {fileID: 1250221206977408070}
   - {fileID: 8339688230160574873}
   m_Father: {fileID: 3911794835538711329}
@@ -7331,7 +5572,6 @@ RectTransform:
   - {fileID: 896004561093857010}
   - {fileID: 3531605266675254900}
   - {fileID: 347387468125264422}
-  - {fileID: 7062981776373146263}
   m_Father: {fileID: 2863483065888243390}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7369,9 +5609,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationList:
-  - {fileID: 6488977009242901728}
-  - {fileID: 6582173589100913676}
-  - {fileID: 4445448588176603642}
   - {fileID: 3348459702361390631}
 --- !u!223 &5994174090752508175
 Canvas:
@@ -7822,6 +6059,268 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6640825779070447872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5074703583712615644}
+  - component: {fileID: 2646479277846647623}
+  m_Layer: 5
+  m_Name: TweenHide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5074703583712615644
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640825779070447872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7775307345454706055}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2646479277846647623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640825779070447872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animation:
+    EnableIdentifier: 1
+    Identifier: Hide
+    Duration: 0.35
+    Delay: 0
+    Backward: 0
+    PlayMode: 0
+    PlayCount: 1
+    AutoPlay: 0
+    UpdateMode: 0
+    Interval: 0
+    Interval2: 0
+    TimeMode: 0
+    SelfScale: 1
+    PrepareSampleMode: 2
+    AutoKill: 0
+    SpeedBased: 0
+    TweenerList:
+    - rid: 1398658504383528960
+    - rid: 1398658504383528961
+    OnStart:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnPlay:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnLoopStart:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnLoopEnd:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnUpdate:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnPause:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnResume:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnStop:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnComplete:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    FoldOut: 1
+    FoldOutCallback: 0
+    CallbackType: 1
+    IsSubAnimation: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 1398658504383528960
+      type: {class: TweenAnchoredPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.35
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 0
+        Ease: 9
+        Strength: 0
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 1250221206977408070}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: {x: 0, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 0, y: 0}
+        To:
+          Mode: 0
+          Value: {x: -600, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 1, y: 1}
+    - rid: 1398658504383528961
+      type: {class: TweenAnchoredPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.35
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 0
+        Ease: 3
+        Strength: 0
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 8339688230160574873}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: {x: 0, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 0, y: 0}
+        To:
+          Mode: 0
+          Value: {x: 600, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 1, y: 1}
 --- !u!1 &6714438615165636069
 GameObject:
   m_ObjectHideFlags: 0
@@ -7974,6 +6473,268 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6813410608957995681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3081660866074346812}
+  - component: {fileID: 6265353876702342890}
+  m_Layer: 5
+  m_Name: TweenShow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3081660866074346812
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813410608957995681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7775307345454706055}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6265353876702342890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813410608957995681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animation:
+    EnableIdentifier: 1
+    Identifier: Show
+    Duration: 0.5
+    Delay: 0
+    Backward: 0
+    PlayMode: 0
+    PlayCount: 1
+    AutoPlay: 0
+    UpdateMode: 0
+    Interval: 0
+    Interval2: 0
+    TimeMode: 0
+    SelfScale: 1
+    PrepareSampleMode: 2
+    AutoKill: 0
+    SpeedBased: 0
+    TweenerList:
+    - rid: 1398658504383528960
+    - rid: 1398658504383528961
+    OnStart:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnPlay:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnLoopStart:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnLoopEnd:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnUpdate:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnPause:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnResume:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnStop:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    OnComplete:
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+    FoldOut: 1
+    FoldOutCallback: 0
+    CallbackType: 1
+    IsSubAnimation: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 1398658504383528960
+      type: {class: TweenAnchoredPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.5
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 0
+        Ease: 29
+        Strength: 0
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 1250221206977408070}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: {x: -600, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 0, y: 0}
+        To:
+          Mode: 0
+          Value: {x: 0, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 1, y: 1}
+    - rid: 1398658504383528961
+      type: {class: TweenAnchoredPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.5
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 0
+        Ease: 29
+        Strength: 0
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 0
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 8339688230160574873}
+        Axis: 30
+        EnableAxis: 0
+        From:
+          Mode: 0
+          Value: {x: 600, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 0, y: 0}
+        To:
+          Mode: 0
+          Value: {x: 0, y: 0}
+          RandomFrom: {x: 0, y: 0}
+          RandomTo: {x: 1, y: 1}
 --- !u!1 &6981904007503440999
 GameObject:
   m_ObjectHideFlags: 0
@@ -8323,7 +7084,6 @@ RectTransform:
   - {fileID: 4254568192355765785}
   - {fileID: 901225399394212918}
   - {fileID: 6929018270584155394}
-  - {fileID: 6664354634638118378}
   m_Father: {fileID: 2863483065888243390}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8361,11 +7121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationList:
-  - {fileID: 7989823150376201046}
-  - {fileID: 4702862755759306045}
-  - {fileID: 4280812559342921857}
-  - {fileID: 979042062503380611}
-  - {fileID: 1288506093493556434}
   - {fileID: 5773036365779153585}
 --- !u!223 &599398207628793949
 Canvas:
@@ -8660,6 +7415,82 @@ MonoBehaviour:
   Target: {fileID: 7252049999461000042}
   Control: 3
   Trigger: 0
+--- !u!1 &7348848030179897333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1555134998514079431}
+  - component: {fileID: 3106418882201938194}
+  - component: {fileID: 9189840357428034949}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1555134998514079431
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348848030179897333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5902317663502180697}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 13.1}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3106418882201938194
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348848030179897333}
+  m_CullTransparentMesh: 1
+--- !u!114 &9189840357428034949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348848030179897333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7a8d35f3f22bf0645a726ed375e2066d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7354119776083251818
 GameObject:
   m_ObjectHideFlags: 0
@@ -9087,210 +7918,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Lose
---- !u!1 &7937021676871820220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5156734561473851600}
-  - component: {fileID: 6376481838851194882}
-  - component: {fileID: 979042062503380611}
-  m_Layer: 5
-  m_Name: Tween1 (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5156734561473851600
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7937021676871820220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6664354634638118378}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6376481838851194882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7937021676871820220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 0
-    Identifier: 
-    Duration: 0.25
-    Delay: 0.3
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 2
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 1
-    SelfScale: 1
-    PrepareSampleMode: 0
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 7391153767240433664
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7391153767240433664
-      type: {class: TweenScale, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.25
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 25
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 901225399394212918}
-        Axis: 30
-        EnableAxis: 0
-        AngleMode: 0
-        From:
-          Mode: 0
-          Value: {x: 0, y: 0, z: 0}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 0, y: 0, z: 0}
-        To:
-          Mode: 0
-          Value: {x: 1, y: 1, z: 1}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 1, y: 1, z: 1}
---- !u!114 &979042062503380611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7937021676871820220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fd2336b4e9e6043919d7738f527b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TweenPlayer: {fileID: 6376481838851194882}
-  Target: {fileID: 7937021676871820220}
-  Control: 1
-  Trigger: 0
 --- !u!1 &7962117036106420828
 GameObject:
   m_ObjectHideFlags: 0
@@ -9319,17 +7946,16 @@ RectTransform:
   m_GameObject: {fileID: 7962117036106420828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5298361515357996512}
-  m_Father: {fileID: 4339091615459137018}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 7563357257374578999}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -647.00006}
-  m_SizeDelta: {x: 250, y: 100}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -19, y: -6}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8458630810402413674
 CanvasRenderer:
@@ -9352,15 +7978,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8234501, b: 0.8234501, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c6e5e6cd3d4daf745a8c4becb2b52d5a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -9413,8 +8039,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8893742129696891493}
-        m_TargetAssemblyTypeName: UIFactory, Assembly-CSharp
+      - m_Target: {fileID: 552517153007675648}
+        m_TargetAssemblyTypeName: UIWorker, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
         m_Arguments:
@@ -9425,47 +8051,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &7977963012069650395
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6664354634638118378}
-  m_Layer: 5
-  m_Name: TweenShow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6664354634638118378
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7977963012069650395}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4169147111911549433}
-  - {fileID: 6280964292309709078}
-  - {fileID: 4581034601441237792}
-  - {fileID: 5156734561473851600}
-  - {fileID: 8600204776118131419}
-  m_Father: {fileID: 8513948085374805600}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8038357119815818959
 GameObject:
   m_ObjectHideFlags: 0
@@ -9858,6 +8443,82 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8343014389851364788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2839045217968959471}
+  - component: {fileID: 5155940989073346043}
+  - component: {fileID: 3882335445884543488}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2839045217968959471
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343014389851364788}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3754328444344823681}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5155940989073346043
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343014389851364788}
+  m_CullTransparentMesh: 1
+--- !u!114 &3882335445884543488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343014389851364788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bf58dbb29b2882f41a81498bcf405f10, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10615,210 +9276,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1080, y: -122.2}
   m_SizeDelta: {x: 0, y: 244.48242}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &8458990216388330778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2392456272360097635}
-  - component: {fileID: 1866832617841375314}
-  - component: {fileID: 4445448588176603642}
-  m_Layer: 5
-  m_Name: Tween1 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2392456272360097635
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8458990216388330778}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7062981776373146263}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1866832617841375314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8458990216388330778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 0
-    Identifier: 
-    Duration: 0.25
-    Delay: 0.2
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 2
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 1
-    SelfScale: 1
-    PrepareSampleMode: 0
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 7391153767240433664
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7391153767240433664
-      type: {class: TweenScale, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.25
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 25
-        Strength: 0
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 347387468125264422}
-        Axis: 30
-        EnableAxis: 0
-        AngleMode: 0
-        From:
-          Mode: 0
-          Value: {x: 0, y: 0, z: 0}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 0, y: 0, z: 0}
-        To:
-          Mode: 0
-          Value: {x: 1, y: 1, z: 1}
-          RandomFrom: {x: 0, y: 0, z: 0}
-          RandomTo: {x: 1, y: 1, z: 1}
---- !u!114 &4445448588176603642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8458990216388330778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fd2336b4e9e6043919d7738f527b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TweenPlayer: {fileID: 1866832617841375314}
-  Target: {fileID: 8458990216388330778}
-  Control: 1
-  Trigger: 0
 --- !u!1 &8782782690453510625
 GameObject:
   m_ObjectHideFlags: 0
@@ -10851,7 +9308,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2370440316373400138}
+  - {fileID: 8834408216031621617}
   - {fileID: 3293479956026966684}
   m_Father: {fileID: 2863483065888243390}
   m_RootOrder: 6
@@ -11081,192 +9538,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &8901336786802372388
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3638232643136807454}
-  - component: {fileID: 1800052313109117735}
-  m_Layer: 5
-  m_Name: TweenHide
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3638232643136807454
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8901336786802372388}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1610340639196032111}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1800052313109117735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8901336786802372388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b4124e68e6816479796e7ac0233a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animation:
-    EnableIdentifier: 1
-    Identifier: Hide
-    Duration: 0.35
-    Delay: 0
-    Backward: 0
-    PlayMode: 0
-    PlayCount: 1
-    AutoPlay: 0
-    UpdateMode: 0
-    Interval: 0
-    Interval2: 0
-    TimeMode: 0
-    SelfScale: 1
-    PrepareSampleMode: 2
-    AutoKill: 0
-    SpeedBased: 0
-    TweenerList:
-    - rid: 1398658505592537089
-    OnStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPlay:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopStart:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnLoopEnd:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnUpdate:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnPause:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnResume:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnStop:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    OnComplete:
-      Event:
-        m_PersistentCalls:
-          m_Calls: []
-    FoldOut: 1
-    FoldOutCallback: 0
-    CallbackType: 1
-    IsSubAnimation: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 1398658505592537089
-      type: {class: TweenCanvasGroupAlpha, ns: Aya.TweenPro, asm: Aya.TweenPro}
-      data:
-        Active: 1
-        Duration: 0.35
-        Delay: 0
-        HoldStart: 1
-        HoldEnd: 0
-        Ease: 0
-        Strength: 1
-        CurveMode: 0
-        EditCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Curve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 1
-            outSlope: 1
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        Space: 0
-        FoldOut: 1
-        DurationMode: 0
-        Target: {fileID: 7860124151857083217}
-        Axis: 30
-        EnableAxis: 0
-        From:
-          Mode: 0
-          Value: 1
-          RandomFrom: 0
-          RandomTo: 0
-        To:
-          Mode: 0
-          Value: 0
-          RandomFrom: 0
-          RandomTo: 1
 --- !u!1 &9152571993638749260
 GameObject:
   m_ObjectHideFlags: 0
@@ -12743,21 +11014,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 148
-      objectReference: {fileID: 0}
-    - target: {fileID: 2311267541269235836, guid: 7b8e92fbb321fe543bc9bb4848f0daf8,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2311267541269235836, guid: 7b8e92fbb321fe543bc9bb4848f0daf8,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2311267541269235836, guid: 7b8e92fbb321fe543bc9bb4848f0daf8,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2311267541269235836, guid: 7b8e92fbb321fe543bc9bb4848f0daf8,
         type: 3}
