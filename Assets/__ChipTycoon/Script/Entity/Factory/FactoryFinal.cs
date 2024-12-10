@@ -50,7 +50,7 @@ public class FactoryFinal : FactoryBase
                 {
                     while (Input.LastProduct.IsWorking)
                     {
-                        yield return null;
+                        yield return YieldBuilder.WaitForSeconds(0.1f);
                     }
 
                     var product = Input.StackList.Pop();
