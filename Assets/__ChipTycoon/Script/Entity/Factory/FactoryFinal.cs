@@ -13,7 +13,9 @@ public class FactoryFinal : FactoryBase
     public int CarCapacity = 10;
     public StackList CarStackList;
     public UTweenPlayerReference TweenCarEnter;
+    public string MoveClip;
     public UTweenPlayerReference TweenCarExit;
+    public string IdleClip;
     public float CarWaitInterval = 1f;
     public TMP_Text TextCarValue;
     public TMP_Text TextCarCount;
@@ -37,8 +39,10 @@ public class FactoryFinal : FactoryBase
             yield return YieldBuilder.WaitForSeconds(CarWaitInterval);
 
             TweenCarEnter.Play();
+            Play(MoveClip);
             var tweenEnter = TweenCarEnter.Value.Animation;
             yield return tweenEnter.WaitForComplete();
+            Play(IdleClip);
 
             while (CarStackList.Count < CarCapacity)
             {
@@ -61,8 +65,10 @@ public class FactoryFinal : FactoryBase
             }
 
             TweenCarExit.Play();
+            Play(MoveClip);
             var tweenExit = TweenCarExit.Value.Animation;
             yield return tweenExit.WaitForComplete();
+            Play(IdleClip);
 
             CarStackList.Clear();
         }
