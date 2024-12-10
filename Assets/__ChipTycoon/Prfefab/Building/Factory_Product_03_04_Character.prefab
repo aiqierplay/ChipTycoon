@@ -186,7 +186,7 @@ MonoBehaviour:
         Delay: 0
         HoldStart: 1
         HoldEnd: 0
-        Ease: 12
+        Ease: 0
         Strength: 0
         CurveMode: 0
         EditCurve:
@@ -246,12 +246,12 @@ MonoBehaviour:
         AngleMode: 0
         From:
           Mode: 0
-          Value: {x: 28.2, y: 0, z: 3.92}
+          Value: {x: 0, y: 0, z: 15}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 0}
         To:
           Mode: 0
-          Value: {x: -0.82, y: 0, z: 3.92}
+          Value: {x: 0, y: 0, z: 3}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 1}
 --- !u!1 &1524857835041897730
@@ -539,12 +539,14 @@ MonoBehaviour:
   UnlockSpeed: 1
   FxUnlock: {fileID: 0}
   CarTrans: {fileID: 3877750532661499093}
-  CarCapacity: 20
+  CarCapacity: 5
   CarStackList: {fileID: 2050037534894577437}
   TweenCarEnter:
     Value: {fileID: 3648719356773231065}
+  MoveClip: Walk
   TweenCarExit:
     Value: {fileID: 7783468603849023534}
+  IdleClip: Idle
   CarWaitInterval: 5
   TextCarValue: {fileID: 2222961927468477724}
   TextCarCount: {fileID: 6793240241466324066}
@@ -1292,15 +1294,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4651842772521779390}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0, y: 0, z: 2.97}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8969280850028019680}
   - {fileID: 6088720626384829880}
   - {fileID: 4519981377550584059}
-  - {fileID: 1898168653404157356}
+  - {fileID: 8247210949999549086}
   - {fileID: 5808706781813244825}
   - {fileID: 4757824733205880041}
   - {fileID: 1774450943090183118}
@@ -1584,6 +1586,38 @@ MonoBehaviour:
   Camera: {fileID: 0}
   Mode: 1
   Rotate: {x: 0, y: 0, z: 0}
+--- !u!1 &5512616296718283568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8247210949999549086}
+  m_Layer: 0
+  m_Name: Char
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8247210949999549086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512616296718283568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1898168653404157356}
+  m_Father: {fileID: 3877750532661499093}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5659980297003363741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,7 +2401,7 @@ MonoBehaviour:
   Animation:
     EnableIdentifier: 0
     Identifier: 
-    Duration: 2
+    Duration: 2.25
     Delay: 0
     Backward: 0
     PlayMode: 0
@@ -2383,6 +2417,7 @@ MonoBehaviour:
     SpeedBased: 0
     TweenerList:
     - rid: 7391153700092248064
+    - rid: 6666233678731935744
     OnStart:
       Event:
         m_PersistentCalls:
@@ -2426,15 +2461,91 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 6666233678731935744
+      type: {class: TweenEulerAngles, ns: Aya.TweenPro, asm: Aya.TweenPro}
+      data:
+        Active: 1
+        Duration: 0.25
+        Delay: 0
+        HoldStart: 0
+        HoldEnd: 0
+        Ease: 0
+        Strength: 1
+        CurveMode: 0
+        EditCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Space: 1
+        FoldOut: 1
+        DurationMode: 0
+        Target: {fileID: 8247210949999549086}
+        Axis: 30
+        EnableAxis: 0
+        AngleMode: 1
+        From:
+          Mode: 0
+          Value: {x: 0, y: 0, z: 0}
+          RandomFrom: {x: 0, y: 0, z: 0}
+          RandomTo: {x: 0, y: 0, z: 0}
+        To:
+          Mode: 0
+          Value: {x: 0, y: 180, z: 0}
+          RandomFrom: {x: 0, y: 0, z: 0}
+          RandomTo: {x: 0, y: 360, z: 0}
     - rid: 7391153700092248064
       type: {class: TweenPosition, ns: Aya.TweenPro, asm: Aya.TweenPro}
       data:
         Active: 1
-        Duration: 2
-        Delay: 0
-        HoldStart: 1
+        Duration: 1.8
+        Delay: 0.25
+        HoldStart: 0
         HoldEnd: 0
-        Ease: 8
+        Ease: 0
         Strength: 0
         CurveMode: 0
         EditCurve:
@@ -2494,12 +2605,12 @@ MonoBehaviour:
         AngleMode: 0
         From:
           Mode: 0
-          Value: {x: -0.82, y: 0, z: 3.92}
+          Value: {x: 0, y: 0, z: 3}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 1}
         To:
           Mode: 0
-          Value: {x: -31.91, y: 0, z: 3.92}
+          Value: {x: 0, y: 0, z: 15}
           RandomFrom: {x: 0, y: 0, z: 0}
           RandomTo: {x: 0, y: 0, z: 0}
 --- !u!1 &7782822156894166789
@@ -2968,7 +3079,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3877750532661499093}
+    m_TransformParent: {fileID: 8247210949999549086}
     m_Modifications:
     - target: {fileID: -9181110881844367051, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
@@ -2978,7 +3089,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
@@ -2998,22 +3109,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
@@ -3023,7 +3134,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
@@ -3175,6 +3286,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 751cd72e137062d4ca901562e1593283,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 95e206f032ce1ac4db929a3906427169, type: 2}
     - target: {fileID: 6020967872872066068, guid: 751cd72e137062d4ca901562e1593283,
         type: 3}
       propertyPath: m_IsActive
