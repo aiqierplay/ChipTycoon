@@ -48,6 +48,11 @@ public class FactoryFinal : FactoryBase
             {
                 if (Input.Count > 0)
                 {
+                    while (Input.LastProduct.IsWorking)
+                    {
+                        yield return null;
+                    }
+
                     var product = Input.StackList.Pop();
                     CarStackList.AddParabola(product);
                     Refresh();
@@ -61,6 +66,7 @@ public class FactoryFinal : FactoryBase
             for (var i = 0; i < Output.Number; i++)
             {
                 Output.Add(1);
+                Output.LastProduct.Init();
                 yield return null;
             }
 

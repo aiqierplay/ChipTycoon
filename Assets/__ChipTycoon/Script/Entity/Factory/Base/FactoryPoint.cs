@@ -2,6 +2,7 @@ using Aya.Physical;
 using Sirenix.OdinInspector;
 using System;
 using System.Collections;
+using Aya.Extension;
 using TMPro;
 using UnityEngine;
 
@@ -31,6 +32,8 @@ public class FactoryPoint
     public GameObject MaxTipObj;
 
     public TriggerArea TriggerArea;
+
+    public Product LastProduct => StackList.List.Last() as Product;
 
     public ProductTypeData TypeData => ProductSetting.Ins.DataDic[Type];
 

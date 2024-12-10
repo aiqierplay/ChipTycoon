@@ -14,4 +14,9 @@ public class Product : EntityBase
     public IEnumerable TypeGetter() => ProductSetting.Ins.GetValueDropdownKeyList();
     
     public ProductTypeData TypeData => ProductSetting.Ins.DataDic[Type];
+
+    public void Init()
+    {
+        IsWorking = false;
+    }
 }

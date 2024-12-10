@@ -78,6 +78,18 @@ public abstract class FactoryBase : BuildingBase
     {
         Input.Add(Info.InputCount);
         Output.Add(Info.OutputCount);
+
+        foreach (var entity in Input.StackList.List)
+        {
+            var product = entity as Product;
+            product.Init();
+        }
+
+        foreach (var entity in Output.StackList.List)
+        {
+            var product = entity as Product;
+            product.Init();
+        }
     }
 
     public virtual void SaveState()
@@ -106,17 +118,17 @@ public abstract class FactoryBase : BuildingBase
         World.Character.DisableMove();
     }
     
-    [Button]
-    public void TestAddInput()
-    {
-        Input.Add(10);
-    }
-    
-    [Button]
-    public void TestAddOutput()
-    {
-        Output.Add(10);
-    }
+    // [Button]
+    // public void TestAddInput()
+    // {
+    //     Input.Add(10);
+    // }
+    //
+    // [Button]
+    // public void TestAddOutput()
+    // {
+    //     Output.Add(10);
+    // }
 
     [NonSerialized] public Coroutine UnlockCoroutine;
 
@@ -222,6 +234,11 @@ public abstract class FactoryBase : BuildingBase
 
                 if (Input.Count > 0 && ProduceLine.CheckCanInput())
                 {
+                    while (Input.LastProduct.IsWorking)
+                    {
+                        yield return null;
+                    }
+
                     var product = Input.StackList.Pop();
                     yield return product.WaitForParabolaFlyTo(ProduceLine.InputStart.position, 2f,
                         RandUtil.RandFloat(0.25f, 0.35f),
@@ -242,43 +259,6 @@ public abstract class FactoryBase : BuildingBase
         else
         {
             yield return null;
-            // while (true)
-            // {
-            //     var timer = 0f;
-            //     if (Input.Count >= Input.Number && Output.CanAdd)
-            //     {
-            //         TweenWork.Sample(0f);
-            //         while (timer <= WorkDuration)
-            //         {
-            //             timer += DeltaTime;
-            //             if (timer >= WorkDuration)
-            //             {
-            //                 timer = WorkDuration;
-            //             }
-            //
-            //             WorkProgress = timer / WorkDuration;
-            //
-            //             if (WorkProgress >= 1)
-            //             {
-            //                 for (var i = 0; i < Input.Number; i++)
-            //                 {
-            //                     Input.Remove(Input.Number);
-            //                 }
-            //
-            //                 Output.Add(Output.Number);
-            //                 TweenWork.Sample(WorkProgress);
-            //                 Refresh();
-            //                 break;
-            //             }
-            //
-            //             Refresh();
-            //             TweenWork.Sample(0f);
-            //             yield return null;
-            //         }
-            //
-            //         yield return YieldBuilder.WaitForSeconds(WorkInterval);
-            //     }
-            // }
         }
     }
 }

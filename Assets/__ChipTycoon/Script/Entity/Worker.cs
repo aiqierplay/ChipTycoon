@@ -193,6 +193,8 @@ public class Worker : EntityBase
         }
     }
 
+    public Product LastProduct => StackList.List.Last() as Product;
+
     public ProductTypeData CurrentProductType
     {
         get
@@ -292,6 +294,11 @@ public class Worker : EntityBase
     {
         while (!IsEmpty && factory.Input.CanAdd && CurrentFactoryPoint != null && CurrentFactoryPoint.Mode == FactoryPointMode.Input)
         {
+            while (LastProduct != null && LastProduct.IsWorking)
+            {
+                yield return null;
+            }
+
             var product = StackList.Pop() as Product;
             if (product == null) yield break;
             product.IsWorking = true;
@@ -311,6 +318,11 @@ public class Worker : EntityBase
         // Log(StackList.Count, factory.name, CurrentFactory.name, factory.Output.IsEmpty, CurrentFactoryPoint.Mode);
         while (!IsFull && !factory.Output.IsEmpty && CurrentFactoryPoint != null && CurrentFactoryPoint.Mode == FactoryPointMode.Output)
         {
+            while (factory.Output.LastProduct.IsWorking)
+            {
+                yield return null;
+            }
+
             var product = factory.Output.StackList.Pop() as Product;
             if (product == null) yield break;
             if (product.TypeData.IsFinal)
@@ -331,7 +343,11 @@ public class Worker : EntityBase
             }
             else
             {
-                StackList.AddParabola(product);
+                product.IsWorking = true;
+                StackList.AddParabola(product, () =>
+                {
+                    product.IsWorking = false;
+                });
             }
 
             factory.Output.Refresh();
