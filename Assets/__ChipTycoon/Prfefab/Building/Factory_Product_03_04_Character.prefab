@@ -529,7 +529,7 @@ MonoBehaviour:
     Max: -1
     Pos: {fileID: 581464294885362362}
     StackList: {fileID: 4007030964381811443}
-    Number: 200
+    Number: 20
     TextCount: {fileID: 7681698517754493514}
     MaxTipObj: {fileID: 0}
     TriggerArea: {fileID: 2389723725971601895}
