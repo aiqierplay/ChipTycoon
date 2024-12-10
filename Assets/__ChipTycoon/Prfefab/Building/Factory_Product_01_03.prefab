@@ -348,7 +348,7 @@ MonoBehaviour:
     Max: -1
     Pos: {fileID: 4407863342677961801}
     StackList: {fileID: 6026419197688667960}
-    Number: 10
+    Number: 1
     TextCount: {fileID: 8400070086215691059}
     MaxTipObj: {fileID: 0}
     TriggerArea: {fileID: 8703496929057194213}
@@ -3369,6 +3369,12 @@ PrefabInstance:
       propertyPath: OutputLineUv
       value: 
       objectReference: {fileID: 7239645624550929936}
+    - target: {fileID: 1563763015180863222, guid: fdfc558e43567b541b7b94d03eae85e8,
+        type: 3}
+      propertyPath: OutputPrefab
+      value: 
+      objectReference: {fileID: 5102741648946911573, guid: 8243dbd67ef39e54da01b94e29709001,
+        type: 3}
     - target: {fileID: 1563763015180863222, guid: fdfc558e43567b541b7b94d03eae85e8,
         type: 3}
       propertyPath: OutputInterval
