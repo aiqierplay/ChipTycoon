@@ -21,6 +21,7 @@ public class Worker : EntityBase
     public string WalkClip;
 
     public float RotateSpeed = 50f;
+    public float TransferInterval = 0.1f;
 
     [GetComponentInChildren, NonSerialized]
     public StackList StackList;
@@ -307,7 +308,7 @@ public class Worker : EntityBase
                 product.IsWorking = false;
             });
             factory.Input.Refresh();
-            yield return null;
+            yield return YieldBuilder.WaitForSeconds(TransferInterval);
         }
 
         yield return null;
@@ -351,7 +352,7 @@ public class Worker : EntityBase
             }
 
             factory.Output.Refresh();
-            yield return null;
+            yield return YieldBuilder.WaitForSeconds(TransferInterval);
         }
 
         yield return null;

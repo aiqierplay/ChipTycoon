@@ -19,6 +19,7 @@ public class FactoryFinal : FactoryBase
     public float CarWaitInterval = 1f;
     public TMP_Text TextCarValue;
     public TMP_Text TextCarCount;
+    public float TransferInterval = 0.1f;
 
     public override void Refresh()
     {
@@ -58,7 +59,7 @@ public class FactoryFinal : FactoryBase
                     Refresh();
                 }
 
-                yield return null;
+                yield return YieldBuilder.WaitForSeconds(TransferInterval);
             }
 
             yield return YieldBuilder.WaitForSeconds(1f);
@@ -67,7 +68,7 @@ public class FactoryFinal : FactoryBase
             {
                 Output.Add(1);
                 Output.LastProduct.Init();
-                yield return null;
+                yield return YieldBuilder.WaitForSeconds(TransferInterval);
             }
 
             TweenCarExit.Play();
