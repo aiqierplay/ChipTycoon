@@ -221,8 +221,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069556936905402813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6918, y: -4.9824, z: 0}
-  m_LocalScale: {x: 4.6535907, y: 8.625929, z: 1}
+  m_LocalPosition: {x: 2.6918, y: -5.3457, z: 0}
+  m_LocalScale: {x: 4.6535907, y: 9.352232, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3161982175429708112}
@@ -454,7 +454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5102525077636939392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -20, z: 0}
+  m_LocalPosition: {x: 0, y: -15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -997,8 +997,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8335509644897470334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6951, y: -4.975, z: 0}
-  m_LocalScale: {x: 4.646648, y: 8.611327, z: 1}
+  m_LocalPosition: {x: -2.6951, y: -5.3377, z: 0}
+  m_LocalScale: {x: 4.646648, y: 9.336401, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3161982175429708112}
@@ -1330,7 +1330,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 64ab1fd4e88f1d641b413dc9e89a56aa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.44
+      value: 2.74
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 64ab1fd4e88f1d641b413dc9e89a56aa,
         type: 3}
@@ -1701,6 +1701,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DiggerOre_test
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830231064809266350, guid: eb782736a36e51e4485b879c5b86441d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3915741517003860463, guid: eb782736a36e51e4485b879c5b86441d,
         type: 3}
@@ -2085,7 +2090,7 @@ PrefabInstance:
     - target: {fileID: 3830231064809266350, guid: 957b617a327db6f488da92a49685f016,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3933763616417595371, guid: 957b617a327db6f488da92a49685f016,
         type: 3}

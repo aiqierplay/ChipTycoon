@@ -160,7 +160,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.7
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -208,14 +208,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37452321}
-  m_LocalRotation: {x: 0.29587892, y: -0.27827656, z: 0.1400705, w: 0.90299404}
+  m_LocalRotation: {x: 0.40436712, y: -0.43585575, z: 0.2524676, w: 0.7633984}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1535981975}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 37.757, y: -32.061, z: 6.412}
+  m_LocalEulerAnglesHint: {x: 56.873, y: -57.574, z: 3.459}
 --- !u!1 &99150907
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +268,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 70
+  field of view: 50
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -364,9 +364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496811e5d5d9b4bcba367bcf82bb26ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _updateInEditMode: 1
-  _updateInPlayMode: 1
-  _inputProvider: {fileID: 0}
 --- !u!4 &144841635
 Transform:
   m_ObjectHideFlags: 0
@@ -700,7 +697,7 @@ PrefabInstance:
     - target: {fileID: 5913957739943182526, guid: 13771f98ddafe88488319774b1592ea8,
         type: 3}
       propertyPath: m_Name
-      value: Test
+      value: wor
       objectReference: {fileID: 0}
     - target: {fileID: 8332968519176259441, guid: 13771f98ddafe88488319774b1592ea8,
         type: 3}
@@ -1259,7 +1256,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 12
+  m_CameraDistance: 16
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -1301,7 +1298,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 70
+    FieldOfView: 50
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000

@@ -114,5 +114,5 @@ Material:
     - _OutlineColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SColor: {r: 0.31132078, g: 0.15721121, b: 0.02202741, a: 1}
     - _SketchColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

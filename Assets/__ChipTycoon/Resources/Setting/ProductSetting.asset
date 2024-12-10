@@ -41,3 +41,10 @@ MonoBehaviour:
       type: 3}
     CostCoin: 10
     IsFinal: 1
+  - Key: Product_031
+    Name: 
+    Icon: {fileID: 0}
+    Prefab: {fileID: 5102741648946911573, guid: c3007326e6275c446a27c52dfb079f6e,
+      type: 3}
+    CostCoin: 0
+    IsFinal: 0
