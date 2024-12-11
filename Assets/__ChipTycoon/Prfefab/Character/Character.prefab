@@ -422,6 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdleClip: Idle
   WalkClip: Walk
+  MaxTip: {fileID: 5451277888687926016}
   RotateSpeed: 50
   TransferInterval: 0.1
   ClampPosWithLayer: 1

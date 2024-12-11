@@ -67,6 +67,7 @@ public class DiggerArea : EntityBase
 
     public void SaveState()
     {
+        CurrentLevel.Info.DiggerPos = DiggerTool.Trans.localPosition;
         for (var i = 0; i < DiggableList.Count; i++)
         {
             var diggable = DiggableList[i];
