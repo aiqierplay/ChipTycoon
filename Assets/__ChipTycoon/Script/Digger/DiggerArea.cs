@@ -47,7 +47,7 @@ public class DiggerArea : EntityBase
             }
         }
 
-        for (var i = 0; i < DiggableList.Count; i++)
+        for (var i = 0; i < DiggableList.Count && i < CurrentLevel.Info.DiggableState.Count; i++)
         {
             var diggable = DiggableList[i];
             var active = CurrentLevel.Info.DiggableState[i];
