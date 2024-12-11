@@ -273,7 +273,7 @@ public class Worker : EntityBase
         }
 
         IsWorking = true;
-        if (StackList.IsEmpty)
+        if (StackList.IsEmpty || CurrentProductType.Key == factory.Output.Type)
         {
             yield return TransferOutputCo(factory);
         }

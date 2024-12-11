@@ -117,7 +117,7 @@ public abstract class FactoryBase : BuildingBase
         UI.Show<UIFactory>(this);
         World.Character.DisableMove();
     }
-    
+    //
     // [Button]
     // public void TestAddInput()
     // {
@@ -239,11 +239,13 @@ public abstract class FactoryBase : BuildingBase
                         yield return null;
                     }
 
-                    var product = Input.StackList.Pop();
+                    var product = Input.StackList.Pop() as Product;
+                    product.IsWorking = true;
                     yield return product.WaitForParabolaFlyTo(ProduceLine.InputStart.position, 2f,
-                        RandUtil.RandFloat(0.25f, 0.35f),
+                        0.25f,
                         () =>
                         {
+                            product.IsWorking = false;
                             GamePool.DeSpawn(product);
                         });
 

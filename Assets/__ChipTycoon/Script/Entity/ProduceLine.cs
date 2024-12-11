@@ -71,8 +71,9 @@ public class ProduceLine : EntityBase
 
     public void AddInput()
     {
-        var input = GamePool.Spawn(InputPrefab, Trans);
+        var input = GamePool.Spawn(InputPrefab, Trans) as Product;
         input.Position = InputStart.position;
+        input.Init();
         InputList.Add(input);
     }
 
@@ -190,8 +191,9 @@ public class ProduceLine : EntityBase
                     outputTimer += DeltaTime;
                     if (outputTimer >= OutputInterval && OutputList.Count < OutputMax)
                     {
-                        var output = GamePool.Spawn(OutputPrefab, Trans);
+                        var output = GamePool.Spawn(OutputPrefab, Trans) as Product;
                         output.Position = OutputStart.position;
+                        output.Init();
                         OutputList.Add(output);
                         OutputCount++;
                         outputTimer = 0f;
