@@ -64,21 +64,25 @@ public class FactoryFinal : FactoryBase
 
             yield return YieldBuilder.WaitForSeconds(0.25f);
 
+            StartCoroutine(ExitCo());
+
             for (var i = 0; i < Output.Number; i++)
             {
                 Output.Add(1);
                 Output.LastProduct.Init();
                 yield return YieldBuilder.WaitForSeconds(TransferInterval);
             }
-
-            TweenCarExit.Play();
-            Play(MoveClip);
-            var tweenExit = TweenCarExit.Value.Animation;
-            yield return tweenExit.WaitForComplete();
-            Play(IdleClip);
-
-            CarStackList.Clear();
-            Refresh();
         }
+    }
+
+    public IEnumerator ExitCo()
+    {
+        TweenCarExit.Play();
+        Play(MoveClip);
+        var tweenExit = TweenCarExit.Value.Animation;
+        yield return tweenExit.WaitForComplete();
+        Play(IdleClip);
+        CarStackList.Clear();
+        Refresh();
     }
 }
