@@ -62,7 +62,7 @@ public class FactoryFinal : FactoryBase
                 yield return YieldBuilder.WaitForSeconds(TransferInterval);
             }
 
-            yield return YieldBuilder.WaitForSeconds(1f);
+            // yield return YieldBuilder.WaitForSeconds(1f);
 
             for (var i = 0; i < Output.Number; i++)
             {
