@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &41609419862470206
 GameObject:
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &44003971987881924
 GameObject:
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &405551198616468520
 GameObject:
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &698769477446104880
 GameObject:
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &803805243501574262
 GameObject:
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &803807272805747132
 GameObject:
@@ -2268,7 +2268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &972037531834661278
 GameObject:
@@ -2761,7 +2761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &1278447390174960997
 GameObject:
@@ -3461,7 +3461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &1478039879982888954
 GameObject:
@@ -3668,7 +3668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &1713814424790409884
 GameObject:
@@ -3716,7 +3716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &1804666986092736224
 GameObject:
@@ -4588,7 +4588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &2061096420467438475
 GameObject:
@@ -4962,7 +4962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &2158539604166040037
 GameObject:
@@ -5381,7 +5381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &2221340996342952717
 GameObject:
@@ -5943,7 +5943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &2380211295882819650
 GameObject:
@@ -6036,7 +6036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &2438199660822026820
 GameObject:
@@ -7268,7 +7268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &2971980228655222372
 GameObject:
@@ -7361,7 +7361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3033647746285194875
 GameObject:
@@ -7409,7 +7409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3062083353038015159
 GameObject:
@@ -7841,7 +7841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3309686130581832635
 GameObject:
@@ -8289,7 +8289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3459964639831207871
 GameObject:
@@ -8337,7 +8337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3471689578177737531
 GameObject:
@@ -8385,7 +8385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3536523326072723791
 GameObject:
@@ -8433,7 +8433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3547885971893703009
 GameObject:
@@ -8738,7 +8738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3710939539513281524
 GameObject:
@@ -8786,7 +8786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3766688870620617690
 GameObject:
@@ -9205,7 +9205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &3949196334538568657
 GameObject:
@@ -10257,7 +10257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &4253134916183457891
 GameObject:
@@ -10403,7 +10403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &4303657038754675889
 GameObject:
@@ -10451,7 +10451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &4364157938977440852
 GameObject:
@@ -11164,7 +11164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &4647563659368214699
 GameObject:
@@ -11424,7 +11424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &4765090665196324283
 GameObject:
@@ -11713,7 +11713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &4810420573565471284
 GameObject:
@@ -11875,7 +11875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &4890000110672216457
 GameObject:
@@ -11923,7 +11923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &4892460961343910001
 GameObject:
@@ -11971,7 +11971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5039161164587386874
 GameObject:
@@ -12769,7 +12769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5221791594410289945
 GameObject:
@@ -12817,7 +12817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5225814520429462550
 GameObject:
@@ -12865,7 +12865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5229016505790052266
 GameObject:
@@ -12913,7 +12913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5233110270457323527
 GameObject:
@@ -13263,7 +13263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5309147504861283397
 GameObject:
@@ -13939,7 +13939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5473466270003771445
 GameObject:
@@ -14183,7 +14183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5505900105304758019
 GameObject:
@@ -14231,7 +14231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5507594107863451421
 GameObject:
@@ -14279,7 +14279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5554744094857100330
 GameObject:
@@ -14327,7 +14327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5556510650153695070
 GameObject:
@@ -14375,7 +14375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5612339073961722293
 GameObject:
@@ -14810,7 +14810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &5897109150833121349
 GameObject:
@@ -15229,7 +15229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6000286682246983894
 GameObject:
@@ -15595,7 +15595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6055545556489124759
 GameObject:
@@ -16309,7 +16309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6423132613133051091
 GameObject:
@@ -16357,7 +16357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6460049079143647104
 GameObject:
@@ -16450,7 +16450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6478863868859197072
 GameObject:
@@ -16543,7 +16543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6501997829817853079
 GameObject:
@@ -16689,7 +16689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6583102522665251401
 GameObject:
@@ -17031,7 +17031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6704546163071345055
 GameObject:
@@ -17079,7 +17079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6726036886452049130
 GameObject:
@@ -17498,7 +17498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &6849104136037198890
 GameObject:
@@ -18443,7 +18443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &7348830588559967656
 GameObject:
@@ -18997,7 +18997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &7492417391998426146
 GameObject:
@@ -19257,7 +19257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &7532486765269272969
 GameObject:
@@ -19578,7 +19578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &7780042914602647995
 GameObject:
@@ -19626,7 +19626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &7819460438520469867
 GameObject:
@@ -19817,7 +19817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &7877221569550648280
 GameObject:
@@ -19865,7 +19865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &7887516646732676842
 GameObject:
@@ -19913,7 +19913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &7916867769110207364
 GameObject:
@@ -20862,7 +20862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &8158535303951639791
 GameObject:
@@ -21008,7 +21008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &8190675425144169194
 GameObject:
@@ -21427,7 +21427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &8322289159812748357
 GameObject:
@@ -22116,7 +22116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &8524331411117591210
 GameObject:
@@ -22278,7 +22278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &8564582338255978780
 GameObject:
@@ -22326,7 +22326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &8607837415200617296
 GameObject:
@@ -22692,7 +22692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &8710514887763404137
 GameObject:
@@ -23050,7 +23050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &8814339314112549007
 GameObject:
@@ -23098,7 +23098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &8829619965266452616
 GameObject:
@@ -23501,7 +23501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &9008716775692387037
 GameObject:
@@ -23692,7 +23692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &9056078468137835065
 GameObject:
@@ -23740,7 +23740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &9092687810691500502
 GameObject:
@@ -23788,7 +23788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea00234ef61787740af72d9e759d563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequirePower: 8
+  RequirePower: 20
   FxBreak: {fileID: 3198885058612810382, guid: 9d4e73c28b3e7dd4fb7e799e6f508985, type: 3}
 --- !u!1 &9098591400278344113
 GameObject:
