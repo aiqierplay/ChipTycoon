@@ -423,7 +423,7 @@ MonoBehaviour:
   IdleClip: Idle
   WalkClip: Walk
   RotateSpeed: 50
-  TransferInterval: 0.1
+  TransferInterval: 0.01
   ClampPosWithLayer: 1
   WalkLayer:
     serializedVersion: 2
