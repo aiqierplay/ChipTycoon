@@ -38,7 +38,7 @@ public class FactoryFinal : FactoryBase
         while (true)
         {
             yield return YieldBuilder.WaitForSeconds(CarWaitInterval);
-
+            Refresh();
             TweenCarEnter.Play();
             Play(MoveClip);
             var tweenEnter = TweenCarEnter.Value.Animation;
@@ -62,7 +62,7 @@ public class FactoryFinal : FactoryBase
                 yield return YieldBuilder.WaitForSeconds(TransferInterval);
             }
 
-            // yield return YieldBuilder.WaitForSeconds(1f);
+            yield return YieldBuilder.WaitForSeconds(0.25f);
 
             for (var i = 0; i < Output.Number; i++)
             {
@@ -78,6 +78,7 @@ public class FactoryFinal : FactoryBase
             Play(IdleClip);
 
             CarStackList.Clear();
+            Refresh();
         }
     }
 }
