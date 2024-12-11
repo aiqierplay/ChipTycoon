@@ -301,7 +301,12 @@ public class Worker : EntityBase
             }
 
             var product = StackList.Pop() as Product;
-            if (product == null) yield break;
+            if (product == null)
+            {
+                yield return null;
+                continue;
+            }
+
             product.IsWorking = true;
             factory.Input.StackList.AddParabola(product, () =>
             {
@@ -317,7 +322,13 @@ public class Worker : EntityBase
     public IEnumerator TransferOutputCo(FactoryBase factory)
     {
         // Log(StackList.Count, factory.name, CurrentFactory.name, factory.Output.IsEmpty, CurrentFactoryPoint.Mode);
-        while (!IsFull && !factory.Output.IsEmpty && CurrentFactoryPoint != null && CurrentFactoryPoint.Mode == FactoryPointMode.Output)
+        Func<bool> checkFunc = () =>
+        {
+            var result = !IsFull && !factory.Output.IsEmpty && CurrentFactoryPoint != null && CurrentFactoryPoint.Mode == FactoryPointMode.Output;
+            return result;
+        };
+
+        while (checkFunc())
         {
             while (factory.Output.LastProduct.IsWorking)
             {
@@ -325,7 +336,12 @@ public class Worker : EntityBase
             }
 
             var product = factory.Output.StackList.Pop() as Product;
-            if (product == null) yield break;
+            if (product == null)
+            {
+                yield return null;
+                continue;
+            }
+
             if (product.TypeData.IsFinal)
             {
                 product.IsWorking = true;

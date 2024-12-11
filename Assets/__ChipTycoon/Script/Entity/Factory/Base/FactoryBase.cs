@@ -117,18 +117,26 @@ public abstract class FactoryBase : BuildingBase
         UI.Show<UIFactory>(this);
         World.Character.DisableMove();
     }
-    //
-    // [Button]
-    // public void TestAddInput()
-    // {
-    //     Input.Add(10);
-    // }
-    //
-    // [Button]
-    // public void TestAddOutput()
-    // {
-    //     Output.Add(10);
-    // }
+    
+    [Button]
+    public void TestAddInput()
+    {
+        for (var i = 0; i < 20; i++)
+        {
+            Input.Add(1);
+            Input.LastProduct.Init();
+        }
+    }
+    
+    [Button]
+    public void TestAddOutput()
+    {
+        for (var i = 0; i < 20; i++)
+        {
+            Output.Add(1);
+            Output.LastProduct.Init();
+        }
+    }
 
     [NonSerialized] public Coroutine UnlockCoroutine;
 

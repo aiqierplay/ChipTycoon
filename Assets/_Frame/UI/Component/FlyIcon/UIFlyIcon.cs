@@ -20,14 +20,43 @@ public class UIFlyIcon : UIBase<UIFlyIcon>
     public float Interval = 0.05f;
     public float RandomStartPos = 100f;
     public int PerFrameLimit = 5;
-    public int MaxCount = 100;
-    public AnimationCurve CurveX;
-    public AnimationCurve CurveY;
-    public AnimationCurve CurveScaleCoin;
+    // public AnimationCurve CurveX;
+    // public AnimationCurve CurveY;
+    public AnimationCurve CurveScaleIcon;
     public float ScaleTargetDuration;
     public AnimationCurve CurveScaleTarget;
 
     [TableList] public List<UIFlyIconData> TargetList;
+
+    [NonSerialized]
+    public List<int> EaseTypeList = new List<int>()
+    {
+        // EaseType.Linear,
+        EaseType.InQuad,
+        // EaseType.OutQuad,
+        // EaseType.InOutQuad,
+        EaseType.InCubic,
+        // EaseType.OutCubic,
+        // EaseType.InOutCubic,
+        EaseType.InQuart,
+        // EaseType.OutQuart,
+        // EaseType.InOutQuart,
+        EaseType.InQuint,
+        // EaseType.OutQuint,
+        // EaseType.InOutQuint,
+        EaseType.InSine,
+        // EaseType.OutSine,
+        // EaseType.InOutSine,
+        EaseType.InExpo,
+        // EaseType.OutExpo,
+        // EaseType.InOutExpo,
+        EaseType.InCirc,
+        // EaseType.OutCirc,
+        // EaseType.InOutCirc,
+        EaseType.InBack,
+        // EaseType.OutBack,
+        // EaseType.InOutBack
+    };
 
     [NonSerialized] public Dictionary<string, UIFlyIconData> TargetDic;
 
@@ -73,11 +102,6 @@ public class UIFlyIcon : UIBase<UIFlyIcon>
         if (iconPrefab == null) yield break;
         for (var i = 0; i < count;)
         {
-            while (IconPool[iconPrefab.gameObject].SpawnPrefabsCount >= MaxCount)
-            {
-                yield return null;
-            }
-
             var frameCounter = 0;
             while (frameCounter < PerFrameLimit && i < count)
             {
@@ -90,19 +114,25 @@ public class UIFlyIcon : UIBase<UIFlyIcon>
                 iconIns.Trans.localScale = Vector3.zero;
                 iconIns.Init();
                 iconIns.SetValue(iconValue);
-                UTween.Scale(iconIns.transform, 0f, 1f, FlyDuration).SetCurve(CurveScaleCoin);
+                UTween.Scale(iconIns.transform, 0f, 1f, FlyDuration)
+                    .SetCurve(CurveScaleIcon);
+
+                var easeTypeX = EaseType.FunctionDic[EaseTypeList.Random()];
+                var easeTypeY = EaseType.FunctionDic[EaseTypeList.Random()];
+
                 UTween.Value(0f, 1f, FlyDuration, value =>
-                {
-                    var x = Vector3.Lerp(iconStartWorldPos, iconEndPos, CurveX.Evaluate(value)).x;
-                    var y = Vector3.Lerp(iconStartWorldPos, iconEndPos, CurveY.Evaluate(value)).y;
-                    iconIns.transform.SetPositionXY(x, y);
-                })
+                    {
+                        var x = easeTypeX.Ease(iconStartWorldPos.x, iconEndPos.x, value);
+                        var y = easeTypeY.Ease(iconStartWorldPos.y, iconEndPos.y, value);
+                        iconIns.transform.SetPositionXY(x, y);
+                    })
                     .SetOnStop(() =>
                     {
                         onEach?.Invoke();
                         if (scaleTargetTrans != null)
                         {
-                            UTween.Scale(scaleTargetTrans, 0f, 1f, ScaleTargetDuration).SetCurve(CurveScaleTarget);
+                            UTween.Scale(scaleTargetTrans, 0f, 1f, ScaleTargetDuration)
+                                .SetCurve(CurveScaleTarget);
                         }
 
                         IconPool.DeSpawn(iconIns);
