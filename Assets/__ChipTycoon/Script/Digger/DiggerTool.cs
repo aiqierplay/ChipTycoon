@@ -51,8 +51,11 @@ public class DiggerTool : EntityBase
     {
         Direction = Vector3.zero;
         IsWorking = false;
-        Trans.localPosition = CurrentLevel.Info.DiggerPos;
-        RootTrans.ResetLocal();
+        var savePos = CurrentLevel.Info.DiggerPos;
+        Trans.ResetLocal();
+        RootTrans.localPosition = new Vector3(0, savePos.y, 0);
+        MoveTrans.localPosition = new Vector3(savePos.x, 0f, savePos.z);
+        
         RefreshData();
         RefreshLine(true);
         SwitchTool(DiggerToolMode.Digger);
