@@ -973,7 +973,8 @@ MonoBehaviour:
   UnlockObj: {fileID: 7653539424572425424}
   TextUnlockCost: {fileID: 4215481557032849975}
   UnlockSpeed: 1
-  FxUnlock: {fileID: 0}
+  FxUnlock: {fileID: 1765350171443339923, guid: ddb095fc519eee34ca22f74c89660b9c,
+    type: 3}
   CarTrans: {fileID: 2264334764383781166}
   CarCapacity: 4
   CarStackList: {fileID: 4751457654794744329}

@@ -5342,17 +5342,21 @@ MonoBehaviour:
   UnlockObj: {fileID: 4650763102539829547}
   TextUnlockCost: {fileID: 1169924133061937100}
   UnlockSpeed: 1
-  FxUnlock: {fileID: 0}
+  FxUnlock: {fileID: 1765350171443339923, guid: ddb095fc519eee34ca22f74c89660b9c,
+    type: 3}
   CarTrans: {fileID: 3877750532661499093}
   CarCapacity: 20
   CarStackList: {fileID: 4591853020785425806}
   TweenCarEnter:
     Value: {fileID: 3648719356773231065}
+  MoveClip: 
   TweenCarExit:
     Value: {fileID: 7783468603849023534}
+  IdleClip: 
   CarWaitInterval: 5
   TextCarValue: {fileID: 2222961927468477724}
   TextCarCount: {fileID: 6793240241466324066}
+  TransferInterval: 0.1
 --- !u!1 &2262716195967837793
 GameObject:
   m_ObjectHideFlags: 0

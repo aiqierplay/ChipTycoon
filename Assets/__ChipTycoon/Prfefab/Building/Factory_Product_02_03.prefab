@@ -555,7 +555,7 @@ MonoBehaviour:
   UnlockObj: {fileID: 4650763102539829547}
   TextUnlockCost: {fileID: 1169924133061937100}
   UnlockSpeed: 3
-  FxUnlock: {fileID: 9079693626009250893, guid: f72b96afab36b684fbe374e6ebdfc249,
+  FxUnlock: {fileID: 1765350171443339923, guid: ddb095fc519eee34ca22f74c89660b9c,
     type: 3}
 --- !u!1 &2262716195967837793
 GameObject:

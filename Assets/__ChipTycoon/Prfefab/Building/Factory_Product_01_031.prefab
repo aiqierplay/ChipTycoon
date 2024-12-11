@@ -306,7 +306,7 @@ Transform:
   m_GameObject: {fileID: 1995079177787389527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6454963768111089456}
@@ -355,8 +355,9 @@ MonoBehaviour:
   LockObj: {fileID: 134974031940907404}
   UnlockObj: {fileID: 4650763102539829547}
   TextUnlockCost: {fileID: 1169924133061937100}
-  UnlockSpeed: 3
-  FxUnlock: {fileID: 0}
+  UnlockSpeed: 10
+  FxUnlock: {fileID: 1765350171443339923, guid: ddb095fc519eee34ca22f74c89660b9c,
+    type: 3}
 --- !u!1 &2262716195967837793
 GameObject:
   m_ObjectHideFlags: 0
