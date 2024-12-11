@@ -19,6 +19,7 @@ public class Worker : EntityBase
     [Title("Animation")] 
     public string IdleClip;
     public string WalkClip;
+    public GameObject MaxTip;
 
     public float RotateSpeed = 50f;
     public float TransferInterval = 0.1f;
@@ -43,7 +44,7 @@ public class Worker : EntityBase
         Type = type;
         StackList.Init();
         Play(IdleClip);
-
+        Refresh();
         RefreshData();
         if (Type == WorkerType.Computer)
         {
@@ -88,6 +89,11 @@ public class Worker : EntityBase
         CurrentFactory = factory;
         CurrentFactoryPoint = point;
         OnEnter(factory);
+    }
+
+    public void Refresh()
+    {
+        if (MaxTip != null) MaxTip.SetActive(IsFull);
     }
 
 
@@ -301,6 +307,7 @@ public class Worker : EntityBase
             }
 
             var product = StackList.Pop() as Product;
+            Refresh();
             if (product == null)
             {
                 yield return null;
@@ -336,6 +343,7 @@ public class Worker : EntityBase
             }
 
             var product = factory.Output.StackList.Pop() as Product;
+            Refresh();
             if (product == null)
             {
                 yield return null;
@@ -364,6 +372,7 @@ public class Worker : EntityBase
                 StackList.AddParabola(product, () =>
                 {
                     product.IsWorking = false;
+                    Refresh();
                 });
             }
 

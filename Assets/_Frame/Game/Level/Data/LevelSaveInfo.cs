@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 [Serializable]
 public class LevelSaveInfo : SaveInfoList<LevelSaveInfo>
@@ -8,6 +9,8 @@ public class LevelSaveInfo : SaveInfoList<LevelSaveInfo>
 
     public bool IsLock = true;
     public bool IsPass = false;
+
+    public Vector3 DiggerPos = new Vector3();
 
     public int DropProductCount;
     public List<int> DiggableState = new List<int>();
@@ -30,6 +33,7 @@ public class LevelSaveInfo : SaveInfoList<LevelSaveInfo>
     {
         IsLock = true;
         IsPass = false;
+        DiggerPos = Vector3.zero;
         if (Index <= 1) IsLock = false;
         DiggableState.Clear();
         DropProductCount = 0;

@@ -51,7 +51,7 @@ public class DiggerTool : EntityBase
     {
         Direction = Vector3.zero;
         IsWorking = false;
-        Trans.ResetLocal();
+        Trans.localPosition = CurrentLevel.Info.DiggerPos;
         RootTrans.ResetLocal();
         RefreshData();
         RefreshLine(true);
