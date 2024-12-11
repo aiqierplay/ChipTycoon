@@ -415,7 +415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2332997677009831199}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.43, z: 0}
+  m_LocalPosition: {x: 0, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -435,8 +435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 0}
-  Size: {x: 0.4, y: 0.4, z: 0.4}
-  Grid: {x: 20, y: 20}
+  Size: {x: 0, y: 0, z: 0}
+  Grid: {x: 1, y: 1}
   Scale: {x: 1, y: 1, z: 1}
   Rotate: {x: 0, y: 0, z: 0}
   OffsetInterval:
@@ -2315,6 +2315,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1415525768762741265, guid: 80cdf934236acf648877299e9d766a7b,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415525768762741265, guid: 80cdf934236acf648877299e9d766a7b,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e4d2bb0a10fd41b4a8a61926c69dd238, type: 2}
@@ -2337,6 +2342,21 @@ PrefabInstance:
         type: 3}
       propertyPath: managedReferences[7391153701323014151].Active
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497315901316120982, guid: 80cdf934236acf648877299e9d766a7b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.92516
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497315901316120982, guid: 80cdf934236acf648877299e9d766a7b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.31478
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497315901316120982, guid: 80cdf934236acf648877299e9d766a7b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.92516
       objectReference: {fileID: 0}
     - target: {fileID: 6511288446032652750, guid: 80cdf934236acf648877299e9d766a7b,
         type: 3}
