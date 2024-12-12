@@ -29,6 +29,8 @@ public class ProduceLine : EntityBase
     [Title("Work")] 
     public float WorkDuration;
     public UTweenPlayer TweenWork;
+    [BoxGroup("Effect")] public GameObject FxWorkStart;
+    [BoxGroup("Effect")] public GameObject FxWorkEnd;
 
     [Title("Info")] 
     public TMP_Text TextInputValue;
@@ -90,6 +92,7 @@ public class ProduceLine : EntityBase
     public void WorkStart()
     {
         if (TweenWork != null) TweenWork.Play();
+        SpawnFx(FxWorkStart);
     }
 
     public void WorkStop()
@@ -183,6 +186,7 @@ public class ProduceLine : EntityBase
                     {
                         workTimer = WorkDuration;
                         IsWorkComplete = true;
+                        SpawnFx(FxWorkEnd);
                     }
                 }
 
