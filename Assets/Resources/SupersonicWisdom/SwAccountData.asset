@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bde5b51eef6a4560b2a2442b047a9a7, type: 3}
+  m_Name: SwAccountData
+  m_EditorClassIdentifier: 
+  titlesList:
+  - games: []
+    id: 
+    name: --- select ---
+    unityProjectId: 
+  - games:
+    - adMobId: 
+      bundleId: 
+      facebookAppId: 2240280056348888
+      facebookToken: 625ec170c6e902e5f6b88f98b18e2f44
+      gameAnalyticsKey: 684e0ce350b2703e626b3aa4fa49b621
+      gameAnalyticsSecret: 89c55424187f01ff2a00295c7c7b937d382abbe4
+      id: ed13fcfc-3e2d-40d4-a59d-477ef85465fe
+      isAppKey: 
+      os: android
+      platform: google_play
+      storeId: 
+    id: 01b1971b-4feb-4f2b-a24f-493772691fdb
+    name: ChipTycoon
+    unityProjectId: 
+  integrationGuideUrl: 

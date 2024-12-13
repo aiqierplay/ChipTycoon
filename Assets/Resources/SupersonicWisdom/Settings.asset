@@ -17,18 +17,18 @@ MonoBehaviour:
   iosChinaAppId: 
   iosGameId: 
   iosChinaGameId: 
-  androidGameId: 
+  androidGameId: ed13fcfc-3e2d-40d4-a59d-477ef85465fe
   ironSourceAndroidAppKey: 
   ironSourceIosAppKey: 
   ironSourceIosChinaAppKey: 
   iosGameAnalyticsGameKey: 
   iosGameAnalyticsSecretKey: 
-  androidGameAnalyticsGameKey: 
-  androidGameAnalyticsSecretKey: 
+  androidGameAnalyticsGameKey: 684e0ce350b2703e626b3aa4fa49b621
+  androidGameAnalyticsSecretKey: 89c55424187f01ff2a00295c7c7b937d382abbe4
   adMobIosAppId: 
   adMobIosChinaAppId: 
   adMobAndroidAppId: 
-  areTextMeshProEssentialsInstalled: 0
+  areTextMeshProEssentialsInstalled: 1
   disableFacebookInit: 0
   testPrivacyPolicy: -1
   customInterstitialMinimumInterval: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   enableIosIap: 0
   enableIosAutomaticNotificationPermission: 0
   validateBeforeBuild: 1
-  accountToken: 
-  selectedGameIndex: 0
+  accountToken: 9264f55e814b305e85e0653f5bf72758c568b0faec99e6dd2fb8477f1a0ac31d
+  selectedGameIndex: 1
   isTitleSelectedAutomatically: 0
-  wasLoggedIn: 0
+  wasLoggedIn: 1
