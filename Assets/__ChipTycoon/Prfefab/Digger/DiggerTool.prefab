@@ -329,10 +329,10 @@ MonoBehaviour:
   - {fileID: 5933461944566671421}
   - {fileID: 6994468149471756060}
   - {fileID: 865337952368306479}
-  MoveSpeed: 0.05
+  MoveSpeed: 0.2
   RotateSpeed: 1
   MaxTouchDis: 10
-  WorkSpeedMultiply: 0.2
+  WorkSpeedMultiply: 0.05
   WorkSpeedDuration: 1
 --- !u!54 &6001713344971937411
 Rigidbody:
@@ -1024,7 +1024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &66334886250704832
 Transform:
   m_ObjectHideFlags: 0
@@ -3387,7 +3387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8123136193946073225
 Transform:
   m_ObjectHideFlags: 0
@@ -14072,7 +14072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4742584456401517120
 Transform:
   m_ObjectHideFlags: 0
