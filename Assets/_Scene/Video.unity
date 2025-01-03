@@ -709,7 +709,7 @@ PrefabInstance:
     - target: {fileID: 5913957739943182526, guid: 13771f98ddafe88488319774b1592ea8,
         type: 3}
       propertyPath: m_Name
-      value: wor
+      value: Test
       objectReference: {fileID: 0}
     - target: {fileID: 8332968519176259441, guid: 13771f98ddafe88488319774b1592ea8,
         type: 3}
@@ -3011,7 +3011,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997142487902490559
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5402,7 +5402,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!114 &3213287060998280403
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6487,7 +6487,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &4110787714445801012
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8204,7 +8204,7 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &6115844105531463110
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8255,7 +8255,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!114 &6152667273188547572
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11078,7 +11078,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &8078271795207409375
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11101,7 +11101,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!1 &8180738074223418977
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12172,7 +12172,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!1 &9163050349590532402
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
