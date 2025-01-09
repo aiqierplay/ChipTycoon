@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Plugins/UDragDrop/Sample/Sample_02_UI_DragArea/Scene/Sample_02_UI_DragArea.unity
-    guid: 0e2beab5addcaf040bd2d9b0eccd6861
+    path: Assets/_Scene/Main.unity
+    guid: efb9ffd9e4199184fa9d3e80e6d5bf59
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1c49fbc51b8851a4fa82bdde59dbd9ba,
       type: 2}
