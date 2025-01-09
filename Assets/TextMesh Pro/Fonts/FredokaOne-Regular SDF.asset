@@ -51,6 +51,7 @@ Material:
     - _BumpFace: 0
     - _BumpOutline: 0
     - _ColorMask: 15
+    - _CullMode: 0
     - _Diffuse: 0.5
     - _FaceDilate: 0
     - _FaceUVSpeedX: 0
@@ -124,7 +125,7 @@ Texture2D:
   m_MipsStripped: 0
   m_TextureFormat: 1
   m_MipCount: 1
-  m_IsReadable: 0
+  m_IsReadable: 1
   m_IsPreProcessed: 0
   m_IgnoreMasterTextureLimit: 0
   m_StreamingMipmaps: 0
@@ -170,11 +171,11 @@ MonoBehaviour:
   material: {fileID: -1291683578390349286}
   materialHashCode: -792279406
   m_Version: 1.1.0
-  m_SourceFontFileGUID: c886cbacfb8fd3b4a86418a3505e9fe1
-  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: c886cbacfb8fd3b4a86418a3505e9fe1,
+  m_SourceFontFileGUID: 4d66840bdc9a1b24dab71e56e5f38819
+  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 4d66840bdc9a1b24dab71e56e5f38819,
     type: 3}
-  m_SourceFontFile: {fileID: 0}
-  m_AtlasPopulationMode: 0
+  m_SourceFontFile: {fileID: 12800000, guid: 4d66840bdc9a1b24dab71e56e5f38819, type: 3}
+  m_AtlasPopulationMode: 1
   m_FaceInfo:
     m_FaceIndex: 0
     m_FamilyName: Fredoka One
@@ -1743,6 +1744,21 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
+  - m_Index: 3
+    m_Metrics:
+      m_Width: 0
+      m_Height: 0
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 0
+      m_HorizontalAdvance: 12
+    m_GlyphRect:
+      m_X: 0
+      m_Y: 0
+      m_Width: 0
+      m_Height: 0
+    m_Scale: 1
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 33
@@ -2155,6 +2171,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 8364
     m_GlyphIndex: 224
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 32
+    m_GlyphIndex: 3
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: -1007179837283797025}
